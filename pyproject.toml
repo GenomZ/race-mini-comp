@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-gp"
+version = "0.1.0"
+description = "Agentic Grand Prix: a 2D racing gym with LangChain tools for LLM-agent competitions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "pydantic>=2.5",
+    "langchain-core>=0.3",
+    "langgraph>=0.2",
+    "langchain-openai>=0.2",
+    "langchain-anthropic>=0.3",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["agentic_gp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

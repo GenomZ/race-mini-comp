@@ -1,0 +1,27 @@
+{
+  "name": "dummy",
+  "agent": "agentic_gp.agents.dummy",
+  "track": "default",
+  "timestamp": "2026-09-14T10:19:43.038873+00:00",
+  "model": "-",
+  "attempts": [
+    {
+      "attempt": 1,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 1195.0,
+      "crashes": 239,
+      "waypoints_passed": 2,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    }
+  ],
+  "best_lap": null,
+  "completed_attempts": 0,
+  "max_waypoints_passed": 2,
+  "total_crashes": 239,
+  "tool_calls": 501,
+  "wall_clock_seconds": 0.9,
+  "log": "logs\\dummy_1789381182.jsonl"
+}

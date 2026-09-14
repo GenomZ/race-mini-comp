@@ -1,0 +1,8 @@
+numpy>=1.26
+pydantic>=2.5
+langchain-core>=0.3
+langgraph>=0.2
+langchain-openai>=0.2
+langchain-anthropic>=0.3
+matplotlib>=3.8
+pytest>=8
