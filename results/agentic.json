@@ -1,0 +1,38 @@
+{
+  "name": "agentic",
+  "agent": "agentic_gp.agents.agentic",
+  "track": "default",
+  "timestamp": "2026-09-14T10:56:42.987936+00:00",
+  "model": "-",
+  "attempts": [
+    {
+      "attempt": 1,
+      "completed": true,
+      "lap_time": 91.15,
+      "sim_time": 91.15,
+      "penalty_time": 0.0,
+      "crashes": 0,
+      "waypoints_passed": 16,
+      "ticks": 183,
+      "ended_by": "lap_complete"
+    },
+    {
+      "attempt": 2,
+      "completed": true,
+      "lap_time": 91.0,
+      "sim_time": 91.0,
+      "penalty_time": 0.0,
+      "crashes": 0,
+      "waypoints_passed": 16,
+      "ticks": 182,
+      "ended_by": "lap_complete"
+    }
+  ],
+  "best_lap": 91.0,
+  "completed_attempts": 2,
+  "max_waypoints_passed": 16,
+  "total_crashes": 0,
+  "tool_calls": 368,
+  "wall_clock_seconds": 5.1,
+  "log": "logs\\agentic_1789383397.jsonl"
+}

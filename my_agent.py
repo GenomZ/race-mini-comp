@@ -19,6 +19,10 @@ finishes a lap, far behind the reference time. Ideas to beat Hermes: call
 reads the crash events after each attempt and adjusts the plan, keep memory
 across attempts, or split planning/execution between a strong model and a fast
 one (see agentic_gp/llm.py).
+
+For a complete reference implementation demonstrating global track planning,
+episodic memory, and cross-attempt reflection, inspect:
+    agentic_gp.agents.agentic (run with: python run_agentic.py)
 """
 
 from __future__ import annotations

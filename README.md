@@ -103,6 +103,7 @@ pip install -r requirements.txt
 
 ```bash
 python run_dummy.py                 # drives straight, crashes; shows the tool loop
+python run_agentic.py               # reference agentic workflow (planning, memory, reflection)
 ```
 
 ```bash
@@ -171,14 +172,15 @@ agentic_gp/            the gym package
   agents/dummy.py      drives straight
   agents/hermes.py     the zero-shot LLM baseline
   agents/reflex.py     rule-based organiser reference (clean lap ~69 s)
+  agents/agentic.py    reference agentic workflow (planning, memory, reflection ~91 s)
 my_agent.py            YOUR LangGraph agent (starter provided)
 evaluate.py            run an agent, record results, plot
-run_dummy.py / run_hermes.py
+run_dummy.py / run_hermes.py / run_agentic.py
 results/               JSON + PNG per evaluated agent; LEADERBOARD.md is generated from these
 docs/                  implementation plan, architecture notes, organiser guide
 tests/                 pytest suite (python -m pytest)
 ```
 
 Reference times on the default track: the dummy DNFs; the starter `my_agent.py` laps in ~207 s; the
-rule-based reference driver laps clean in ~69 s. Hermes' time depends on the model you run it with -
-measure it with `run_hermes.py` and beat it.
+reference agentic workflow `agentic` laps clean in ~91 s; the rule-based reference driver laps clean in ~69 s.
+Hermes' time depends on the model you run it with - measure it with `run_hermes.py` and beat it.
