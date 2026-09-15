@@ -47,10 +47,26 @@ from typing import Any
 from ..tools import tools_by_name
 
 # Where to save/load the trained readout weights.
-WEIGHTS_PATH = os.path.join(
+#
+# Default path (repo-root/fruit_fly_weights.json) is preserved for backwards
+# compatibility. You can override at runtime in two ways:
+#   - set the FRUIT_FLY_WEIGHTS environment variable
+#   - pass --agent-arg weights_path=PATH to evaluate.py
+# The training script in scripts/train_fruit_fly_minimax.py uses the latter
+# to keep multiple training runs (different training-lap counts) side by side.
+DEFAULT_WEIGHTS_PATH = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "..", "..", "fruit_fly_weights.json",
 )
+
+
+def _resolve_weights_path(override: str | None) -> str:
+    if override:
+        return override
+    env_path = os.getenv("FRUIT_FLY_WEIGHTS")
+    if env_path:
+        return env_path
+    return DEFAULT_WEIGHTS_PATH
 
 
 # ============================================================================
@@ -373,7 +389,10 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
         n_generations: int = 8, pop_size: int = 12, elite_frac: float = 0.25,
         load_weights: bool = True,
         train_if_no_weights: bool = True,
+        weights_path: str | None = None,
         **kwargs) -> None:
+    """Run one training-or-evaluation cycle. See module docstring + CLI hints."""
+    weights_path = _resolve_weights_path(weights_path)
     by = tools_by_name(tools)
     cfg = getattr(env, "cfg", None)
 
@@ -382,9 +401,9 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
     n_neurons_total = len(topo["neuron_ids"])
 
     # Decide whether to train or evaluate.
-    have_weights = os.path.isfile(WEIGHTS_PATH) and load_weights
+    have_weights = os.path.isfile(weights_path) and load_weights
     if have_weights:
-        with open(WEIGHTS_PATH) as f:
+        with open(weights_path) as f:
             saved = json.load(f)
         readout = saved["readout"]
         n_neurons_used = saved["n_neurons_total"]
@@ -400,7 +419,7 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
         print(f"[fruit_fly_minimax] Connectome: {len(topo['neuron_ids'])} neurons, "
               f"{len(topo['edges'])} edges. Output = aDN1_left + aDN1_right.")
         if have_weights:
-            print(f"[fruit_fly_minimax] Loaded trained readout from {WEIGHTS_PATH}")
+            print(f"[fruit_fly_minimax] Loaded trained readout from {weights_path}")
         elif train_if_no_weights and attempts > 1:
             print(f"[fruit_fly_minimax] No weights file found. Will train via CEM "
                   f"across {attempts} attempts "
@@ -467,12 +486,12 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
 
     # Save the best readout for future runs.
     if best_readout is not None:
-        with open(WEIGHTS_PATH, "w") as f:
+        with open(weights_path, "w") as f:
             json.dump({"readout": best_readout, "n_neurons_total": n_neurons_total,
                        "best_lap": best_lap}, f, indent=2)
         if verbose:
             print(f"[fruit_fly_minimax] Saved trained readout (best lap "
-                  f"{best_lap:.2f}s) to {WEIGHTS_PATH}")
+                  f"{best_lap:.2f}s) to {weights_path}")
 
     # Final attempt: drive with the best readout found.
     if attempts >= 1 and best_readout is not None:
