@@ -8,6 +8,7 @@ build/
 dist/
 .env
 logs/
+results/*.log
 .idea/
 .vscode/
 .DS_Store

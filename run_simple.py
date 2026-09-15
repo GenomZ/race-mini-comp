@@ -28,6 +28,12 @@ Variables recognised:
     RACE_LLM_PROVIDER   always 'minimax' for this script
     RACE_LLM_MODEL      always 'MiniMax-M3' for this script
 
+OUTPUTS (all written to results/ by default):
+    results/simple.json           lap summary (written by evaluate.py)
+    results/simple.png            track plot, requires --plot (default-on here)
+    results/simple_<ts>.log       per-tick log: state, prompt, decision, events
+                                  use --no-log to skip, --log PATH to relocate
+
 If you do not set MINIMAX_API_KEY, the script still runs — the agent's
 call_minimax() helper falls back to BALANCED mode when the API is
 unreachable, so you get a rule-based lap instead of an LLM-driven one.
@@ -159,15 +165,17 @@ print()
 import evaluate  # noqa: E402  (must come AFTER env-var setup above)
 
 if __name__ == "__main__":
-    # Default: log per-tick trace to logs/simple_<timestamp>.log so the trace
-    # is preserved on disk for after-the-fact debugging. Set --no-log (or pass
-    # `--agent-arg log_path=`) to disable.
+    # Per-tick trace default: results/simple_<timestamp>.log, so all artefacts
+    # for one run (JSON summary, PNG plot, per-tick log) live together in
+    # results/. Pass --no-log to disable the per-tick file, or --log PATH to
+    # write it elsewhere.
     import argparse
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--no-log", action="store_true",
                         help="disable per-tick log file")
     parser.add_argument("--log", default=None, metavar="PATH",
-                        help="write per-tick log to PATH (default: logs/simple_<ts>.log)")
+                        help="write per-tick log to PATH "
+                             "(default: results/simple_<ts>.log)")
     parsed, extra = parser.parse_known_args(sys.argv[1:])
     log_path = None
     if not parsed.no_log:
@@ -175,7 +183,7 @@ if __name__ == "__main__":
             log_path = parsed.log
         else:
             ts = time.strftime("%Y%m%d_%H%M%S")
-            log_dir = os.path.join(os.getcwd(), "logs")
+            log_dir = os.path.join(os.getcwd(), "results")
             os.makedirs(log_dir, exist_ok=True)
             log_path = os.path.join(log_dir, f"simple_{ts}.log")
 

@@ -1,0 +1,27 @@
+{
+  "name": "simple",
+  "agent": "my_agent_simple",
+  "track": "default",
+  "timestamp": "2026-09-15T12:03:44.327592+00:00",
+  "model": "-",
+  "attempts": [
+    {
+      "attempt": 1,
+      "completed": true,
+      "lap_time": 159.25,
+      "sim_time": 99.25,
+      "penalty_time": 60.0,
+      "crashes": 12,
+      "waypoints_passed": 16,
+      "ticks": 199,
+      "ended_by": "lap_complete"
+    }
+  ],
+  "best_lap": 159.25,
+  "completed_attempts": 1,
+  "max_waypoints_passed": 16,
+  "total_crashes": 12,
+  "tool_calls": 201,
+  "wall_clock_seconds": 0.3,
+  "log": "logs/simple_1789473824.jsonl"
+}
