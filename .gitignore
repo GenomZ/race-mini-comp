@@ -13,6 +13,9 @@ results/*.log
 # we ship with the repo.
 !results/simple_trace.log
 !results/simple_trace.txt
+# Trained readout weights for the fruit-fly-connectome agent. Regenerated
+# by `python evaluate.py agentic_gp.agents.fruit_fly_minimax --attempts 30`.
+fruit_fly_weights.json
 .idea/
 .vscode/
 .DS_Store
