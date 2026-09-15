@@ -3,10 +3,10 @@
 The provider is chosen with environment variables so the same agent code runs
 against a local open-source model (Hermes via Ollama) or a hosted API:
 
-    RACE_LLM_PROVIDER = ollama | anthropic | openai        (default: ollama)
-    RACE_LLM_MODEL    = model name for that provider       (default: see DEFAULT_MODELS)
-    OLLAMA_BASE_URL   = http://localhost:11434/v1          (ollama only)
-    ANTHROPIC_API_KEY / OPENAI_API_KEY                     (hosted providers)
+    RACE_LLM_PROVIDER = ollama | anthropic | openai | minimax   (default: ollama)
+    RACE_LLM_MODEL    = model name for that provider             (default: see DEFAULT_MODELS)
+    OLLAMA_BASE_URL   = http://localhost:11434/v1                (ollama only)
+    ANTHROPIC_API_KEY / OPENAI_API_KEY / MINIMAX_API_KEY        (hosted providers)
 
 Usage:
     from agentic_gp.llm import get_chat_model
@@ -23,7 +23,12 @@ DEFAULT_MODELS = {
     "ollama": "hermes3",            # Nous Research Hermes 3 (Llama 3.1 based), `ollama pull hermes3`
     "anthropic": "claude-opus-5",
     "openai": "gpt-4o-mini",
+    "minimax": "MiniMax-M3",        # MiniMax M3 (openai-compatible at https://api.minimax.io)
 }
+
+# Base URL for the MiniMax chat-completions endpoint. It speaks the OpenAI
+# protocol, so we route it through langchain_openai.ChatOpenAI.
+MINIMAX_BASE_URL = "https://api.minimax.io/v1"
 
 
 def get_chat_model(model: str | None = None, provider: str | None = None, temperature: float = 0.0):
@@ -44,6 +49,23 @@ def get_chat_model(model: str | None = None, provider: str | None = None, temper
         from langchain_openai import ChatOpenAI
 
         return ChatOpenAI(model=model, temperature=temperature)
+
+    if provider == "minimax":
+        # MiniMax is OpenAI-compatible; reuse ChatOpenAI with a custom base_url.
+        # The key is read from MINIMAX_API_KEY; students override via .env.
+        from langchain_openai import ChatOpenAI
+
+        api_key = os.getenv("MINIMAX_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "MINIMAX_API_KEY is not set. Export it in your shell or add it to .env."
+            )
+        return ChatOpenAI(
+            model=model,
+            temperature=temperature,
+            base_url=MINIMAX_BASE_URL,
+            api_key=api_key,
+        )
 
     if provider == "ollama":
         from langchain_openai import ChatOpenAI
