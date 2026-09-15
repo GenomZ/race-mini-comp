@@ -33,6 +33,7 @@ from __future__ import annotations
 import json
 import logging
 import math
+import os
 from typing import Any
 
 from agentic_gp.physics import clamp
@@ -415,7 +416,11 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
                     throttle, steering,
                     decision_source,
                     events=list(obs.get("events", [])),
-                    llm_reply=None,    # no LLM in this agent
+                    # This agent has no LLM, so we synthesise a reply string
+                    # from the decision the executor made. The trace file
+                    # then shows the full "prompt -> reply -> decision"
+                    # sequence a real LLM-driven agent would produce.
+                    llm_reply=format_llm_reply(throttle, steering),
                 )
                 if verbose and (obs["events"] or obs["tick"] % 20 == 0):
                     print(tick_one_lap_text(obs))
@@ -439,6 +444,17 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
                 h.close()
             except Exception:
                 pass
+
+        # If we wrote a per-tick .log file, also emit a one-line-per-tick
+        # plain-text summary alongside it. Easier to grep / sort / pipe into
+        # other tools than the block-format .log.
+        if log_path and os.path.isfile(log_path):
+            txt_path = os.path.splitext(log_path)[0] + ".txt"
+            try:
+                n = write_plain_text_summary(log_path, txt_path)
+                print(f"[simple-agent] wrote {n}-row plain-text summary to {txt_path}")
+            except Exception as exc:
+                print(f"[simple-agent] could not write plain-text summary: {exc!r}")
 
 
 # ============================================================================
@@ -470,11 +486,17 @@ def run(env, tools, attempts: int = 1, verbose: bool = True,
 #         You are driving a virtual car on a racing track. ...
 #         [user]
 #         tick 12, t=6.0s, speed=24.5, gate 3 (passed 2/16), ...
+#       llm-reply:
+#         'throttle=+0.60 steering=-0.12'
 #       decision:
 #         source   = decide_controls (rule-based)
 #         throttle = +0.60
 #         steering = -0.12
 #       events: []
+#
+#   The 'llm-reply' block is synthesised by format_llm_reply() in this agent
+#   because there is no real LLM call; in a real LLM-driven agent this would
+#   be the actual response from the model.
 # ============================================================================
 
 LOGGER_NAME = "my_agent_simple"
@@ -509,9 +531,11 @@ def log_tick(
 
     decision_source: short label for where the (throttle, steering) came from.
         Examples: "decide_controls (rule-based)", "recovery (reverse)".
-    llm_reply: if a hypothetical LLM was consulted, its raw reply text. If
-        None (the case here, since we have no LLM), the reply block is
-        omitted so students see the controller is purely reactive.
+    llm_reply: the LLM-style reply string for this tick. In this agent we
+        synthesise it from the decision via format_llm_reply() so the trace
+        shows the full prompt-then-reply-then-decision sequence a real
+        LLM-driven agent would produce. Pass None to omit the reply block
+        (e.g. if you really don't want any LLM-shaped artefact in the log).
     """
     state = state_summary(obs)
     prompt_user = build_user_prompt(obs)            # defined in PART 7 below
@@ -577,3 +601,93 @@ def parse_llm_reply(reply: str) -> tuple[float, float]:
     if not t or not s:
         return 0.0, 0.0
     return clamp(float(t.group(1)), -1.0, 1.0), clamp(float(s.group(1)), -1.0, 1.0)
+
+
+def format_llm_reply(throttle: float, steering: float) -> str:
+    """Inverse of parse_llm_reply: format (throttle, steering) as a fake LLM reply.
+
+    This controller has no LLM, so the actual reply is synthesised here from
+    whatever decide_controls() / recover_if_stuck() produced. That way the
+    per-tick trace file shows the full prompt-then-reply-then-decision
+    sequence a real LLM-driven agent would have, and a student reading the
+    log can see exactly what 'information' the executor acted on.
+    """
+    return f"throttle={throttle:+.2f} steering={steering:+.2f}"
+
+
+def write_plain_text_summary(trace_log_path: str, summary_txt_path: str) -> int:
+    """Convert the per-tick block-format .log into a one-line-per-tick .txt.
+
+    The .log is great for reading a single tick in detail (with the full
+    prompt, state, and reply blocks). The .txt is great for skimming the
+    whole race at a glance or grepping for patterns (e.g. "every recovery
+    tick" or "every crash").
+
+    Output columns (tab-separated, header line first):
+        tick    t       speed   gate    angle   dist    throttle steering source  events
+
+    Returns the number of data rows written (excluding the header).
+    """
+    rows: list[str] = ["tick\tt\tspeed\tgate\tangle\tdist\tthrottle\tsteering\tsource\tevents"]
+    in_tick = False
+    cur: dict[str, str] = {}
+    order: list[str] = []
+
+    def _flush() -> None:
+        if not cur:
+            return
+        rows.append("\t".join(cur.get(k, "") for k in [
+            "tick", "t", "speed", "gate", "angle", "dist",
+            "throttle", "steering", "source", "events",
+        ]))
+
+    with open(trace_log_path) as f:
+        for raw in f:
+            line = raw.rstrip("\n")
+            if line.startswith("=== tick "):
+                _flush()
+                cur = {}
+                order = []
+                # Parse the tick header: "=== tick 12 (attempt 1) t=6.0s ==="
+                parts = line.split()
+                cur["tick"] = parts[2]
+                t_part = [p for p in parts if p.startswith("t=")]
+                cur["t"] = t_part[0].lstrip("t=").rstrip("s") if t_part else ""
+                in_tick = True
+            elif in_tick and line.startswith("state:"):
+                pass
+            elif in_tick and line.strip().startswith("->"):
+                pass   # skip the verdict line
+            elif in_tick and line.startswith("  tick "):
+                # The verbose state line lives in the .log; parse angle/dist from it
+                state_line = line.strip()
+                import re as _re
+                m_angle = _re.search(r"at\s*([+-]?\d+(?:\.\d+)?)\s*deg", state_line)
+                m_dist  = _re.search(r"next waypoint\s*(\d+(?:\.\d+)?)m", state_line)
+                cur["angle"] = m_angle.group(1) if m_angle else ""
+                cur["dist"]  = m_dist.group(1)  if m_dist  else ""
+                m_speed = _re.search(r"speed=(-?\d+(?:\.\d+)?)", state_line)
+                cur["speed"] = m_speed.group(1) if m_speed else ""
+                m_gate = _re.search(r"gate\s*(\d+)", state_line)
+                cur["gate"] = m_gate.group(1) if m_gate else ""
+            elif in_tick and line.startswith("prompt-to-llm:"):
+                pass
+            elif in_tick and line.startswith("llm-reply:"):
+                pass
+            elif in_tick and line.startswith("decision:"):
+                pass
+            elif in_tick and line.startswith("  source"):
+                cur["source"] = line.strip().split("=", 1)[1].strip()
+            elif in_tick and line.startswith("  throttle"):
+                cur["throttle"] = line.strip().split("=", 1)[1].strip()
+            elif in_tick and line.startswith("  steering"):
+                cur["steering"] = line.strip().split("=", 1)[1].strip()
+            elif in_tick and line.startswith("events:"):
+                cur["events"] = line.strip().split(":", 1)[1].strip()
+                _flush()
+                cur = {}
+                in_tick = False
+
+    with open(summary_txt_path, "w") as f:
+        f.write("\n".join(rows) + "\n")
+    return len(rows) - 1

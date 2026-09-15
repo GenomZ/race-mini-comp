@@ -2,7 +2,7 @@
   "name": "simple",
   "agent": "my_agent_simple",
   "track": "default",
-  "timestamp": "2026-09-15T12:09:31.605202+00:00",
+  "timestamp": "2026-09-15T12:16:09.582623+00:00",
   "model": "-",
   "attempts": [
     {
@@ -22,6 +22,6 @@
   "max_waypoints_passed": 16,
   "total_crashes": 12,
   "tool_calls": 201,
-  "wall_clock_seconds": 0.4,
-  "log": "logs/simple_1789474171.jsonl"
+  "wall_clock_seconds": 0.3,
+  "log": "logs/simple_1789474569.jsonl"
 }
