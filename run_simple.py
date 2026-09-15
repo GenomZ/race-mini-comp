@@ -52,6 +52,7 @@ from __future__ import annotations
 
 import os
 import sys
+import time
 
 # ---------------------------------------------------------------------------
 # 1. Load .env FIRST so the banner can show what was loaded.
@@ -158,11 +159,33 @@ print()
 import evaluate  # noqa: E402  (must come AFTER env-var setup above)
 
 if __name__ == "__main__":
+    # Default: log per-tick trace to logs/simple_<timestamp>.log so the trace
+    # is preserved on disk for after-the-fact debugging. Set --no-log (or pass
+    # `--agent-arg log_path=`) to disable.
+    import argparse
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--no-log", action="store_true",
+                        help="disable per-tick log file")
+    parser.add_argument("--log", default=None, metavar="PATH",
+                        help="write per-tick log to PATH (default: logs/simple_<ts>.log)")
+    parsed, extra = parser.parse_known_args(sys.argv[1:])
+    log_path = None
+    if not parsed.no_log:
+        if parsed.log:
+            log_path = parsed.log
+        else:
+            ts = time.strftime("%Y%m%d_%H%M%S")
+            log_dir = os.path.join(os.getcwd(), "logs")
+            os.makedirs(log_dir, exist_ok=True)
+            log_path = os.path.join(log_dir, f"simple_{ts}.log")
+
     argv = [
         "my_agent_simple",
         "--name", "simple",
         "--attempts", "1",
         "--plot",
-        *sys.argv[1:],   # forward --track oval, --attempts 3, etc.
+        *extra,
     ]
+    if log_path:
+        argv += ["--agent-arg", f"log_path={log_path}"]
     evaluate.main(argv)

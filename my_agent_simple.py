@@ -31,6 +31,7 @@ What it gets:
 from __future__ import annotations
 
 import json
+import logging
 import math
 from typing import Any
 
@@ -346,7 +347,17 @@ def recover_if_stuck(obs: dict, recovery: dict | None) -> tuple[tuple[float, flo
 #   the lap is done or we run out of ticks.
 # ============================================================================
 
-def run(env, tools, attempts: int = 1, verbose: bool = True, **kwargs) -> None:
+def run(env, tools, attempts: int = 1, verbose: bool = True,
+        log_path: str | None = None, **kwargs) -> None:
+    """Drive `attempts` laps with per-tick logging.
+
+    Args:
+        env, tools, attempts, verbose: standard evaluate.py kwargs.
+        log_path: if given, every tick is appended to this file (UTF-8 text)
+                  in the format documented at the top of PART 6. If None
+                  (default), no file is written — the trace still appears
+                  on stderr when verbose=True.
+    """
     by = get_tools(tools)
 
     # One-shot read of the static track layout. We do not actually USE the
@@ -356,41 +367,179 @@ def run(env, tools, attempts: int = 1, verbose: bool = True, **kwargs) -> None:
     if verbose:
         track_map = get_track_map(by)
         print(f"[simple-agent] {race_briefing(track_map)}")
+    if log_path:
+        print(f"[simple-agent] logging per-tick trace to {log_path}")
 
-    for attempt_idx in range(attempts):
-        obs = reset(by)
-        recovery = None   # carried across ticks while we are reversing
+    log_handler = setup_log_file(log_path)
+    if log_handler is not None and verbose:
+        # Also stream log records to stderr so a student watching the terminal
+        # can follow the trace without opening the file.
+        stream_handler = logging.StreamHandler()
+        stream_handler.setLevel(logging.INFO)
+        stream_handler.setFormatter(logging.Formatter("%(message)s"))
+        logger.addHandler(stream_handler)
 
-        while not obs["attempt_over"]:
-            # Decide what to do this tick. Recovery takes priority over the
-            # normal controller — the car has to back off the wall before it
-            # can do anything useful.
-            result = recover_if_stuck(obs, recovery)
-            if result[0] is not None:
-                throttle, steering = result[0]
-                recovery = result[1]
+    try:
+        for attempt_idx in range(attempts):
+            obs = reset(by)
+            recovery = None   # carried across ticks while we are reversing
+
+            while not obs["attempt_over"]:
+                # Decide what to do this tick. Recovery takes priority over the
+                # normal controller — the car has to back off the wall before it
+                # can do anything useful.
+                result = recover_if_stuck(obs, recovery)
+                if result[0] is not None:
+                    throttle, steering = result[0]
+                    recovery = result[1]
+                    decision_source = "recovery (reverse)"
+                else:
+                    throttle, steering = decide_controls(obs)
+                    recovery = None
+                    decision_source = "decide_controls (rule-based)"
+
+                # Annotate the obs dict with the attempt index so log_tick()
+                # can label records by attempt.
+                obs_for_log = dict(obs)
+                obs_for_log["_attempt_idx"] = attempt_idx + 1
+
+                # Apply it.
+                obs = drive(by, throttle, steering)
+
+                # Per-tick log: full prompt, the decision we made, and any
+                # events the env emitted. Always log every tick when we are
+                # writing to a file; on the terminal we keep the original
+                # sparse trace (events + every 20th tick) to stay readable.
+                log_tick(
+                    obs_for_log,
+                    throttle, steering,
+                    decision_source,
+                    events=list(obs.get("events", [])),
+                    llm_reply=None,    # no LLM in this agent
+                )
+                if verbose and (obs["events"] or obs["tick"] % 20 == 0):
+                    print(tick_one_lap_text(obs))
+
+            # End-of-attempt summary.
+            result = env.attempts[-1]
+            if result.completed:
+                print(f"[simple-agent] attempt {attempt_idx + 1}: "
+                      f"lap {result.lap_time:.2f}s, "
+                      f"crashes={result.crashes}, "
+                      f"ticks={result.ticks}")
             else:
-                throttle, steering = decide_controls(obs)
-                recovery = None
+                print(f"[simple-agent] attempt {attempt_idx + 1}: "
+                      f"DNF ({result.ended_by}), "
+                      f"waypoints {result.waypoints_passed}/{env.track.n_gates}")
+    finally:
+        # Detach handlers so successive runs (e.g. in tests) don't double-log.
+        for h in list(logger.handlers):
+            logger.removeHandler(h)
+            try:
+                h.close()
+            except Exception:
+                pass
 
-            # Apply it.
-            obs = drive(by, throttle, steering)
 
-            # Optional: print a one-line trace of what just happened.
-            if verbose and (obs["events"] or obs["tick"] % 20 == 0):
-                print(tick_one_lap_text(obs))
+# ============================================================================
+#   PART 6 — PER-TICK LOGGING
+#   ----------------------------------------------------------------------------
+#   This controller has NO LLM in the inner loop. But the logging here is
+#   written to look exactly like an LLM-agent trace would: one block per tick,
+#   with the "prompt" the model would see, the "reply" it would have given,
+#   and the decision the executor made from that. That makes it trivial to
+#   swap decide_controls() for an actual LLM call later — the log shape is
+#   already correct.
+#
+#   Where the log goes:
+#       - If you pass log_path="my_run.log" to run(), every tick is appended
+#         to that file (UTF-8 text, one record per tick).
+#       - If log_path is None, no file is written.
+#       - Independently of the file, the logger INFO-level messages go to
+#         stderr when verbose=True, so a student watching the terminal sees
+#         the same trace.
+#
+#   Record format (one block per tick, blank line between ticks):
+#
+#       === tick 12 (attempt 1) t=6.0s ===
+#       state:
+#         tick 12, t=6.0s, speed=24.5, gate 3 (passed 2/16), ...
+#         -> driving cleanly
+#       prompt-to-llm:
+#         [system]
+#         You are driving a virtual car on a racing track. ...
+#         [user]
+#         tick 12, t=6.0s, speed=24.5, gate 3 (passed 2/16), ...
+#       decision:
+#         source   = decide_controls (rule-based)
+#         throttle = +0.60
+#         steering = -0.12
+#       events: []
+# ============================================================================
 
-        # End-of-attempt summary.
-        result = env.attempts[-1]
-        if result.completed:
-            print(f"[simple-agent] attempt {attempt_idx + 1}: "
-                  f"lap {result.lap_time:.2f}s, "
-                  f"crashes={result.crashes}, "
-                  f"ticks={result.ticks}")
-        else:
-            print(f"[simple-agent] attempt {attempt_idx + 1}: "
-                  f"DNF ({result.ended_by}), "
-                  f"waypoints {result.waypoints_passed}/{env.track.n_gates}")
+LOGGER_NAME = "my_agent_simple"
+logger = logging.getLogger(LOGGER_NAME)
+
+
+def setup_log_file(log_path: str | None) -> logging.Handler | None:
+    """Attach a FileHandler to the module logger. Returns the handler.
+
+    Pass log_path=None to disable file logging (returns None).
+    The handler uses level=INFO so INFO messages from log_tick() are captured.
+    """
+    if not log_path:
+        return None
+    handler = logging.FileHandler(log_path, mode="w", encoding="utf-8")
+    handler.setLevel(logging.INFO)
+    handler.setFormatter(logging.Formatter("%(message)s"))   # raw messages, we format ourselves
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+    return handler
+
+
+def log_tick(
+    obs: dict,
+    throttle: float,
+    steering: float,
+    decision_source: str,
+    events: list[str],
+    llm_reply: str | None = None,
+) -> None:
+    """Write one structured per-tick record to the logger.
+
+    decision_source: short label for where the (throttle, steering) came from.
+        Examples: "decide_controls (rule-based)", "recovery (reverse)".
+    llm_reply: if a hypothetical LLM was consulted, its raw reply text. If
+        None (the case here, since we have no LLM), the reply block is
+        omitted so students see the controller is purely reactive.
+    """
+    state = state_summary(obs)
+    prompt_user = build_user_prompt(obs)            # defined in PART 7 below
+    lines = [
+        f"=== tick {obs['tick']} (attempt {obs.get('_attempt_idx', '?')}) "
+        f"t={obs['sim_time']:.1f}s ===",
+        "state:",
+        f"  {state}",
+        "prompt-to-llm:",
+        f"  [system]",
+        f"  {SYSTEM_PROMPT_FOR_CONTROLS.splitlines()[0]} ...   ({len(SYSTEM_PROMPT_FOR_CONTROLS)} chars)",
+        f"  [user]",
+        f"  {prompt_user}",
+    ]
+    if llm_reply is not None:
+        lines += [
+            "llm-reply:",
+            f"  {llm_reply!r}",
+        ]
+    lines += [
+        "decision:",
+        f"  source   = {decision_source}",
+        f"  throttle = {throttle:+.2f}",
+        f"  steering = {steering:+.2f}",
+        f"events: {events}",
+        "",
+    ]
+    logger.info("\n".join(lines))
 
 
 # ============================================================================
