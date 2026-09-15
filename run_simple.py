@@ -31,8 +31,12 @@ Variables recognised:
 OUTPUTS (all written to results/ by default):
     results/simple.json           lap summary (written by evaluate.py)
     results/simple.png            track plot, requires --plot (default-on here)
-    results/simple_<ts>.log       per-tick log: state, prompt, decision, events
-                                  use --no-log to skip, --log PATH to relocate
+    results/simple_trace.log      per-tick log: state, prompt, decision, events
+                                  This file IS committed to the repo as a
+                                  reference example of what an agent trace
+                                  looks like. Regenerate with run_simple.py
+                                  or pass --no-log to skip, --log PATH for
+                                  a different destination.
 
 If you do not set MINIMAX_API_KEY, the script still runs — the agent's
 call_minimax() helper falls back to BALANCED mode when the API is
@@ -58,7 +62,6 @@ from __future__ import annotations
 
 import os
 import sys
-import time
 
 # ---------------------------------------------------------------------------
 # 1. Load .env FIRST so the banner can show what was loaded.
@@ -165,27 +168,28 @@ print()
 import evaluate  # noqa: E402  (must come AFTER env-var setup above)
 
 if __name__ == "__main__":
-    # Per-tick trace default: results/simple_<timestamp>.log, so all artefacts
-    # for one run (JSON summary, PNG plot, per-tick log) live together in
-    # results/. Pass --no-log to disable the per-tick file, or --log PATH to
-    # write it elsewhere.
+    # Per-tick trace default: results/simple_trace.log (no timestamp). This
+    # file IS shipped with the repo (the .gitignore has an explicit
+    # `!results/simple_trace.log` exception for it) so that anyone who clones
+    # the repo can read a real example of what an agent run looks like
+    # without having to install dependencies and run anything. Pass --no-log
+    # to disable, or --log PATH to write a timestamped copy elsewhere.
     import argparse
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--no-log", action="store_true",
                         help="disable per-tick log file")
     parser.add_argument("--log", default=None, metavar="PATH",
                         help="write per-tick log to PATH "
-                             "(default: results/simple_<ts>.log)")
+                             "(default: results/simple_trace.log)")
     parsed, extra = parser.parse_known_args(sys.argv[1:])
     log_path = None
     if not parsed.no_log:
         if parsed.log:
             log_path = parsed.log
         else:
-            ts = time.strftime("%Y%m%d_%H%M%S")
             log_dir = os.path.join(os.getcwd(), "results")
             os.makedirs(log_dir, exist_ok=True)
-            log_path = os.path.join(log_dir, f"simple_{ts}.log")
+            log_path = os.path.join(log_dir, "simple_trace.log")
 
     argv = [
         "my_agent_simple",

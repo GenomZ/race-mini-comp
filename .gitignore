@@ -9,6 +9,8 @@ dist/
 .env
 logs/
 results/*.log
+# ...except the canonical simple-agent per-tick trace, which we ship with the repo.
+!results/simple_trace.log
 .idea/
 .vscode/
 .DS_Store
