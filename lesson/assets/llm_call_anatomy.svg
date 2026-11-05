@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">Anatomy of an LLM call</title>
+  <desc id="d">A prompt becomes tokens, the model thinks for a while, its text is parsed into JSON, your validator checks and clamps it, and only then does it become controls or a plan. Any failure along the way raises LLMError and the code fallback drives instead.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .n { font-size: 44px; font-weight: 800; fill: #ffffff; }
+      .st { font-size: 25px; font-weight: 800; }
+      .t { font-size: 18.5px; }
+      .ts { font-size: 17px; fill: #52514e; }
+      .who { font-size: 15px; letter-spacing: 1.5px; font-weight: 700; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 21px; }
+      .monos { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 16px; }
+      .kw { fill: #6250d6; font-weight: 700; }
+      .cm { fill: #898781; }
+      .h { font-size: 24px; font-weight: 800; }
+      .foot { font-size: 18px; fill: #898781; }
+    </style>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e34948"/></marker>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTERS 4-6</text>
+  <text x="72" y="152" class="title">Anatomy of an LLM call</text>
+  <text x="72" y="200" class="sub">Six stages between your question and the car. Each one can fail - so every call needs a way out.</text>
+
+  <!-- stage cards: x = 72 + i*258, width 236 -->
+  <!-- 1 prompt -->
+  <g transform="translate(72,244)">
+    <rect width="236" height="372" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <rect width="236" height="70" rx="18" fill="#52514e"/><rect y="52" width="236" height="18" fill="#52514e"/>
+    <text x="20" y="52" class="n">1</text><text x="64" y="46" class="st" style="fill:#ffffff">PROMPT</text>
+    <text x="20" y="100" class="who" style="fill:#52514e">YOUR CODE</text>
+    <text x="20" y="132" class="t">system: the rules</text>
+    <text x="20" y="158" class="t">user: corner table,</text>
+    <text x="20" y="184" class="t">briefing, physics</text>
+    <text x="20" y="210" class="t">+ the JSON you want</text>
+    <rect x="16" y="236" width="204" height="120" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="262" class="monos">driverkit.</text>
+    <text x="28" y="284" class="monos">  track_brief(track)</text>
+    <text x="28" y="312" class="monos">track["briefing"]</text>
+    <text x="28" y="340" class="monos cm"># + "+ = right"!</text>
+  </g>
+  <!-- 2 tokens -->
+  <g transform="translate(330,244)">
+    <rect width="236" height="372" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <rect width="236" height="70" rx="18" fill="#6250d6"/><rect y="52" width="236" height="18" fill="#6250d6"/>
+    <text x="20" y="52" class="n">2</text><text x="64" y="46" class="st" style="fill:#ffffff">TOKENS</text>
+    <text x="20" y="100" class="who" style="fill:#6250d6">THE SHARED KEY</text>
+    <text x="20" y="132" class="t">text is cut into tokens;</text>
+    <text x="20" y="158" class="t">prompt + answer +</text>
+    <text x="20" y="184" class="t">thinking all count</text>
+    <text x="20" y="226" class="ts">Max, one weekend (6 calls):</text>
+    <text x="20" y="250" class="ts">12.6-21.6k prompt +</text>
+    <text x="20" y="274" class="ts">3.6-8.8k completion</text>
+    <text x="20" y="318" class="ts">llm.llm_stats() counts</text>
+    <text x="20" y="342" class="ts">calls, tokens, seconds</text>
+  </g>
+  <!-- 3 latency -->
+  <g transform="translate(588,244)">
+    <rect width="236" height="372" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <rect width="236" height="70" rx="18" fill="#e34948"/><rect y="52" width="236" height="18" fill="#e34948"/>
+    <text x="20" y="52" class="n">3</text><text x="64" y="46" class="st" style="fill:#ffffff">LATENCY</text>
+    <text x="20" y="100" class="who" style="fill:#e34948">MINIMAX THINKS</text>
+    <text x="20" y="132" class="t">the world does not</text>
+    <text x="20" y="158" class="t">wait for the answer</text>
+    <text x="20" y="200" class="ts">rookie, thinking off:</text>
+    <text x="20" y="224" class="t"><tspan font-weight="800">p50 1.16 s</tspan> · p95 1.95 s</text>
+    <text x="20" y="262" class="ts">Max's plan / debrief calls:</text>
+    <text x="20" y="286" class="t"><tspan font-weight="800">4-45 s</tspan> each</text>
+    <text x="20" y="326" class="ts">LLM_EFFORT: none … max</text>
+    <text x="20" y="350" class="ts">(default low)</text>
+  </g>
+  <!-- 4 json -->
+  <g transform="translate(846,244)">
+    <rect width="236" height="372" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <rect width="236" height="70" rx="18" fill="#eda100"/><rect y="52" width="236" height="18" fill="#eda100"/>
+    <text x="20" y="52" class="n" style="fill:#1d1d1b">4</text><text x="64" y="46" class="st" style="fill:#1d1d1b">JSON</text>
+    <text x="20" y="100" class="who" style="fill:#a06d00">agentic_gp.llm</text>
+    <text x="20" y="132" class="t">text → dict, robustly:</text>
+    <text x="20" y="158" class="t">skips &lt;think&gt;, code</text>
+    <text x="20" y="184" class="t">fences, prose, trailing</text>
+    <text x="20" y="210" class="t">commas</text>
+    <text x="20" y="252" class="ts">not JSON? ONE retry:</text>
+    <text x="20" y="276" class="ts">"Reply with ONLY one</text>
+    <text x="20" y="300" class="ts">valid JSON object"</text>
+    <text x="20" y="342" class="monos">llm.chat_json(...)</text>
+  </g>
+  <!-- 5 validator -->
+  <g transform="translate(1104,244)">
+    <rect width="236" height="372" rx="18" fill="#ffffff" stroke="#008300" stroke-width="3"/>
+    <rect width="236" height="70" rx="18" fill="#008300"/><rect y="52" width="236" height="18" fill="#008300"/>
+    <text x="20" y="52" class="n">5</text><text x="64" y="46" class="st" style="fill:#ffffff">VALIDATE</text>
+    <text x="20" y="100" class="who" style="fill:#008300">YOUR CODE - ALWAYS</text>
+    <text x="20" y="132" class="t">wrong type → default</text>
+    <text x="20" y="158" class="t">out of range → clamp</text>
+    <text x="20" y="184" class="t">(L5: 0.6 … 1.15 ×</text>
+    <text x="20" y="210" class="t">the physics speed)</text>
+    <text x="20" y="236" class="t">invented zone → drop</text>
+    <text x="20" y="278" class="ts">problems go back to</text>
+    <text x="20" y="302" class="ts">the model once</text>
+    <text x="20" y="342" class="ts">never trust, always check</text>
+  </g>
+  <!-- 6 controls -->
+  <g transform="translate(1362,244)">
+    <rect width="250" height="372" rx="18" fill="#1d1d1b"/>
+    <text x="20" y="52" class="n">6</text><text x="64" y="46" class="st" style="fill:#ffffff">THE CAR</text>
+    <text x="20" y="100" class="who" style="fill:#d4a017">ONLY CHECKED VALUES</text>
+    <text x="20" y="140" class="t" style="fill:#ffffff">a plan (speed factors,</text>
+    <text x="20" y="166" class="t" style="fill:#ffffff">zones, a radio line)</text>
+    <text x="20" y="200" class="t" style="fill:#ffffff">or controls</text>
+    <text x="20" y="226" class="monos" style="fill:#eda100">(throttle, steering)</text>
+    <text x="20" y="276" class="ts" style="fill:#c3c2b7">code executes it every</text>
+    <text x="20" y="300" class="ts" style="fill:#c3c2b7">0.5 s - fast, safe,</text>
+    <text x="20" y="324" class="ts" style="fill:#c3c2b7">deterministic</text>
+  </g>
+  <!-- arrows between stages -->
+  <g stroke="#52514e" stroke-width="3" marker-end="url(#aK)">
+    <line x1="310" y1="430" x2="328" y2="430"/><line x1="568" y1="430" x2="586" y2="430"/>
+    <line x1="826" y1="430" x2="844" y2="430"/><line x1="1084" y1="430" x2="1102" y2="430"/>
+    <line x1="1342" y1="430" x2="1360" y2="430"/>
+  </g>
+
+  <!-- fallback lane -->
+  <path d="M 448 616 V 668 M 706 616 V 668 M 964 616 V 668 M 1222 616 V 668" stroke="#e34948" stroke-width="3" stroke-dasharray="6 5"/>
+  <rect x="330" y="668" width="1010" height="104" rx="18" fill="#fdecec" stroke="#e34948" stroke-width="2.5"/>
+  <text x="356" y="704" class="h" style="fill:#b3261e">Anything goes wrong → LLMError</text>
+  <text x="356" y="736" class="t">timeout (30 s; 120 s in plan / reflect) · up to 2 retries with backoff (1 s, 2 s) · budget used up ·</text>
+  <text x="356" y="760" class="t">not allowed here (drive, qualifying, race) · still no valid JSON after the retry · no key / no network</text>
+  <path d="M 1340 720 H 1487 V 616" fill="none" stroke="#e34948" stroke-width="3" marker-end="url(#aR)"/>
+  <rect x="1380" y="690" width="232" height="60" rx="14" fill="#ffffff" stroke="#e34948" stroke-width="2.5"/>
+  <text x="1496" y="728" class="h" text-anchor="middle" style="font-size:22px">code FALLBACK</text>
+
+  <!-- the pattern in code -->
+  <rect x="72" y="808" width="900" height="300" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+  <text x="100" y="848" class="h">The pattern (L5 Strategist, shortened)</text>
+  <g transform="translate(100,890)">
+    <text x="0" y="0" class="mono"><tspan class="kw">try</tspan>:</text>
+    <text x="40" y="32" class="mono">raw = llm.chat_json(prompt, system=SYSTEM)</text>
+    <text x="40" y="64" class="mono">plan, problems = self.validate(raw)</text>
+    <text x="40" y="96" class="mono cm"># problems? send them back once, re-validate</text>
+    <text x="0" y="128" class="mono"><tspan class="kw">except</tspan> llm.LLMError:</text>
+    <text x="40" y="160" class="mono">plan, _ = self.validate({})   <tspan class="cm"># = physics plan</tspan></text>
+    <text x="0" y="196" class="mono cm"># the car ALWAYS races - with or without the LLM</text>
+  </g>
+
+  <rect x="1004" y="808" width="608" height="300" rx="18" fill="#f1effc" stroke="#6250d6" stroke-width="2"/>
+  <text x="1032" y="848" class="h">One key, 15-30 students</text>
+  <text x="1032" y="886" class="t">• official budgets: plan 2 · reflect 2 · track 8 calls</text>
+  <text x="1032" y="918" class="t">• LLM_DAILY_CAP: 250 calls per process (default)</text>
+  <text x="1032" y="950" class="t">• LLM_LOG_DIR: every prompt + answer as JSONL</text>
+  <text x="1032" y="982" class="t">• offline: LLM_PROVIDER=mock (tests) or replay</text>
+  <text x="1032" y="1006" class="t">   (recorded cassettes)</text>
+  <text x="1032" y="1046" class="t">• answers vary run to run: run it twice before</text>
+  <text x="1032" y="1070" class="t">   you believe a lap time</text>
+
+  <text x="72" y="1160" class="foot">Defaults from agentic_gp/llm.py (TIMEOUT, LLM_MAX_RETRIES, RETRY_BASE_SECONDS, OFFICIAL_BUDGETS); latencies and tokens from drivers/README.md.  ·  lesson/assets/llm_call_anatomy.svg</text>
+</svg>

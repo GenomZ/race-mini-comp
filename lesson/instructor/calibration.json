@@ -1,0 +1,8631 @@
+{
+ "meta": {
+  "measured": {
+   "bulk": "2026-10-22 (14 s)",
+   "curves": "2026-10-22 (3 s)",
+   "fly": "2026-10-22 (18 s)",
+   "cliff": "2026-10-22 (212 s)",
+   "real": "2026-10-22 (209 s)"
+  },
+  "format": "agp-calibration",
+  "version": 1,
+  "git_commit": "befd421",
+  "python": "3.14.2",
+  "platform": "Windows 11",
+  "seeds": [
+   7,
+   12,
+   21
+  ]
+ },
+ "bulk": {
+  "llm": "mock",
+  "tracks": [
+   "grand_prix",
+   "oval",
+   "sprint",
+   "speedway",
+   "briefing_demo",
+   "random:7",
+   "random:12",
+   "random:21"
+  ],
+  "rows": [
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 85.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.06
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 64.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 106.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.14
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 91.85,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 73.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.25
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 72.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "template",
+    "file": "drivers/template.py",
+    "group": "template",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 77.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 307.4,
+      "crashes": 31,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 151.6,
+      "crashes": 15,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 207.3,
+      "crashes": 21,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 284.35,
+      "crashes": 26,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.19
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 316.4,
+      "crashes": 31,
+      "zone_violations": 9,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 234.75,
+      "crashes": 23,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 212.85,
+      "crashes": 20,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l0_dummy",
+    "file": "drivers/examples/l0_dummy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 217.35,
+      "crashes": 20,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.19
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 66.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 31.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.05
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 74.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 71.7,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.09
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l1_reflex",
+    "file": "drivers/examples/l1_reflex.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 54.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.05
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.09
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.19
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.14
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.8
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.8
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.7
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.72
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.65,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.71
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.68
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.73
+   },
+   {
+    "label": "l2b_racing_line",
+    "file": "drivers/examples/l2b_racing_line.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.7
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 48.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.23
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 24.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.21
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.2,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.31
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.22
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 71.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 34.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.05
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.05
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 82.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 76.65,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.09
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.19
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "l4_llm_rookie",
+    "file": "drivers/examples/l4_llm_rookie.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.05,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.06
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.65,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "l5_llm_strategist",
+    "file": "drivers/examples/l5_llm_strategist.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.09
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.33
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.24
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.35
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.25
+   },
+   {
+    "label": "l6_llm_crew_chief (Max)",
+    "file": "drivers/examples/l6_llm_crew_chief.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 8
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.24
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 2.06
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 1.95
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 1.98
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 2.12
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 2.15
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 2.03
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 2.09
+   },
+   {
+    "label": "l6b_pit_crew_langgraph",
+    "file": "drivers/examples/l6b_pit_crew_langgraph.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 6
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 2.14
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 63.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.45
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.22
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.33
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 69.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.52
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 76.3,
+      "crashes": 0,
+      "zone_violations": 13,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.52
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.53
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.37
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.48
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 93.05,
+      "crashes": 2,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.61
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.38
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 70.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.45
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 108.05,
+      "crashes": 2,
+      "zone_violations": 15,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.55
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.33
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.31
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.35
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 117.1,
+      "crashes": 2,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 7.31
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 3.19
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 78.55,
+      "crashes": 1,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 4.96
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 122.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 7.79
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 134.1,
+      "crashes": 2,
+      "zone_violations": 17,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 7.19
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 86.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 5.83
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 84.75,
+      "crashes": 1,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 5.01
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "group": "example",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 87.05,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 5.56
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 85.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.06
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 64.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 106.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 91.85,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 73.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 72.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch0_pit_lane",
+    "file": "lesson/checkpoints/ch0_pit_lane.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 77.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.15
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 66.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 31.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 74.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 72.75,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 54.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.07
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.06
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.1
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "ch2_planner",
+    "file": "lesson/checkpoints/ch2_planner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.08
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.25
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.37
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.5,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.27
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 66.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.12
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 31.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.06
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.09
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 74.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.17
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 72.75,
+      "crashes": 0,
+      "zone_violations": 1,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.13
+   },
+   {
+    "label": "ch4_pilot",
+    "file": "lesson/checkpoints/ch4_pilot.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 54.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 20
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.11
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.52
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.27
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.41
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.57
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.5,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.55
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.35
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.29
+   },
+   {
+    "label": "ch5_strategist",
+    "file": "lesson/checkpoints/ch5_strategist.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.3
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.27
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.41
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.5,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.4
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.3
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.29
+   },
+   {
+    "label": "ch6_crew_chief",
+    "file": "lesson/checkpoints/ch6_crew_chief.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 1
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 2
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 3
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 4
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.31
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 63.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.43
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.31
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 69.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.46
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 76.3,
+      "crashes": 0,
+      "zone_violations": 13,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.33
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.27
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "group": "handrail",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.3
+   }
+  ]
+ },
+ "curves": {
+  "llm": "mock",
+  "rows": [
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 50.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 48.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 46.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.4
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 24.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 24.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 24.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.29
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.45
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.2,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.4,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.0,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.43
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.46
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.55,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.37
+   },
+   {
+    "label": "l3_learner",
+    "file": "drivers/examples/l3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.44
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 48.05,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "error": null,
+    "wall_s": 0.39
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.95,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.85,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 25.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 24.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "error": null,
+    "wall_s": 0.19
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "error": null,
+    "wall_s": 0.33
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 56.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 57.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 55.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "speedway",
+    "error": null,
+    "wall_s": 0.49
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 59.75,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 60.5,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.05,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.25,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.2,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 58.35,
+      "crashes": 0,
+      "zone_violations": 2,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "briefing_demo",
+    "error": null,
+    "wall_s": 0.46
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:7",
+    "error": null,
+    "wall_s": 0.48
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.9,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.25,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:12",
+    "error": null,
+    "wall_s": 0.38
+   },
+   {
+    "label": "ch3_learner",
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 44.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 42.15,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "random:21",
+    "error": null,
+    "wall_s": 0.34
+   }
+  ],
+  "no_keep_best": [
+   {
+    "label": "ch3_learner",
+    "keep_best": false,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 51.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.8,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 48.05,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.45,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "params": null,
+    "variant": "default",
+    "error": null,
+    "wall_s": 0.42
+   },
+   {
+    "label": "ch3_learner",
+    "keep_best": false,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "params": {
+     "push": 1.3,
+     "crash_cut": 1.0
+    },
+    "variant": "greedy push=1.3 crash_cut=1.0",
+    "error": null,
+    "wall_s": 0.4
+   },
+   {
+    "label": "ch3_learner",
+    "keep_best": false,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.65,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 39.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "params": null,
+    "variant": "default",
+    "error": null,
+    "wall_s": 0.34
+   },
+   {
+    "label": "ch3_learner",
+    "keep_best": false,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 37.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "params": {
+     "push": 1.3,
+     "crash_cut": 1.0
+    },
+    "variant": "greedy push=1.3 crash_cut=1.0",
+    "error": null,
+    "wall_s": 0.37
+   }
+  ],
+  "greedy_with_keep_best": [
+   {
+    "label": "ch3_learner",
+    "keep_best": true,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.5,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 52.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.75,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.7,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 47.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "params": {
+     "push": 1.3,
+     "crash_cut": 1.0
+    },
+    "variant": "greedy push=1.3 crash_cut=1.0",
+    "error": null,
+    "wall_s": 0.38
+   },
+   {
+    "label": "ch3_learner",
+    "keep_best": true,
+    "file": "lesson/checkpoints/ch3_learner.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 40.6,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 38.35,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 37.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 41.1,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     },
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 37.4,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "sprint",
+    "params": {
+     "push": 1.3,
+     "crash_cut": 1.0
+    },
+    "variant": "greedy push=1.3 crash_cut=1.0",
+    "error": null,
+    "wall_s": 0.33
+   }
+  ]
+ },
+ "fly": {
+  "connectome_data": true,
+  "rows": [
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 63.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.39
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 100,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.73
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 4,
+      "zone_violations": 0,
+      "gates": 5,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 1.61
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.5
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 63,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.75
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 198.8,
+      "crashes": 22,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.58
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.2
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 83,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.74
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 80.65,
+      "crashes": 8,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 0.31
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.69
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 58,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.77
+   },
+   {
+    "label": "ch7_fly_fixed",
+    "file": "lesson/checkpoints/ch7_fly_fixed.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 65.3,
+      "crashes": 6,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.25
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 93.05,
+      "crashes": 2,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.43
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 100,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.52
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 3,
+      "zone_violations": 0,
+      "gates": 5,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 1.4
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.32
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 74,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.46
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 249.6,
+      "crashes": 29,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.61
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.18
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 83,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.47
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 79.9,
+      "crashes": 8,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 0.23
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.41
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 61,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.5
+   },
+   {
+    "label": "fly_broken",
+    "file": "drivers/examples/fly_broken.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 124.6,
+      "crashes": 14,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.36
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 49.2,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 3.07
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 162.6,
+      "crashes": 17,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 4.91
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 154.95,
+      "crashes": 16,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 4.73
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 149.5,
+      "crashes": 15,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 4.69
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 126.35,
+      "crashes": 9,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 4.82
+   },
+   {
+    "label": "fly_connectome",
+    "file": "drivers/examples/fly_connectome.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 4,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 12.16
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 63.3,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.34
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 100,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.35
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 4,
+      "zone_violations": 0,
+      "gates": 5,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 1.26
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.13
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 63,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.27
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 198.8,
+      "crashes": 22,
+      "zone_violations": 0,
+      "gates": 16,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "grand_prix",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.48
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 29.0,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": null,
+    "params": null,
+    "error": null,
+    "wall_s": 0.15
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 83,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 0,
+    "params": {
+     "SCRAMBLE": 0
+    },
+    "error": null,
+    "wall_s": 1.28
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 80.65,
+      "crashes": 8,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 1,
+    "params": {
+     "SCRAMBLE": 1
+    },
+    "error": null,
+    "wall_s": 0.26
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 0,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 2,
+    "params": {
+     "SCRAMBLE": 2
+    },
+    "error": null,
+    "wall_s": 1.31
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": false,
+      "time": null,
+      "crashes": 58,
+      "zone_violations": 0,
+      "gates": 0,
+      "status": "DNF (max ticks)",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 3,
+    "params": {
+     "SCRAMBLE": 3
+    },
+    "error": null,
+    "wall_s": 1.32
+   },
+   {
+    "label": "fly_toy",
+    "file": "drivers/examples/fly_toy.py",
+    "attempts": [
+     {
+      "phase": "session",
+      "completed": true,
+      "time": 65.3,
+      "crashes": 6,
+      "zone_violations": 0,
+      "gates": 8,
+      "status": "",
+      "late_ticks": 0,
+      "llm_calls_cum": 0
+     }
+    ],
+    "track": "oval",
+    "scramble": 4,
+    "params": {
+     "SCRAMBLE": 4
+    },
+    "error": null,
+    "wall_s": 0.25
+   }
+  ]
+ },
+ "cliff": {
+  "mode": "realtime (SessionConfig(realtime=True)), real time.sleep() in drive()",
+  "rows": [
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "track": "grand_prix",
+    "think": 0.0,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 66.7,
+     "crashes": 0,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 0,
+     "llm_calls_cum": 0
+    },
+    "ticks": 134,
+    "wall_s": 0.1,
+    "think_max_s": 0.0
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "track": "grand_prix",
+    "think": 0.5,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 220.25,
+     "crashes": 17,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 136,
+     "llm_calls_cum": 0
+    },
+    "ticks": 271,
+    "wall_s": 68.9,
+    "think_max_s": 0.506
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "track": "grand_prix",
+    "think": 1.0,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 445.95,
+     "crashes": 46,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 288,
+     "llm_calls_cum": 0
+    },
+    "ticks": 432,
+    "wall_s": 145.0,
+    "think_max_s": 1.021
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "track": "grand_prix",
+    "think": 2.0,
+    "attempt": {
+     "phase": "session",
+     "completed": false,
+     "time": null,
+     "crashes": 70,
+     "zone_violations": 0,
+     "gates": 15,
+     "status": "DNF (max ticks)",
+     "late_ticks": 400,
+     "llm_calls_cum": 0
+    },
+    "ticks": 500,
+    "wall_s": 200.8,
+    "think_max_s": 2.008
+   },
+   {
+    "label": "ch1_reflex",
+    "file": "lesson/checkpoints/ch1_reflex.py",
+    "track": "grand_prix",
+    "think": 3.0,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 573.4,
+     "crashes": 66,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 418,
+     "llm_calls_cum": 0
+    },
+    "ticks": 487,
+    "wall_s": 210.6,
+    "think_max_s": 3.006
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "track": "grand_prix",
+    "think": 0.0,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 52.5,
+     "crashes": 0,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 0,
+     "llm_calls_cum": 0
+    },
+    "ticks": 105,
+    "wall_s": 0.1,
+    "think_max_s": 0.008
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "track": "grand_prix",
+    "think": 0.5,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 434.15,
+     "crashes": 42,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 225,
+     "llm_calls_cum": 0
+    },
+    "ticks": 449,
+    "wall_s": 114.0,
+    "think_max_s": 0.507
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "track": "grand_prix",
+    "think": 1.0,
+    "attempt": {
+     "phase": "session",
+     "completed": false,
+     "time": null,
+     "crashes": 57,
+     "zone_violations": 0,
+     "gates": 14,
+     "status": "DNF (max ticks)",
+     "late_ticks": 334,
+     "llm_calls_cum": 0
+    },
+    "ticks": 500,
+    "wall_s": 168.3,
+    "think_max_s": 1.026
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "track": "grand_prix",
+    "think": 2.0,
+    "attempt": {
+     "phase": "session",
+     "completed": false,
+     "time": null,
+     "crashes": 81,
+     "zone_violations": 0,
+     "gates": 8,
+     "status": "DNF (max ticks)",
+     "late_ticks": 400,
+     "llm_calls_cum": 0
+    },
+    "ticks": 500,
+    "wall_s": 200.9,
+    "think_max_s": 2.007
+   },
+   {
+    "label": "l2_planner",
+    "file": "drivers/examples/l2_planner.py",
+    "track": "grand_prix",
+    "think": 3.0,
+    "attempt": {
+     "phase": "session",
+     "completed": true,
+     "time": 465.65,
+     "crashes": 58,
+     "zone_violations": 0,
+     "gates": 16,
+     "status": "",
+     "late_ticks": 302,
+     "llm_calls_cum": 0
+    },
+    "ticks": 352,
+    "wall_s": 153.5,
+    "think_max_s": 3.007
+   }
+  ]
+ },
+ "real": {
+  "provider": "minimax:MiniMax-M3",
+  "weekends": [
+   {
+    "track": "grand_prix",
+    "wall_s": 49.1,
+    "drivers": [
+     {
+      "name": "Max",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 46.5,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 45.4,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 4
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 44.9,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 44.9,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 44.9,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       }
+      ],
+      "llm": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 20281,
+       "completion_tokens": 6070,
+       "seconds": 43.172
+      },
+      "per_call": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 20281,
+       "completion_tokens": 6070,
+       "p50_s": 5.07,
+       "p95_s": 19.88,
+       "max_s": 19.88,
+       "total_s": 43.2
+      },
+      "status": ""
+     },
+     {
+      "name": "CP5 Strategist",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 53.85,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 52.85,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 50.95,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 50.95,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 50.95,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       }
+      ],
+      "llm": {
+       "calls": 2,
+       "errors": 0,
+       "prompt_tokens": 3415,
+       "completion_tokens": 1319,
+       "seconds": 7.82
+      },
+      "per_call": {
+       "calls": 2,
+       "errors": 0,
+       "prompt_tokens": 3415,
+       "completion_tokens": 1319,
+       "p50_s": 3.91,
+       "p95_s": 5.9,
+       "max_s": 5.9,
+       "total_s": 7.8
+      },
+      "status": ""
+     },
+     {
+      "name": "CP6 Crew Chief",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 52.5,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 52.55,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 4
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 51.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 51.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 51.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       }
+      ],
+      "llm": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 13457,
+       "completion_tokens": 4245,
+       "seconds": 37.432
+      },
+      "per_call": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 13457,
+       "completion_tokens": 4245,
+       "p50_s": 3.35,
+       "p95_s": 18.4,
+       "max_s": 18.4,
+       "total_s": 37.4
+      },
+      "status": ""
+     }
+    ],
+    "standings": [
+     {
+      "position": 1,
+      "name": "Max",
+      "race_time": 44.9,
+      "crashes": 0,
+      "status": ""
+     },
+     {
+      "position": 2,
+      "name": "CP5 Strategist",
+      "race_time": 50.95,
+      "crashes": 0,
+      "status": ""
+     },
+     {
+      "position": 3,
+      "name": "CP6 Crew Chief",
+      "race_time": 51.3,
+      "crashes": 0,
+      "status": ""
+     }
+    ]
+   },
+   {
+    "track": "random:7",
+    "wall_s": 110.2,
+    "drivers": [
+     {
+      "name": "Max",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 41.45,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 41.6,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 4
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 41.95,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 41.45,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 41.45,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 6
+       }
+      ],
+      "llm": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 19142,
+       "completion_tokens": 6543,
+       "seconds": 67.77
+      },
+      "per_call": {
+       "calls": 6,
+       "errors": 0,
+       "prompt_tokens": 19142,
+       "completion_tokens": 6543,
+       "p50_s": 7.07,
+       "p95_s": 39.83,
+       "max_s": 39.83,
+       "total_s": 67.8
+      },
+      "status": ""
+     },
+     {
+      "name": "CP5 Strategist",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 44.85,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 44.4,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 42.05,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 42.05,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 42.05,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       }
+      ],
+      "llm": {
+       "calls": 2,
+       "errors": 0,
+       "prompt_tokens": 2623,
+       "completion_tokens": 606,
+       "seconds": 4.156
+      },
+      "per_call": {
+       "calls": 2,
+       "errors": 0,
+       "prompt_tokens": 2623,
+       "completion_tokens": 606,
+       "p50_s": 2.08,
+       "p95_s": 2.7,
+       "max_s": 2.7,
+       "total_s": 4.2
+      },
+      "status": ""
+     },
+     {
+      "name": "CP6 Crew Chief",
+      "attempts": [
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 45.05,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 2
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 43.35,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 3
+       },
+       {
+        "phase": "practice",
+        "completed": true,
+        "time": 43.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 5
+       },
+       {
+        "phase": "qualifying",
+        "completed": true,
+        "time": 43.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 5
+       },
+       {
+        "phase": "race",
+        "completed": true,
+        "time": 43.3,
+        "crashes": 0,
+        "zone_violations": 0,
+        "gates": 16,
+        "status": "",
+        "late_ticks": 0,
+        "llm_calls_cum": 5
+       }
+      ],
+      "llm": {
+       "calls": 5,
+       "errors": 0,
+       "prompt_tokens": 12546,
+       "completion_tokens": 11216,
+       "seconds": 101.861
+      },
+      "per_call": {
+       "calls": 5,
+       "errors": 0,
+       "prompt_tokens": 12546,
+       "completion_tokens": 11216,
+       "p50_s": 9.24,
+       "p95_s": 44.5,
+       "max_s": 44.5,
+       "total_s": 101.9
+      },
+      "status": ""
+     }
+    ],
+    "standings": [
+     {
+      "position": 1,
+      "name": "Max",
+      "race_time": 41.45,
+      "crashes": 0,
+      "status": ""
+     },
+     {
+      "position": 2,
+      "name": "CP5 Strategist",
+      "race_time": 42.05,
+      "crashes": 0,
+      "status": ""
+     },
+     {
+      "position": 3,
+      "name": "CP6 Crew Chief",
+      "race_time": 43.3,
+      "crashes": 0,
+      "status": ""
+     }
+    ]
+   }
+  ],
+  "pilot": {
+   "attempt": {
+    "phase": "session",
+    "completed": true,
+    "time": 65.75,
+    "crashes": 0,
+    "zone_violations": 0,
+    "gates": 16,
+    "status": "",
+    "late_ticks": 0,
+    "llm_calls_cum": 20
+   },
+   "llm": {
+    "calls": 20,
+    "prompt_tokens": 8410,
+    "completion_tokens": 521,
+    "seconds": 22.005,
+    "errors": 0,
+    "cache_hits": 0,
+    "mode": "open",
+    "calls_left": null
+   },
+   "per_call": {
+    "p50_s": 1.04,
+    "p95_s": 1.45,
+    "max_s": 4.2,
+    "total_s": 22.0
+   },
+   "unusable": 0
+  },
+  "briefing": {
+   "attempt": {
+    "phase": "practice",
+    "completed": true,
+    "time": 61.15,
+    "crashes": 0,
+    "zone_violations": 0,
+    "gates": 16,
+    "status": "",
+    "late_ticks": 0,
+    "llm_calls_cum": 1
+   },
+   "llm": {
+    "calls": 1,
+    "prompt_tokens": 1189,
+    "completion_tokens": 2060,
+    "seconds": 22.745,
+    "errors": 0,
+    "cache_hits": 0,
+    "mode": "official",
+    "calls_left": 7
+   },
+   "per_call": {
+    "p50_s": 22.75,
+    "p95_s": 22.75,
+    "max_s": 22.75,
+    "total_s": 22.7
+   }
+  }
+ }
+}

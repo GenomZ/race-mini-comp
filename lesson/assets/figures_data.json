@@ -1,0 +1,1502 @@
+{
+ "_about": "Measured by lesson/make_figures.py with agentic_gp (LLM_PROVIDER=mock). Times = race time (sim time + 5 s per crash + 1 s per tick too fast in a zone).",
+ "crash_loop": {
+  "classic": {
+   "completed": false,
+   "crashes": 232,
+   "gates": 5,
+   "ticks": 500,
+   "time": null
+  },
+  "marshal": {
+   "completed": true,
+   "crashes": 15,
+   "gates": 16,
+   "ticks": 150,
+   "time": 149.95
+  }
+ },
+ "fly_real_vs_scrambled": [
+  {
+   "crashes": 0,
+   "gates": 8,
+   "scramble": null,
+   "ticks": 99,
+   "time": 49.2,
+   "track": "oval"
+  },
+  {
+   "crashes": 17,
+   "gates": 8,
+   "scramble": 0,
+   "ticks": 156,
+   "time": 162.6,
+   "track": "oval"
+  },
+  {
+   "crashes": 16,
+   "gates": 8,
+   "scramble": 1,
+   "ticks": 150,
+   "time": 154.95,
+   "track": "oval"
+  },
+  {
+   "crashes": 15,
+   "gates": 8,
+   "scramble": 2,
+   "ticks": 149,
+   "time": 149.5,
+   "track": "oval"
+  },
+  {
+   "crashes": 9,
+   "gates": 8,
+   "scramble": 3,
+   "ticks": 163,
+   "time": 126.35,
+   "track": "oval"
+  },
+  {
+   "crashes": 4,
+   "gates": 0,
+   "scramble": 4,
+   "ticks": 500,
+   "time": null,
+   "track": "oval"
+  },
+  {
+   "crashes": 1,
+   "gates": 16,
+   "scramble": null,
+   "ticks": 148,
+   "time": 78.55,
+   "track": "sprint"
+  },
+  {
+   "crashes": 22,
+   "gates": 16,
+   "scramble": 0,
+   "ticks": 209,
+   "time": 214.4,
+   "track": "sprint"
+  },
+  {
+   "crashes": 29,
+   "gates": 16,
+   "scramble": 1,
+   "ticks": 236,
+   "time": 263.0,
+   "track": "sprint"
+  },
+  {
+   "crashes": 27,
+   "gates": 16,
+   "scramble": 2,
+   "ticks": 217,
+   "time": 243.45,
+   "track": "sprint"
+  },
+  {
+   "crashes": 20,
+   "gates": 16,
+   "scramble": 3,
+   "ticks": 223,
+   "time": 211.2,
+   "track": "sprint"
+  },
+  {
+   "crashes": 10,
+   "gates": 2,
+   "scramble": 4,
+   "ticks": 500,
+   "time": null,
+   "track": "sprint"
+  },
+  {
+   "crashes": 2,
+   "gates": 16,
+   "scramble": null,
+   "ticks": 215,
+   "time": 117.1,
+   "track": "grand_prix"
+  },
+  {
+   "crashes": 34,
+   "gates": 16,
+   "scramble": 0,
+   "ticks": 290,
+   "time": 314.8,
+   "track": "grand_prix"
+  },
+  {
+   "crashes": 39,
+   "gates": 16,
+   "scramble": 1,
+   "ticks": 339,
+   "time": 364.4,
+   "track": "grand_prix"
+  },
+  {
+   "crashes": 36,
+   "gates": 16,
+   "scramble": 2,
+   "ticks": 309,
+   "time": 334.05,
+   "track": "grand_prix"
+  },
+  {
+   "crashes": 25,
+   "gates": 16,
+   "scramble": 3,
+   "ticks": 334,
+   "time": 292.0,
+   "track": "grand_prix"
+  },
+  {
+   "crashes": 9,
+   "gates": 1,
+   "scramble": 4,
+   "ticks": 500,
+   "time": null,
+   "track": "grand_prix"
+  }
+ ],
+ "fly_tuning": {
+  "angles": [
+   -90,
+   -80,
+   -70,
+   -60,
+   -50,
+   -40,
+   -30,
+   -20,
+   -10,
+   0,
+   10,
+   20,
+   30,
+   40,
+   50,
+   60,
+   70,
+   80,
+   90
+  ],
+  "dna02_real": {
+   "DNa02_L": [
+    156.0,
+    156.0,
+    158.0,
+    152.0,
+    116.0,
+    94.0,
+    24.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "DNa02_R": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    4.0,
+    50.0,
+    90.0,
+    112.0,
+    126.0,
+    134.0,
+    136.0
+   ]
+  },
+  "lateralization_real": 0.828,
+  "lateralization_scrambled": {
+   "0": -0.002,
+   "1": -0.098,
+   "2": -0.016,
+   "3": -0.002,
+   "4": -0.058
+  },
+  "real_steer": [
+   -1.0,
+   -1.0,
+   -1.0,
+   -1.0,
+   -1.0,
+   -1.0,
+   -0.646,
+   -0.509,
+   -0.486,
+   -0.011,
+   0.415,
+   0.44,
+   0.528,
+   0.88,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "ladder": [
+  {
+   "completed": true,
+   "crashes": 31,
+   "family": "none",
+   "gates": 16,
+   "kind": "no perception",
+   "label": "L0 Dummy",
+   "stem": "l0_dummy",
+   "ticks": 305,
+   "time": 307.4
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "reflex",
+   "gates": 16,
+   "kind": "simple reflex (starter)",
+   "label": "Template",
+   "stem": "template",
+   "ticks": 172,
+   "time": 85.85
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "reflex",
+   "gates": 16,
+   "kind": "simple reflex",
+   "label": "L1 Reflex",
+   "stem": "l1_reflex",
+   "ticks": 134,
+   "time": 66.7
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "model",
+   "gates": 16,
+   "kind": "model-based, goal-based",
+   "label": "L2 Planner",
+   "stem": "l2_planner",
+   "ticks": 105,
+   "time": 52.5
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "model",
+   "gates": 16,
+   "kind": "model-based, better path",
+   "label": "L2b Racing line",
+   "stem": "l2b_racing_line",
+   "ticks": 100,
+   "time": 49.95
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "learning",
+   "gates": 16,
+   "kind": "learning (best of 4)",
+   "label": "L3 Learner",
+   "stem": "l3_learner",
+   "ticks": 97,
+   "time": 48.3
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "llm_policy",
+   "gates": 16,
+   "kind": "LLM policy (mock = code fallback)",
+   "label": "L4 Rookie",
+   "stem": "l4_llm_rookie",
+   "ticks": 144,
+   "time": 71.8
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "llm_planner",
+   "gates": 16,
+   "kind": "LLM planner (mock = physics plan)",
+   "label": "L5 Strategist",
+   "stem": "l5_llm_strategist",
+   "ticks": 100,
+   "time": 49.95
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "crew",
+   "gates": 16,
+   "kind": "tool-using multi-role (mock, best of 4)",
+   "label": "L6 Max",
+   "stem": "l6_llm_crew_chief",
+   "ticks": 100,
+   "time": 49.95
+  },
+  {
+   "completed": true,
+   "crashes": 0,
+   "family": "spiking",
+   "gates": 16,
+   "kind": "spiking toy (57 LIF neurons)",
+   "label": "Fly Toy",
+   "stem": "fly_toy",
+   "ticks": 127,
+   "time": 63.3
+  },
+  {
+   "completed": true,
+   "crashes": 2,
+   "family": "spiking",
+   "gates": 16,
+   "kind": "spiking, real FlyWire wiring",
+   "label": "Fly Connectome",
+   "stem": "fly_connectome",
+   "ticks": 215,
+   "time": 117.1
+  }
+ ],
+ "latency_cliff": [
+  {
+   "completed": true,
+   "crashes": 0,
+   "gates": 16,
+   "late_ticks": 0,
+   "latency": 0.0,
+   "ticks": 105,
+   "time": 52.5
+  },
+  {
+   "completed": true,
+   "crashes": 42,
+   "gates": 16,
+   "late_ticks": 225,
+   "latency": 0.5,
+   "ticks": 449,
+   "time": 434.15
+  },
+  {
+   "completed": false,
+   "crashes": 57,
+   "gates": 14,
+   "late_ticks": 334,
+   "latency": 1.0,
+   "ticks": 500,
+   "time": null
+  },
+  {
+   "completed": false,
+   "crashes": 81,
+   "gates": 8,
+   "late_ticks": 400,
+   "latency": 2.0,
+   "ticks": 500,
+   "time": null
+  },
+  {
+   "completed": true,
+   "crashes": 58,
+   "gates": 16,
+   "late_ticks": 302,
+   "latency": 3.0,
+   "ticks": 352,
+   "time": 465.65
+  }
+ ],
+ "learning_curve": {
+  "grand_prix": [
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 105,
+    "time": 52.5
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 102,
+    "time": 50.55
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 99,
+    "time": 49.3
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 97,
+    "time": 48.3
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 96,
+    "time": 47.6
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 93,
+    "time": 46.3
+   }
+  ],
+  "speedway": [
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 122,
+    "time": 60.6
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 115,
+    "time": 57.4
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 114,
+    "time": 57.0
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 114,
+    "time": 57.0
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 111,
+    "time": 55.35
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 111,
+    "time": 55.15
+   }
+  ],
+  "sprint": [
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 83,
+    "time": 41.4
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 82,
+    "time": 40.9
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 79,
+    "time": 39.5
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 80,
+    "time": 39.8
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 79,
+    "time": 39.3
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 83,
+    "time": 41.5
+   }
+  ]
+ },
+ "learning_gone_wrong": {
+  "keep_best": [
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 170,
+    "time": 84.65
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 147,
+    "time": 73.1
+   },
+   {
+    "completed": true,
+    "crashes": 2,
+    "gates": 16,
+    "ticks": 131,
+    "time": 75.15
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 127,
+    "time": 63.4
+   },
+   {
+    "completed": true,
+    "crashes": 2,
+    "gates": 16,
+    "ticks": 118,
+    "time": 68.65
+   },
+   {
+    "completed": true,
+    "crashes": 1,
+    "gates": 16,
+    "ticks": 119,
+    "time": 64.1
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 118,
+    "time": 58.55
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 109,
+    "time": 54.2
+   },
+   {
+    "completed": true,
+    "crashes": 1,
+    "gates": 16,
+    "ticks": 110,
+    "time": 60.0
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 106,
+    "time": 53.0
+   }
+  ],
+  "no_keep_best": [
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 170,
+    "time": 84.65
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 147,
+    "time": 73.1
+   },
+   {
+    "completed": true,
+    "crashes": 2,
+    "gates": 16,
+    "ticks": 131,
+    "time": 75.15
+   },
+   {
+    "completed": true,
+    "crashes": 1,
+    "gates": 16,
+    "ticks": 114,
+    "time": 61.55
+   },
+   {
+    "completed": true,
+    "crashes": 4,
+    "gates": 16,
+    "ticks": 115,
+    "time": 77.2
+   },
+   {
+    "completed": true,
+    "crashes": 7,
+    "gates": 16,
+    "ticks": 122,
+    "time": 96.0
+   },
+   {
+    "completed": true,
+    "crashes": 0,
+    "gates": 16,
+    "ticks": 110,
+    "time": 54.55
+   },
+   {
+    "completed": true,
+    "crashes": 3,
+    "gates": 16,
+    "ticks": 110,
+    "time": 69.55
+   },
+   {
+    "completed": true,
+    "crashes": 5,
+    "gates": 16,
+    "ticks": 116,
+    "time": 82.85
+   },
+   {
+    "completed": true,
+    "crashes": 2,
+    "gates": 16,
+    "ticks": 108,
+    "time": 64.0
+   }
+  ],
+  "track": "grand_prix"
+ },
+ "overfitting_matrix": {
+  "memorizer_table": [
+   25.64,
+   38.93,
+   34.61,
+   31.38,
+   29.85,
+   27.95,
+   21.19,
+   33.4,
+   37.38,
+   32.9,
+   25.06,
+   28.42,
+   35.08,
+   31.38,
+   33.07,
+   39.84
+  ],
+  "rows": {
+   "L1 Reflex": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 134,
+     "time": 66.7
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 64,
+     "time": 31.65
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 119,
+     "time": 59.3
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 114,
+     "time": 57.0
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 113,
+     "time": 56.05
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 149,
+     "time": 74.3
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 100,
+     "time": 50.0
+    }
+   },
+   "L1 tuned at home\ncap=40, turn_k=1.0": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 113,
+     "time": 56.4
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 56,
+     "time": 27.7
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 106,
+     "time": 52.65
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 99,
+     "time": 49.3
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 96,
+     "time": 47.8
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 129,
+     "time": 64.15
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 89,
+     "time": 44.35
+    }
+   },
+   "L2 Planner": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 105,
+     "time": 52.5
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 52,
+     "time": 25.95
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 94,
+     "time": 46.75
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 88,
+     "time": 43.6
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 88,
+     "time": 43.8
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 122,
+     "time": 60.6
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 83,
+     "time": 41.4
+    }
+   },
+   "L2b Racing line": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 100,
+     "time": 49.95
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 50,
+     "time": 25.0
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 90,
+     "time": 45.0
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 80,
+     "time": 39.75
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 83,
+     "time": 41.1
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 117,
+     "time": 58.2
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 77,
+     "time": 38.4
+    }
+   },
+   "L3 Learner\nbest of 4": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 97,
+     "time": 48.3
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 50,
+     "time": 24.7
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 88,
+     "time": 44.0
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 82,
+     "time": 40.75
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 83,
+     "time": 41.2
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 114,
+     "time": 57.0
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 79,
+     "time": 39.5
+    }
+   },
+   "Memorizer\nhome speed table": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 106,
+     "time": 52.75
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 1,
+     "gates": 8,
+     "ticks": 63,
+     "time": 36.35
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 2,
+     "gates": 16,
+     "ticks": 110,
+     "time": 64.55
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 2,
+     "gates": 16,
+     "ticks": 100,
+     "time": 59.95
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 1,
+     "gates": 16,
+     "ticks": 104,
+     "time": 56.9
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 134,
+     "time": 66.8
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 5,
+     "gates": 16,
+     "ticks": 90,
+     "time": 69.65
+    }
+   },
+   "Template (starter)": {
+    "grand_prix": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 172,
+     "time": 85.85
+    },
+    "oval": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 8,
+     "ticks": 89,
+     "time": 44.4
+    },
+    "random:1": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 164,
+     "time": 81.65
+    },
+    "random:2": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 152,
+     "time": 75.8
+    },
+    "random:3": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 154,
+     "time": 77.0
+    },
+    "speedway": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 213,
+     "time": 106.3
+    },
+    "sprint": {
+     "completed": true,
+     "crashes": 0,
+     "gates": 16,
+     "ticks": 130,
+     "time": 64.8
+    }
+   }
+  },
+  "tracks": [
+   "grand_prix",
+   "oval",
+   "sprint",
+   "speedway",
+   "random:1",
+   "random:2",
+   "random:3"
+  ]
+ },
+ "speed_profile": {
+  "grip_min": 16.5,
+  "l2_lap": {
+   "completed": true,
+   "crashes": 0,
+   "gates": 16,
+   "ticks": 105,
+   "time": 52.5
+  },
+  "planned_min": 16.5,
+  "track": "grand_prix"
+ },
+ "stopping": [
+  {
+   "blind": 5.0,
+   "braking": 2.0,
+   "speed": 10,
+   "total": 7.0
+  },
+  {
+   "blind": 10.0,
+   "braking": 8.0,
+   "speed": 20,
+   "total": 18.0
+  },
+  {
+   "blind": 15.0,
+   "braking": 18.0,
+   "speed": 30,
+   "total": 33.0
+  },
+  {
+   "blind": 20.0,
+   "braking": 32.0,
+   "speed": 40,
+   "total": 52.0
+  }
+ ],
+ "tracks": {
+  "briefing_demo": {
+   "corners": [
+    {
+     "direction": "left",
+     "from_wp": 3,
+     "id": "T1",
+     "min_radius": 47.6,
+     "to_wp": 4,
+     "v_max": 30.9
+    },
+    {
+     "direction": "left",
+     "from_wp": 4,
+     "id": "T2",
+     "min_radius": 27.7,
+     "to_wp": 5,
+     "v_max": 23.5
+    },
+    {
+     "direction": "right",
+     "from_wp": 4,
+     "id": "T3",
+     "min_radius": 32.5,
+     "to_wp": 6,
+     "v_max": 25.5
+    },
+    {
+     "direction": "right",
+     "from_wp": 5,
+     "id": "T4",
+     "min_radius": 21.7,
+     "to_wp": 7,
+     "v_max": 20.8
+    },
+    {
+     "direction": "left",
+     "from_wp": 6,
+     "id": "T5",
+     "min_radius": 13.7,
+     "to_wp": 8,
+     "v_max": 16.5
+    },
+    {
+     "direction": "left",
+     "from_wp": 10,
+     "id": "T6",
+     "min_radius": 21.7,
+     "to_wp": 11,
+     "v_max": 20.8
+    },
+    {
+     "direction": "right",
+     "from_wp": 10,
+     "id": "T7",
+     "min_radius": 22.2,
+     "to_wp": 12,
+     "v_max": 21.1
+    },
+    {
+     "direction": "right",
+     "from_wp": 11,
+     "id": "T8",
+     "min_radius": 43.8,
+     "to_wp": 13,
+     "v_max": 29.6
+    },
+    {
+     "direction": "left",
+     "from_wp": 12,
+     "id": "T9",
+     "min_radius": 28.2,
+     "to_wp": 14,
+     "v_max": 23.8
+    },
+    {
+     "direction": "left",
+     "from_wp": 14,
+     "id": "T10",
+     "min_radius": 57.8,
+     "to_wp": 15,
+     "v_max": 34.0
+    }
+   ],
+   "gates": 16,
+   "half_width": 9.0,
+   "length": 1554.1,
+   "name": "Grand Prix Circuit (yellow flag)",
+   "zones": [
+    {
+     "from_index": 202,
+     "label": "Yellow flag",
+     "max_speed": 15.0,
+     "to_index": 247
+    }
+   ]
+  },
+  "grand_prix": {
+   "corners": [
+    {
+     "direction": "left",
+     "from_wp": 3,
+     "id": "T1",
+     "min_radius": 47.6,
+     "to_wp": 4,
+     "v_max": 30.9
+    },
+    {
+     "direction": "left",
+     "from_wp": 4,
+     "id": "T2",
+     "min_radius": 27.7,
+     "to_wp": 5,
+     "v_max": 23.5
+    },
+    {
+     "direction": "right",
+     "from_wp": 4,
+     "id": "T3",
+     "min_radius": 32.5,
+     "to_wp": 6,
+     "v_max": 25.5
+    },
+    {
+     "direction": "right",
+     "from_wp": 5,
+     "id": "T4",
+     "min_radius": 21.7,
+     "to_wp": 7,
+     "v_max": 20.8
+    },
+    {
+     "direction": "left",
+     "from_wp": 6,
+     "id": "T5",
+     "min_radius": 13.7,
+     "to_wp": 8,
+     "v_max": 16.5
+    },
+    {
+     "direction": "left",
+     "from_wp": 10,
+     "id": "T6",
+     "min_radius": 21.7,
+     "to_wp": 11,
+     "v_max": 20.8
+    },
+    {
+     "direction": "right",
+     "from_wp": 10,
+     "id": "T7",
+     "min_radius": 22.2,
+     "to_wp": 12,
+     "v_max": 21.1
+    },
+    {
+     "direction": "right",
+     "from_wp": 11,
+     "id": "T8",
+     "min_radius": 43.8,
+     "to_wp": 13,
+     "v_max": 29.6
+    },
+    {
+     "direction": "left",
+     "from_wp": 12,
+     "id": "T9",
+     "min_radius": 28.2,
+     "to_wp": 14,
+     "v_max": 23.8
+    },
+    {
+     "direction": "left",
+     "from_wp": 14,
+     "id": "T10",
+     "min_radius": 57.8,
+     "to_wp": 15,
+     "v_max": 34.0
+    }
+   ],
+   "gates": 16,
+   "half_width": 9.0,
+   "length": 1554.1,
+   "name": "Grand Prix Circuit",
+   "zones": []
+  },
+  "oval": {
+   "corners": [
+    {
+     "direction": "left",
+     "from_wp": 2,
+     "id": "T1",
+     "min_radius": 20.5,
+     "to_wp": 4,
+     "v_max": 20.2
+    },
+    {
+     "direction": "left",
+     "from_wp": 6,
+     "id": "T2",
+     "min_radius": 20.5,
+     "to_wp": 0,
+     "v_max": 20.2
+    }
+   ],
+   "gates": 8,
+   "half_width": 10.0,
+   "length": 823.7,
+   "name": "Oval",
+   "zones": []
+  },
+  "speedway": {
+   "corners": [
+    {
+     "direction": "left",
+     "from_wp": 4,
+     "id": "T1",
+     "min_radius": 57.4,
+     "to_wp": 6,
+     "v_max": 33.9
+    },
+    {
+     "direction": "left",
+     "from_wp": 6,
+     "id": "T2",
+     "min_radius": 34.2,
+     "to_wp": 8,
+     "v_max": 26.2
+    },
+    {
+     "direction": "right",
+     "from_wp": 7,
+     "id": "T3",
+     "min_radius": 57.4,
+     "to_wp": 9,
+     "v_max": 33.9
+    },
+    {
+     "direction": "left",
+     "from_wp": 11,
+     "id": "T4",
+     "min_radius": 51.6,
+     "to_wp": 13,
+     "v_max": 32.1
+    },
+    {
+     "direction": "left",
+     "from_wp": 13,
+     "id": "T5",
+     "min_radius": 57.3,
+     "to_wp": 15,
+     "v_max": 33.9
+    }
+   ],
+   "gates": 16,
+   "half_width": 9.0,
+   "length": 2006.9,
+   "name": "Speedway",
+   "zones": []
+  },
+  "sprint": {
+   "corners": [
+    {
+     "direction": "left",
+     "from_wp": 2,
+     "id": "T1",
+     "min_radius": 21.4,
+     "to_wp": 3,
+     "v_max": 20.7
+    },
+    {
+     "direction": "left",
+     "from_wp": 4,
+     "id": "T2",
+     "min_radius": 16.3,
+     "to_wp": 6,
+     "v_max": 18.1
+    },
+    {
+     "direction": "right",
+     "from_wp": 6,
+     "id": "T3",
+     "min_radius": 35.9,
+     "to_wp": 8,
+     "v_max": 26.8
+    },
+    {
+     "direction": "right",
+     "from_wp": 8,
+     "id": "T4",
+     "min_radius": 16.6,
+     "to_wp": 9,
+     "v_max": 18.2
+    },
+    {
+     "direction": "left",
+     "from_wp": 8,
+     "id": "T5",
+     "min_radius": 17.1,
+     "to_wp": 9,
+     "v_max": 18.5
+    },
+    {
+     "direction": "right",
+     "from_wp": 9,
+     "id": "T6",
+     "min_radius": 29.8,
+     "to_wp": 10,
+     "v_max": 24.4
+    },
+    {
+     "direction": "left",
+     "from_wp": 10,
+     "id": "T7",
+     "min_radius": 18.9,
+     "to_wp": 12,
+     "v_max": 19.5
+    },
+    {
+     "direction": "left",
+     "from_wp": 11,
+     "id": "T8",
+     "min_radius": 41.9,
+     "to_wp": 13,
+     "v_max": 28.9
+    },
+    {
+     "direction": "left",
+     "from_wp": 13,
+     "id": "T9",
+     "min_radius": 29.8,
+     "to_wp": 15,
+     "v_max": 24.4
+    }
+   ],
+   "gates": 16,
+   "half_width": 9.0,
+   "length": 1040.3,
+   "name": "Sprint Ring",
+   "zones": []
+  }
+ },
+ "turn_radius": {
+  "arcs": [
+   {
+    "hits_wall": false,
+    "radius": 13.3,
+    "speed": 10
+   },
+   {
+    "hits_wall": true,
+    "radius": 40.0,
+    "speed": 20
+   },
+   {
+    "hits_wall": true,
+    "radius": 90.0,
+    "speed": 30
+   }
+  ],
+  "corner": "T5",
+  "corner_radius": 13.7,
+  "steering": -0.5
+ }
+}
