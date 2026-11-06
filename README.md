@@ -1,186 +1,214 @@
-# The Agentic Grand Prix
+# Agentic Grand Prix 2.0
 
 [![tests](https://github.com/GenomZ/race-mini-comp/actions/workflows/tests.yml/badge.svg)](https://github.com/GenomZ/race-mini-comp/actions/workflows/tests.yml)
 
-Welcome to the Agentic Grand Prix! Your task is to design an AI agent using **LangChain** and
-**LangGraph** capable of driving a virtual car around a track as fast as possible.
+**A 2-day bootcamp lesson on AI agents, run as a racing championship.** Each student writes **one Python
+file**: an AI driver for a deterministic 2D racing simulator. Chapter by chapter that file becomes more
+"agentic": reflexes, then a map and a plan, then learning from practice laps, then a MiniMax LLM as
+strategist and race engineer. On the last afternoon every student's car races in a **Grand Prix** against
+**Max**, the house LLM racer, shown live in Streamlit and in a 3D broadcast viewer.
 
-You are *not* writing a traditional control algorithm (PID) or training a reinforcement learning
-model. You are building an **agentic workflow**: your agent perceives the environment through
-textual sensor data, "thinks" about its next move, and uses specific tools to control the car.
+- **You write:** `drive(obs) -> (throttle, steering)`, later `plan(track)` and `reflect(report)`.
+- **The runner does the rest:** physics, clocks, rules, crashes, replays and standings. Your file never
+  touches the simulator, so every car is judged the same way.
+- **What you learn:** agent types (Russell & Norvig), the **Three Clocks** (where an LLM belongs),
+  calling an LLM robustly (JSON, validation, fallback, budgets), Streamlit, and evaluating an agent like a
+  data scientist (validation tracks, overfitting, a sealed mystery track).
 
-**The challenge.** You compete against a baseline agent named **Hermes**. Hermes is a zero-shot LLM
-agent given a generic prompt to drive the car. Because it thinks frame-by-frame without a plan,
-memory or reflection, it is slow and error-prone. Your goal is to design a superior cognitive
-architecture, using techniques like planning, memory, reflection or specialised sub-agents, and
-post a faster lap time than Hermes.
+[![The driver ladder: L0 Dummy 307 s ... L6 Max 44.65 s, plus the fly-brain side branch](lesson/assets/ladder.svg)](lesson/assets/ladder.svg)
 
-![The circuit](results/reflex.png)
+*The ladder: one file, a little more agentic every chapter. Lap times are measured on the home track
+(`grand_prix`). Max's 44.65 s is one real-MiniMax run ([drivers/README.md](drivers/README.md); LLM runs
+vary, 44.65-45.75 s there and 44.90 s in CALIBRATION.md). Click the poster for the full-size SVG.*
+
+![The finale in the Unity 3D viewer: eight cars on the grid of the class demo race](lesson/assets/finale_unity.jpg)
+
+*The finale as the class sees it: `races/demo/class_demo.json` in the Unity 3D viewer, with the timing
+tower, team radio and mini-map.*
 
 ---
 
-## The environment
+## Quickstart
 
-The track is a 2D simulation: a closed circuit ~1550 units long and 18 units wide with a long
-start/finish straight, sweeping bends, esses and one hairpin. 16 invisible **waypoint gates** span the
-track; gate 0 is the start/finish line.
+You need **Python 3.11 or newer** (the course pins 3.12) and git. Clone to a **short local path** such as
+`C:\code` or `~/code`. Do not use a OneDrive or iCloud folder.
 
-| Rule | Value |
-|------|-------|
-| Tick | each `drive` call advances the simulation by **0.5 virtual seconds**. You must anticipate where the car will be. |
-| Crash | hitting a wall stops the car (speed 0), nudges it 2 units back from the wall and adds a **5 s penalty**. |
-| Waypoints | you must cross the 16 gates **in order**; crossing gate 0 after the other 15 completes the lap. |
-| Attempt limit | an attempt ends after **500 ticks** (250 s) without a lap = DNF. |
-| Lap time | simulated time + penalties. **Lower is better.** |
-| Determinism | the simulation has no randomness; the same inputs always give the same lap. |
+### Option A: uv (recommended)
 
-### Car physics (worth knowing)
-
-* Top speed 40, full-throttle acceleration 12 units/s², full braking 25 units/s², light drag.
-* **Steering commands a fraction of the available grip.** Yaw rate = `steering × min(1.5, 20 / speed)`
-  rad/s. The turn radius at speed `v` with steering `s` is therefore `R = v² / (20·|s|)`, so a
-  corner of radius `R` can be taken at no more than `√(20·R)` units/s. Fast in, fast out does not work here.
-* At the 0.5 s tick, a car at speed 30 moves 15 units between decisions on an 18-unit-wide track.
-  Speed management *is* the game.
-* Reverse is possible (slowly) when stopped, which is how a crashed car backs off a wall.
-
-## How to interact with the gym
-
-Your agent receives four LangChain `StructuredTool`s (built by `agentic_gp.make_tools(env)`).
-Every tool returns a **JSON string**.
-
-### 1. `read_sensors` (ReadSensorsTool)
-Returns the current state without advancing time. Input: none.
-
-```json
-{
-  "speed": 24.5,
-  "distance_to_wall_front": 120.0,
-  "distance_to_wall_left_20": 31.0,  "distance_to_wall_right_20": 27.3,
-  "distance_to_wall_left_45": 12.6,  "distance_to_wall_right_45": 12.8,
-  "distance_to_wall_left_90": 8.5,   "distance_to_wall_right_90": 9.5,
-  "distance_to_next_waypoint": 50.0,
-  "angle_to_next_waypoint": -15.0,
-  "distance_to_waypoint_after_next": 148.2,
-  "angle_to_waypoint_after_next": -31.5,
-  "next_waypoint_index": 3, "waypoints_passed": 2, "waypoints_total": 16,
-  "position": [301.2, 4.7], "heading_deg": 12.3,
-  "sim_time": 6.5, "penalty_time": 0.0, "crashes": 0,
-  "tick": 13, "ticks_remaining": 487,
-  "lap_complete": false, "attempt_over": false
-}
-```
-
-Ray distances are LiDAR-like: distance to the nearest wall along the given bearing (max 200).
-**Angles are in degrees; negative = to your LEFT, positive = to your RIGHT.**
-
-### 2. `drive` (DriveTool)
-Applies controls, advances 0.5 s and returns the same JSON plus an `events` list
-(`"crash: ..."`, `"waypoint_passed: 3"`, `"lap_complete: 69.45s ..."`, `"attempt_over: ..."`).
-
-* `throttle` (float): -1.0 (full brake / slow reverse when stopped) to 1.0 (full acceleration).
-* `steering` (float): -1.0 (full left) to 1.0 (full right).
-
-Out-of-range values are clipped.
-
-### 3. `reset_environment` (ResetTool)
-Puts the car back on the start line and starts a new attempt. The previous attempt is recorded as
-is. Use it only when starting a new attempt.
-
-### 4. `get_track_map` (TrackMapTool)
-Static description of the circuit for planning: the 16 waypoint centers, the track heading at each
-one, the tightest corner radius between consecutive waypoints, track width, lap length and the
-physics constants above.
-
-## Getting started
+[uv](https://docs.astral.sh/uv/) installs the right Python and the exact package versions from `uv.lock`.
+These commands are the same in PowerShell and in the macOS Terminal:
 
 ```bash
 git clone https://github.com/GenomZ/race-mini-comp.git
 cd race-mini-comp
-python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+uv sync
+uv run race.py doctor
+uv run race.py drive drivers/examples/l2_planner.py --replay races/l2.json
+uv run race.py watch races/l2.json --html
+uv run streamlit run app/race_control.py
 ```
+
+- **`doctor`:** you should see a list of `[OK  ]` lines and a last line that starts with `ALL GREEN` or
+  `OK with N warning(s)` and says `report written to doctor_report.txt`. A `[WARN]` "key not set" is
+  expected: you get the key on Day 2. A `[WARN]` "spaces in the path" (a user folder like
+  `C:\Users\Ada Lovelace`) is harmless too.
+- **`drive`:** you should see `Attempt 1: FINISHED 52.50 s | laps [52.50] | crashes 0`. The simulator is
+  deterministic, so you get exactly this number.
+- **`watch --html`:** your browser opens a replay player for that lap.
+- **`streamlit run`:** **Race Control** opens at http://localhost:8501. Stop it with **Ctrl+C**.
+
+### Option B: pip and a virtual environment
+
+**Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/GenomZ/race-mini-comp.git
+cd race-mini-comp
+py -3.12 -m venv .venv            # any Python 3.11+ works; `py -0` lists yours
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
+python race.py doctor
+```
+
+**macOS (Terminal):**
 
 ```bash
-python run_dummy.py                 # drives straight, crashes; shows the tool loop
-python run_agentic.py               # reference agentic workflow (planning, memory, reflection)
+git clone https://github.com/GenomZ/race-mini-comp.git
+cd race-mini-comp
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python race.py doctor
 ```
 
-```bash
-python evaluate.py my_agent --plot  # runs YOUR agent, saves results/my_agent.{json,png}
+Once the venv is active, every command in the lesson is written as `python race.py ...` and
+`python -m streamlit run ...`. With uv you can write `uv run race.py ...` and `uv run streamlit run ...`
+instead.
+
+> **PowerShell says "running scripts is disabled"?** Run
+> `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, or skip activation and call
+> `.venv\Scripts\python race.py doctor` directly.
+
+**Day 2 (LLM chapters):** copy `.env.example` to `.env` (PowerShell: `Copy-Item .env.example .env`, macOS:
+`cp .env.example .env`). Paste the key your instructor gives you, then run `python race.py doctor --llm`.
+`.env` is git-ignored: never commit it and never paste the key into a driver file. No key? Every LLM
+driver still runs offline with the mock provider (`LLM_PROVIDER=mock`).
+
+---
+
+## Four ways to watch a race
+
+Every race command can write a **replay JSON**. All viewers read that same file.
+
+| # | Viewer | Command | What you get |
+|---|---|---|---|
+| 1 | **Plot** (PNG) | `python race.py drive drivers/examples/l2_planner.py --plot races/l2.png` | A matplotlib picture of the best attempt: the line, speed and crashes. |
+| 2 | **Standalone HTML player** | `python race.py watch races/demo/class_demo.json --html` | One `.html` file that plays in any browser (works offline, easy to share). `drive` and `grand-prix` also take `--html FILE`. |
+| 3 | **Streamlit Race Control** | `python -m streamlit run app/race_control.py`, then the **Replay** page | A multi-car player with timing tower, radio feed and the official classification. Other pages show live driving, Sensor X-ray, Physics Lab, Telemetry, Learning Curves, Latency Lab, Pit Wall (LLM trace) and Fly Lab. |
+| 4 | **Unity 3D broadcast** (Windows) | `python race.py watch races/demo/class_demo.json --unity` | A TV-style 3D race with start lights, chase cameras and a podium. The instructor builds it once; see [unity/README.md](unity/README.md). |
+
+`python race.py watch <replay.json>` with no option prints the classification in the terminal. A
+precomputed demo race is already in the repo: [`races/demo/html/class_demo.html`](races/demo/html/class_demo.html).
+
+---
+
+## Lesson map
+
+Your file is `drivers/submissions/<handle>.py` (`<handle>` = your handle, lower case, no spaces; the
+Day-1 chapters use the example handle `ada`). Start with **[lesson/README.md](lesson/README.md)** (agenda,
+rules and how to get unstuck) and keep the
+**[cheat sheet](lesson/cheatsheet.md)** open. Bands are measured on `grand_prix` (see
+[CALIBRATION.md](lesson/instructor/CALIBRATION.md)).
+
+| Day | Chapter | Agent type | Reference driver | Handrail (catch-up file) | Checkpoint |
+|---|---|---|---|---|---|
+| 1 | [Ch0 Pit Lane](lesson/00_pit_lane.md) | environment vs agent | `examples/l0_dummy.py` | `ch0_pit_lane.py` | CP0: `check` PASSED, your car in the viewer (template: 85.85 s) |
+| 1 | [Ch1 Reflexes](lesson/01_reflexes.md) | simple reflex | `examples/l1_reflex.py` | `ch1_reflex.py` | CP1: 60-80 s, clean |
+| 1 | [Ch2 The Map](lesson/02_the_map.md) | model-based, goal-based | `examples/l2_planner.py`, `l2b_racing_line.py` | `ch2_planner.py` | CP2: 48-55 s, clean on every public **and** random track |
+| 1 | [Streamlit block](lesson/streamlit_block.md) (S01-S10) | - | [streamlit_lessons/](streamlit_lessons/README.md) | `streamlit_lessons/solutions/` | your own replay viewer + learning-curve page |
+| 1 | [Ch3 Practice Makes Perfect](lesson/03_practice.md) | learning agent | `examples/l3_learner.py` | `ch3_learner.py` | CP3: at least 3 % faster over 6 attempts on `sprint` |
+| 2 | [Ch4 Talking to MiniMax](lesson/04_minimax.md) | LLM as the policy | `examples/l4_llm_rookie.py` | `ch4_pilot.py` | CP4: exam table + latency p50/p95 (never raced) |
+| 2 | [Ch5 The Strategist](lesson/05_strategist.md) | LLM planner | `examples/l5_llm_strategist.py` | `ch5_strategist.py` | CP5: within 5 % of your Ch3, 0 zone violations |
+| 2 | [Ch6 The Crew Chief](lesson/06_crew_chief.md) | tool-using, multi-role | `examples/l6_llm_crew_chief.py` (Max) | `ch6_crew_chief.py` | CP6: 4 clean attempts on a `random:<seed>` track, best about level with your Ch3 car or better |
+| 2 | [Ch7 Fly Brains](lesson/07_fly_brains.md) | spiking neurons | `examples/fly_toy.py`, `fly_connectome.py` | `ch7_fly_fixed.py` | CP7: the fixed fly finishes; scrambled wiring fails |
+| 2 | [Ch8 Garage and Grand Prix](lesson/08_garage_gp.md) | your final file | - | `ch6_crew_chief.py` | `check` green, clean on public tracks, finishes with the mock LLM |
+
+Reference drivers are in [`drivers/examples/`](drivers/README.md). Handrails are in
+[`lesson/checkpoints/`](lesson/checkpoints/).
+
+---
+
+## Repo layout
+
+```text
+race.py                 the command line: drive | check | validate | exam | grand-prix | final | watch |
+                        tracks | leaderboard | doctor | llm-check     (python race.py <command> --help)
+agentic_gp/
+  sim/                  the simulator: physics, tracks (+ random:<seed>), crash rules, zones
+  driver.py             the driver protocol + OBS_FIELDS / TRACK_FIELDS / REPORT_FIELDS
+  driverkit.py          optional helpers for drivers: steer_towards, speed_profile, PathFollower, ...
+  llm.py                MiniMax-first LLM helper: chat, chat_json, ask_with_tools; mock and replay providers
+  race/                 the runner: loader + scrutineering, sessions, replays, grand prix, leaderboard
+  viz/                  matplotlib figures, the HTML player, plotly figures, the Unity bridge
+  fly/                  fruit-fly brains: LIF simulator, FlyWire connectome circuit
+drivers/
+  template.py           where your driver starts
+  examples/             the ladder: l0_dummy ... l6_llm_crew_chief (Max), l6b_pit_crew_langgraph, fly_*
+  submissions/          your one file goes here
+lesson/                 the course: chapters, cheat sheet, checkpoints/ (handrails), assets/ (posters and
+                        figures, rebuilt by make_figures.py), instructor/
+streamlit_lessons/      the 2-hour Streamlit block: s01 ... s10 + solutions/
+app/                    Race Control, the Streamlit app used all course long (views/ = its pages)
+unity/                  Unity 6 3D broadcast viewer (RaceViewer/) + build script + replay tools
+races/demo/             precomputed demo races, replays, exam states and LLM logs
+results/                one JSON per driver and track -> LEADERBOARD.md
+docs/                   architecture and the documentation index
+tests/                  pytest (the LLM is mocked; live tests are opt-in)
 ```
 
-Then open [my_agent.py](my_agent.py). It is a small LangGraph with a `planner` node and an
-`executor` node. Out of the box it finishes a clean but very slow lap (~207 s). Replace the
-planner with an LLM, add memory and reflection, and make it fast.
+`data/` (the fly circuit) is not in git because of its licence; the instructor builds it (see below).
 
-### Running the Hermes baseline yourself
+---
 
-Hermes uses [Hermes 3](https://ollama.com/library/hermes3) through Ollama by default:
+## For instructors
 
-```bash
-ollama pull hermes3
-```
+- [lesson/instructor/HOWTO.md](lesson/instructor/HOWTO.md): the one-page quick reference (setup, Race
+  Control + the 2-hour Streamlit tutorial, the Unity finale, the final Grand Prix with Max).
+- [lesson/instructor/instructor_guide.md](lesson/instructor/instructor_guide.md): prep checklist, key
+  hygiene for the shared MiniMax key, fly data, Unity build, troubleshooting.
+- [lesson/instructor/RUN_OF_SHOW.md](lesson/instructor/RUN_OF_SHOW.md): minute by minute for both days,
+  with the exact commands for snapshots, the Club Race and the finale.
+- [lesson/instructor/CALIBRATION.md](lesson/instructor/CALIBRATION.md): every measured lap time and
+  checkpoint band. Re-measure with `python lesson/instructor/calibrate.py`.
+- [lesson/instructor/awards.md](lesson/instructor/awards.md) and `lesson/instructor/grade.py`: awards and
+  the optional autograder.
+- [lesson/cassettes/README.md](lesson/cassettes/README.md): record LLM answers before class, replay them
+  offline.
+- [streamlit_lessons/README.md](streamlit_lessons/README.md) (Part A): the Streamlit block run sheet.
+- [unity/README.md](unity/README.md): build the 3D viewer and drive the broadcast from the keyboard.
+- [docs/README.md](docs/README.md): index of all documentation, including
+  [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-```bash
-python run_hermes.py --attempts 1
-```
+Run the tests with `python -m pytest -q` (the LLM is mocked). `python race.py doctor --llm` makes one real
+LLM call; `python race.py llm-check --load 10` load-tests the shared key.
 
-Any LangChain chat model works. Copy `.env.example` to `.env` (or export the variables) and set
-`RACE_LLM_PROVIDER` to `ollama`, `anthropic` or `openai` plus `RACE_LLM_MODEL`. Your own agent can
-use the same factory, `agentic_gp.llm.get_chat_model()`, so switching models is one environment
-variable, e.g. a strong planner on `claude-opus-5` and a fast executor on `claude-haiku-4-5`.
+---
 
-## Strategy hints for agentic design
+## Credits and licences
 
-Driving needs fast reactions, which LLMs struggle with if asked to reason about every tick. To beat
-Hermes, separate planning from execution:
-
-1. **Planner agent.** Call `get_track_map` once, reason about the layout (corner radii → safe speeds
-   via `√(20·R)`), and set a target speed and line for the next segment.
-2. **Execution agent.** Use a small, fast model, or plain code driven by the planner's instructions,
-   to issue `drive` calls quickly that match the target state. Look at the sensor fields the
-   planner gave you and nothing else.
-3. **Reflection.** After a crash or a finished attempt, feed the event log (`events`, `env.attempts`)
-   back to a reflection step that rewrites the plan, then `reset_environment` and go again.
-4. **Memory.** Remember per-segment speeds that worked. The simulation is deterministic, so what
-   worked last attempt works again.
-
-## Rules for submissions
-
-* Submit `my_agent.py` (plus any modules it imports). Keep the `run(env, tools, attempts=1, **kwargs)`
-  entry point.
-* Move the car **only through the tools**. Reading `env.attempts` / the JSONL log for reflection is
-  fine; touching `env.car`, `env.track` internals or physics is not.
-* Evaluation: `python evaluate.py path/to/my_agent.py --name <team> --attempts 3 --plot`. Your
-  **best completed lap** counts. Ties break on fewer crashes.
-* Wall-clock budget per evaluation: 30 minutes. Bring your own API keys.
-
-## Repository layout
-
-```
-agentic_gp/            the gym package
-  config.py            physics + competition constants (PhysicsConfig)
-  geometry.py          rays, segment intersection, splines
-  track.py             Track: centerline, walls, waypoint gates, get_track_map data
-  physics.py           car model
-  env.py               RaceEnv: reset / step / sensors, lap logic, JSONL logging
-  tools.py             LangChain StructuredTool bindings (make_tools)
-  llm.py               get_chat_model(): ollama | anthropic | openai
-  render.py            matplotlib plots of tracks and attempts
-  leaderboard.py       results/*.json -> LEADERBOARD.md
-  agents/dummy.py      drives straight
-  agents/hermes.py     the zero-shot LLM baseline
-  agents/reflex.py     rule-based organiser reference (clean lap ~69 s)
-  agents/agentic.py    reference agentic workflow (planning, memory, reflection ~91 s)
-my_agent.py            YOUR LangGraph agent (starter provided)
-evaluate.py            run an agent, record results, plot
-run_dummy.py / run_hermes.py / run_agentic.py
-results/               JSON + PNG per evaluated agent; LEADERBOARD.md is generated from these
-docs/                  implementation plan, architecture notes, organiser guide
-tests/                 pytest suite (python -m pytest)
-```
-
-Reference times on the default track: the dummy DNFs; the starter `my_agent.py` laps in ~207 s; the
-reference agentic workflow `agentic` laps clean in ~91 s; the rule-based reference driver laps clean in ~69 s.
-Hermes' time depends on the model you run it with - measure it with `run_hermes.py` and beat it.
+- **Code:** MIT licence (see `pyproject.toml`), written for this course.
+- **Fly connectome data (Ch7 part B):** `data/fly/steering_circuit_783.*` is **derived from FlyWire**
+  (FAFB public release v783) by the FlyWire Consortium and is licensed
+  **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/): non-commercial use only**. The MIT
+  licence covers the code, not this data. It is not in git: the instructor builds it with
+  `python -m agentic_gp.fly.extract`. The spiking model re-implements Shiu et al. 2024. Please cite
+  Dorkenwald et al. 2024 and Schlegel et al. 2024 (*Nature* 634). Read
+  [agentic_gp/fly/ATTRIBUTION.md](agentic_gp/fly/ATTRIBUTION.md) for the full citations, the honesty
+  statement and the rules for paid events before you show it.
+- **LLM:** [MiniMax](https://www.minimax.io/) M3 through its OpenAI-compatible API (a paid key, not
+  included). Any OpenAI-compatible provider works as a backup (`.env.example`).
+- **Libraries:** NumPy, SciPy, pandas, Matplotlib, Plotly, Streamlit, the OpenAI Python SDK, LangGraph and
+  LangChain. The 3D viewer is built with Unity 6, under Unity's own licence terms.
+- **Ideas:** the agent types follow Russell & Norvig, *Artificial Intelligence: A Modern Approach*. The toy
+  fly borrows from Braitenberg's *Vehicles*. Max's lessons notebook is inspired by Reflexion (Shinn et
+  al. 2023).

@@ -2,11 +2,43 @@ name: tests
 on: [push, pull_request]
 jobs:
   pytest:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.12"]
+        include:
+          - os: ubuntu-latest           # the oldest Python pyproject.toml allows (requires-python >= 3.11)
+            python: "3.11"
+    runs-on: ${{ matrix.os }}
+    env:
+      LLM_PROVIDER: mock          # tests never call a real LLM (live tests: AGP_LIVE_LLM=1)
+      PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python }}
+          cache: pip
       - run: pip install -r requirements.txt
-      - run: pytest -q
+      - run: python -m pytest -q             # live MiniMax tests (-m llm) skip without AGP_LIVE_LLM=1
+      - run: python race.py check drivers/examples/l2_planner.py
+
+  # The student path: uv + .python-version (3.12) + uv.lock. Fails when uv.lock is out of date with
+  # pyproject.toml (fix: run `uv lock` and commit uv.lock).
+  uv:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      LLM_PROVIDER: mock
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv lock --check
+      - run: uv sync --locked
+      - run: uv run race.py doctor
+      - run: uv run race.py drive drivers/examples/l2_planner.py --quiet

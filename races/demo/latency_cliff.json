@@ -1,0 +1,59 @@
+{
+ "format": "agentic-gp-latency-cliff",
+ "version": 1,
+ "driver": "drivers/examples/l2_planner.py",
+ "track": "grand_prix",
+ "made_by": "app.lib.experiments.latency_cliff(driver, track) - the Latency Lab button does the same",
+ "rows": [
+  {
+   "latency_s": 0.0,
+   "blind_ticks": 0,
+   "finished": true,
+   "race_time": 52.5,
+   "crashes": 0,
+   "gates": 16,
+   "gates_total": 16,
+   "ticks": 105
+  },
+  {
+   "latency_s": 0.5,
+   "blind_ticks": 1,
+   "finished": true,
+   "race_time": 434.15,
+   "crashes": 42,
+   "gates": 16,
+   "gates_total": 16,
+   "ticks": 449
+  },
+  {
+   "latency_s": 1.0,
+   "blind_ticks": 2,
+   "finished": false,
+   "race_time": 535.0,
+   "crashes": 57,
+   "gates": 14,
+   "gates_total": 16,
+   "ticks": 500
+  },
+  {
+   "latency_s": 2.0,
+   "blind_ticks": 4,
+   "finished": false,
+   "race_time": 655.0,
+   "crashes": 81,
+   "gates": 8,
+   "gates_total": 16,
+   "ticks": 500
+  },
+  {
+   "latency_s": 3.0,
+   "blind_ticks": 6,
+   "finished": true,
+   "race_time": 465.65,
+   "crashes": 58,
+   "gates": 16,
+   "gates_total": 16,
+   "ticks": 352
+  }
+ ]
+}

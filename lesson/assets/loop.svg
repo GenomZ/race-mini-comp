@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">The Loop: the runner owns the world</title>
+  <desc id="d">Left: the runner (agentic_gp) owns physics, sensors, walls, zones, the clock and the replays. Middle: a wall that only plain dicts and tuples cross. Right: your driver file with plan, drive and reflect. Bottom: the session loop.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .h { font-size: 30px; font-weight: 700; }
+      .hs { font-size: 21px; fill: #52514e; }
+      .b { font-size: 24px; }
+      .s { font-size: 21px; fill: #52514e; }
+      .lab { font-size: 25px; font-weight: 700; }
+      .labs { font-size: 20px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 23px; }
+      .monos { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 20px; }
+      .cm { fill: #898781; }
+      .kw { fill: #6250d6; font-weight: 600; }
+      .foot { font-size: 18px; fill: #898781; }
+      .white { fill: #ffffff; }
+    </style>
+    <marker id="aO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aV" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6250d6"/></marker>
+    <marker id="aB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <pattern id="brick" width="40" height="28" patternUnits="userSpaceOnUse">
+      <rect width="40" height="28" fill="#c3c2b7"/>
+      <path d="M0 0 H40 M0 14 H40 M20 0 V14 M0 14 V28 M40 14 V28" stroke="#fcfcfb" stroke-width="2.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+
+  <!-- header -->
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTER 0</text>
+  <text x="72" y="152" class="title">The Loop: the runner owns the world</text>
+  <text x="72" y="200" class="sub">Your file never touches the simulator. Every 0.5 s it answers one question: <tspan font-weight="700" fill="#0b0b0b">what do I do now?</tspan></text>
+
+  <!-- LEFT: the runner -->
+  <rect x="72" y="250" width="590" height="690" rx="22" fill="#f4f3ef" stroke="#e1e0d9" stroke-width="2"/>
+  <rect x="72" y="250" width="590" height="96" rx="22" fill="#1d1d1b"/>
+  <rect x="72" y="320" width="590" height="26" fill="#1d1d1b"/>
+  <text x="104" y="297" class="h white">THE RUNNER</text>
+  <text x="104" y="330" class="hs" fill="#c3c2b7" style="fill:#c3c2b7">agentic_gp  ·  race.py  ·  the same for everybody</text>
+
+  <g transform="translate(104,392)">
+    <circle cx="12" cy="-8" r="9" fill="#2a78d6"/>
+    <text x="34" y="0" class="b"><tspan font-weight="700">Physics</tspan>: one tick = 0.5 s of sim time</text>
+    <text x="34" y="30" class="s">grip 20 u/s²  ·  brakes 25 u/s²  ·  top speed 40</text>
+
+    <circle cx="12" cy="74" r="9" fill="#1baf7a"/>
+    <text x="34" y="82" class="b"><tspan font-weight="700">Sensors</tspan>: 7 wall rays, the next 2 waypoints</text>
+    <text x="34" y="112" class="s">speed, offset, segment, lap, the clocks ... = obs</text>
+
+    <circle cx="12" cy="156" r="9" fill="#e34948"/>
+    <text x="34" y="164" class="b"><tspan font-weight="700">Walls</tspan>: a crash costs +5 s</text>
+    <text x="34" y="194" class="s">the marshal puts the car back on the centerline</text>
+
+    <circle cx="12" cy="238" r="9" fill="#eda100"/>
+    <text x="34" y="246" class="b"><tspan font-weight="700">Yellow flags</tspan>: +1 s per tick too fast</text>
+    <text x="34" y="276" class="s">announced only in the briefing text</text>
+
+    <circle cx="12" cy="320" r="9" fill="#6250d6"/>
+    <text x="34" y="328" class="b"><tspan font-weight="700">The race clock</tspan> = sim time + penalties</text>
+    <text x="34" y="358" class="s">laps, gates, DNF after 500 ticks per lap</text>
+
+    <circle cx="12" cy="402" r="9" fill="#52514e"/>
+    <text x="34" y="410" class="b"><tspan font-weight="700">Replays</tspan>: one JSON file per race</text>
+    <text x="34" y="440" class="s">→ Streamlit, the HTML player, the Unity 3D viewer</text>
+  </g>
+  <text x="104" y="900" class="s">It is deterministic: same decisions → same lap.</text>
+
+  <!-- MIDDLE: the wall, and the four messages that pass through it -->
+  <rect x="826" y="250" width="34" height="620" fill="url(#brick)"/>
+  <text x="843" y="236" class="labs" text-anchor="middle" font-weight="700" style="fill:#52514e;letter-spacing:2px">THE WALL</text>
+
+  <line x1="666" y1="400" x2="1002" y2="400" stroke="#6250d6" stroke-width="5" marker-end="url(#aV)"/>
+  <rect x="713" y="364" width="260" height="72" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2.5"/>
+  <text x="843" y="394" class="mono" text-anchor="middle" font-weight="700" style="font-size:21px">track  (dict)</text>
+  <text x="843" y="422" class="labs" text-anchor="middle">once per track</text>
+
+  <line x1="666" y1="540" x2="1002" y2="540" stroke="#eb6834" stroke-width="5" marker-end="url(#aO)"/>
+  <rect x="713" y="504" width="260" height="72" rx="14" fill="#ffffff" stroke="#eb6834" stroke-width="2.5"/>
+  <text x="843" y="534" class="mono" text-anchor="middle" font-weight="700" style="font-size:21px">obs  (dict)</text>
+  <text x="843" y="562" class="labs" text-anchor="middle">every tick = 0.5 s</text>
+
+  <line x1="1008" y1="680" x2="670" y2="680" stroke="#eb6834" stroke-width="5" marker-end="url(#aO)"/>
+  <rect x="713" y="644" width="260" height="72" rx="14" fill="#ffffff" stroke="#eb6834" stroke-width="2.5"/>
+  <text x="843" y="674" class="mono" text-anchor="middle" font-weight="700" style="font-size:21px">(throttle, steering)</text>
+  <text x="843" y="702" class="labs" text-anchor="middle">each −1 … +1</text>
+
+  <line x1="666" y1="820" x2="1002" y2="820" stroke="#2a78d6" stroke-width="5" marker-end="url(#aB)"/>
+  <rect x="713" y="784" width="260" height="72" rx="14" fill="#ffffff" stroke="#2a78d6" stroke-width="2.5"/>
+  <text x="843" y="814" class="mono" text-anchor="middle" font-weight="700" style="font-size:21px">report  (dict)</text>
+  <text x="843" y="842" class="labs" text-anchor="middle">after every attempt</text>
+
+  <text x="843" y="906" class="s" text-anchor="middle" font-weight="700" style="fill:#0b0b0b">plain dicts in, plain tuples out</text>
+  <text x="843" y="934" class="labs" text-anchor="middle">nothing else crosses the wall</text>
+
+  <!-- RIGHT: your file -->
+  <rect x="1012" y="250" width="600" height="690" rx="22" fill="#ffffff" stroke="#2a78d6" stroke-width="3"/>
+  <rect x="1012" y="250" width="600" height="96" rx="22" fill="#2a78d6"/>
+  <rect x="1012" y="320" width="600" height="26" fill="#2a78d6"/>
+  <text x="1044" y="297" class="h white">YOUR FILE</text>
+  <text x="1044" y="330" class="monos white">drivers/submissions/&lt;handle&gt;.py</text>
+
+  <g transform="translate(1044,390)">
+    <text x="0" y="0" class="mono"><tspan class="kw">NAME</tspan> = "Rocket"  <tspan class="cm"># + AUTHOR, COLOR ...</tspan></text>
+    <text x="0" y="52" class="mono"><tspan class="kw">class</tspan> Driver:</text>
+    <text x="40" y="96" class="mono"><tspan class="kw">def</tspan> plan(self, track):</text>
+    <text x="80" y="128" class="mono cm"># read the map, plan</text>
+    <text x="40" y="172" class="mono"><tspan class="kw">def</tspan> drive(self, obs):</text>
+    <text x="80" y="204" class="mono cm"># look, decide - fast!</text>
+    <text x="80" y="236" class="mono"><tspan class="kw">return</tspan> 1.0, 0.0</text>
+    <text x="40" y="280" class="mono"><tspan class="kw">def</tspan> reflect(self, report):</text>
+    <text x="80" y="312" class="mono cm"># what did I learn?</text>
+  </g>
+  <!-- clock tags -->
+  <rect x="1440" y="492" width="150" height="34" rx="17" fill="#6250d6"/>
+  <text x="1515" y="516" class="labs" text-anchor="middle" font-weight="700" style="fill:#fff;font-size:18px">SESSION clock</text>
+  <rect x="1440" y="568" width="150" height="34" rx="17" fill="#eb6834"/>
+  <text x="1515" y="592" class="labs" text-anchor="middle" font-weight="700" style="fill:#fff;font-size:18px">TICK clock</text>
+  <rect x="1440" y="676" width="150" height="34" rx="17" fill="#2a78d6"/>
+  <text x="1515" y="700" class="labs" text-anchor="middle" font-weight="700" style="fill:#fff;font-size:18px">LAP clock</text>
+
+  <text x="1044" y="770" class="s">Only drive() is required - a plain function works too:</text>
+  <text x="1044" y="806" class="mono">def drive(obs): return 0.5, 0.0</text>
+  <text x="1044" y="866" class="s">May import: stdlib, numpy, agentic_gp.driverkit,</text>
+  <text x="1044" y="894" class="s">agentic_gp.llm, agentic_gp.fly.  Never the sim.</text>
+
+  <!-- BOTTOM: the loop -->
+  <text x="72" y="1000" class="h">One session, step by step</text>
+  <g transform="translate(72,1028)">
+    <rect x="0" y="0" width="230" height="64" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="3"/>
+    <text x="115" y="41" class="mono" text-anchor="middle">plan(track)</text>
+    <line x1="238" y1="32" x2="290" y2="32" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+
+    <rect x="298" y="0" width="760" height="64" rx="14" fill="#fff4ee" stroke="#eb6834" stroke-width="3"/>
+    <text x="320" y="41" class="mono">a = drive(obs)  →  obs = env.step(a)</text>
+    <text x="1046" y="41" class="s" text-anchor="end">repeat until attempt_over</text>
+    <path d="M 1000 64 C 1000 100, 356 100, 356 70" fill="none" stroke="#eb6834" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#aO)"/>
+
+    <line x1="1066" y1="32" x2="1118" y2="32" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+    <rect x="1126" y="0" width="290" height="64" rx="14" fill="#ffffff" stroke="#2a78d6" stroke-width="3"/>
+    <text x="1271" y="41" class="mono" text-anchor="middle">reflect(report)</text>
+    <path d="M 1271 -4 C 1271 -40, 1230 -46, 1180 -46 L 760 -46 C 720 -46, 700 -34, 700 -10" fill="none" stroke="#2a78d6" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#aB)"/>
+    <text x="1180" y="-56" class="labs" text-anchor="end">next attempt: same driver object, its memory is kept</text>
+  </g>
+
+  <text x="72" y="1160" class="foot">+ = right for every angle and for steering  ·  lesson/assets/loop.svg</text>
+</svg>

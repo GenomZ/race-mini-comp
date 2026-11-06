@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">From your file to the Grand Prix</title>
+  <desc id="d">Six stages: submit one file, scrutineering (race.py check), one isolated process per driver, the race weekend (plan, practice, qualifying, race), the replay JSON files, and the viewers (Streamlit Race Control, the HTML player, the Unity 3D viewer).</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .n { font-size: 40px; font-weight: 800; fill: #ffffff; }
+      .st { font-size: 26px; font-weight: 800; fill: #ffffff; }
+      .t { font-size: 20px; }
+      .ts { font-size: 18px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 17.5px; }
+      .monob { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 17.5px; font-weight: 700; }
+      .ph { font-size: 19px; font-weight: 800; fill: #ffffff; }
+      .phs { font-size: 15px; fill: #ffffff; }
+      .foot { font-size: 18px; fill: #898781; }
+    </style>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTER 8 + THE FINALE</text>
+  <text x="72" y="152" class="title">From your file to the Grand Prix</text>
+  <text x="72" y="200" class="sub">One file in, one replay out - and the same replay plays in Streamlit, in a browser and in 3D.</text>
+
+  <!-- ============ row 1 ============ -->
+  <!-- 1 submit -->
+  <g transform="translate(72,240)">
+    <rect width="488" height="340" rx="20" fill="#ffffff" stroke="#2a78d6" stroke-width="3"/>
+    <rect width="488" height="64" rx="20" fill="#2a78d6"/><rect y="44" width="488" height="20" fill="#2a78d6"/>
+    <text x="22" y="47" class="n">1</text><text x="62" y="44" class="st">SUBMIT</text>
+    <text x="24" y="110" class="t">one file per student:</text>
+    <rect x="20" y="124" width="448" height="40" rx="10" fill="#eef5fd"/>
+    <text x="34" y="151" class="monob">drivers/submissions/&lt;handle&gt;.py</text>
+    <text x="24" y="200" class="t">NAME, COLOR, MOTTO, ANATOMY on top -</text>
+    <text x="24" y="226" class="t">that is your car in every viewer</text>
+    <text x="24" y="274" class="ts">house cars with --house: Max, Planner, Fly Toy</text>
+    <text x="24" y="300" class="ts">(they race, but score no championship points)</text>
+  </g>
+  <!-- 2 scrutineering -->
+  <g transform="translate(598,240)">
+    <rect width="488" height="340" rx="20" fill="#ffffff" stroke="#008300" stroke-width="3"/>
+    <rect width="488" height="64" rx="20" fill="#008300"/><rect y="44" width="488" height="20" fill="#008300"/>
+    <text x="22" y="47" class="n">2</text><text x="62" y="44" class="st">SCRUTINEERING</text>
+    <rect x="20" y="88" width="448" height="40" rx="10" fill="#eef7ee"/>
+    <text x="34" y="115" class="monob">python race.py check &lt;file&gt;</text>
+    <text x="24" y="166" class="t"><tspan font-weight="700">static check</tspan>: imports only stdlib, numpy,</text>
+    <text x="24" y="192" class="t">agentic_gp.driverkit / llm / fly, langgraph;</text>
+    <text x="24" y="218" class="t">no processes, no eval/exec; ≤ 100 KB;</text>
+    <text x="24" y="244" class="t">NAME ≤ 16 characters</text>
+    <text x="24" y="284" class="t"><tspan font-weight="700">+ a 40-tick smoke test</tspan> on a real track</text>
+    <text x="24" y="314" class="ts">red? it names the line in YOUR file</text>
+  </g>
+  <!-- 3 isolate -->
+  <g transform="translate(1124,240)">
+    <rect width="488" height="340" rx="20" fill="#ffffff" stroke="#52514e" stroke-width="3"/>
+    <rect width="488" height="64" rx="20" fill="#52514e"/><rect y="44" width="488" height="20" fill="#52514e"/>
+    <text x="22" y="47" class="n">3</text><text x="62" y="44" class="st">ONE PROCESS PER CAR</text>
+    <text x="24" y="110" class="t">each driver runs in its own child process;</text>
+    <text x="24" y="136" class="t">the simulation stays in the runner</text>
+    <text x="24" y="176" class="t">drive(): <tspan font-weight="700">2 s</tspan>, then the car coasts (a stall)</text>
+    <text x="24" y="202" class="t">plan() / reflect(): <tspan font-weight="700">120 s</tspan> each</text>
+    <text x="24" y="228" class="t">all thinking on one track: <tspan font-weight="700">300 s</tspan></text>
+    <text x="24" y="254" class="t">LLM calls in flight, all cars: ≤ 8</text>
+    <text x="24" y="294" class="ts">a hang or a crash ruins only that car's race:</text>
+    <text x="24" y="318" class="ts">"DNF (stalled)", "DNF (driver crashed: ...)"</text>
+  </g>
+  <path d="M 560 410 H 598" stroke="#52514e" stroke-width="3.5" marker-end="url(#aK)"/>
+  <path d="M 1086 410 H 1124" stroke="#52514e" stroke-width="3.5" marker-end="url(#aK)"/>
+  <path d="M 1368 580 V 610 H 316 V 636" fill="none" stroke="#52514e" stroke-width="3.5" marker-end="url(#aK)"/>
+
+  <!-- ============ row 2 ============ -->
+  <!-- 4 weekend -->
+  <g transform="translate(72,640)">
+    <rect width="740" height="372" rx="20" fill="#ffffff" stroke="#6250d6" stroke-width="3"/>
+    <rect width="740" height="64" rx="20" fill="#6250d6"/><rect y="44" width="740" height="20" fill="#6250d6"/>
+    <text x="22" y="47" class="n">4</text><text x="62" y="44" class="st">THE RACE WEEKEND</text>
+    <!-- timeline chips -->
+    <g transform="translate(20,92)">
+      <rect width="116" height="70" rx="12" fill="#6250d6"/><text x="58" y="32" class="ph" text-anchor="middle">plan</text><text x="58" y="54" class="phs" text-anchor="middle">once</text>
+      <rect x="128" width="128" height="70" rx="12" fill="#2a78d6"/><text x="192" y="32" class="ph" text-anchor="middle">practice 1</text><text x="192" y="54" class="phs" text-anchor="middle">+ reflect</text>
+      <rect x="268" width="128" height="70" rx="12" fill="#2a78d6"/><text x="332" y="32" class="ph" text-anchor="middle">practice 2</text><text x="332" y="54" class="phs" text-anchor="middle">+ reflect</text>
+      <rect x="408" width="128" height="70" rx="12" fill="#eda100"/><text x="472" y="32" class="ph" text-anchor="middle" style="fill:#1d1d1b">qualifying</text><text x="472" y="54" class="phs" text-anchor="middle" style="fill:#1d1d1b">1 lap → grid</text>
+      <rect x="548" width="152" height="70" rx="12" fill="#1d1d1b"/><text x="624" y="32" class="ph" text-anchor="middle" style="fill:#d4a017">RACE</text><text x="624" y="54" class="phs" text-anchor="middle">3 laps, all cars</text>
+    </g>
+    <text x="24" y="206" class="ts">the same driver object all weekend: its memory carries over;</text>
+    <text x="24" y="230" class="ts">qualifying and race: no LLM, no experiments - lock in your best plan</text>
+    <rect x="20" y="252" width="700" height="40" rx="10" fill="#f1effc"/>
+    <text x="34" y="279" class="monob">python race.py grand-prix --house --track oval</text>
+    <rect x="20" y="302" width="700" height="40" rx="10" fill="#f1effc"/>
+    <text x="34" y="329" class="monob">python race.py final --mystery file:&lt;track.py&gt;</text>
+    <text x="24" y="362" class="ts" style="font-size:16px">final = Home GP + Mystery GP (sealed track, 3 practice laps) + championship</text>
+  </g>
+  <!-- 5 replay -->
+  <g transform="translate(850,640)">
+    <rect width="360" height="372" rx="20" fill="#ffffff" stroke="#eb6834" stroke-width="3"/>
+    <rect width="360" height="64" rx="20" fill="#eb6834"/><rect y="44" width="360" height="20" fill="#eb6834"/>
+    <text x="22" y="47" class="n">5</text><text x="62" y="44" class="st">REPLAY FILES</text>
+    <text x="24" y="104" class="mono" style="font-size:15.5px">races/grand_prix.json</text>
+    <text x="24" y="130" class="mono" style="font-size:15.5px">races/grand_prix_qualifying.json</text>
+    <text x="24" y="156" class="mono" style="font-size:15.5px">races/grand_prix_results.json</text>
+    <text x="24" y="182" class="mono" style="font-size:15.5px">races/grand_prix_standings.md</text>
+    <text x="24" y="226" class="t">replay schema v1: track +</text>
+    <text x="24" y="252" class="t">every car, every tick, every</text>
+    <text x="24" y="278" class="t">crash and radio message</text>
+    <text x="24" y="322" class="ts">one JSON contract for</text>
+    <text x="24" y="346" class="ts">every viewer</text>
+  </g>
+  <!-- 6 watch -->
+  <g transform="translate(1248,640)">
+    <rect width="364" height="372" rx="20" fill="#1d1d1b"/>
+    <text x="22" y="47" class="n">6</text><text x="62" y="44" class="st" style="fill:#d4a017">WATCH IT</text>
+    <text x="24" y="98" class="t" style="fill:#ffffff;font-weight:700">Streamlit Race Control</text>
+    <text x="24" y="124" class="mono" style="fill:#eda100;font-size:15.5px">streamlit run app/race_control.py</text>
+    <text x="24" y="148" class="ts" style="fill:#c3c2b7">pages: Grand Prix, Replay</text>
+    <text x="24" y="196" class="t" style="fill:#ffffff;font-weight:700">HTML player</text>
+    <text x="24" y="222" class="mono" style="fill:#eda100;font-size:15.5px">race.py watch &lt;replay&gt; --html</text>
+    <text x="24" y="270" class="t" style="fill:#ffffff;font-weight:700">Unity 3D broadcast</text>
+    <text x="24" y="296" class="mono" style="fill:#eda100;font-size:15.5px">race.py watch &lt;replay&gt; --unity</text>
+    <text x="24" y="320" class="ts" style="fill:#c3c2b7">RaceViewer.exe (Windows build)</text>
+  </g>
+  <path d="M 812 826 H 850" stroke="#52514e" stroke-width="3.5" marker-end="url(#aK)"/>
+  <path d="M 1210 826 H 1248" stroke="#52514e" stroke-width="3.5" marker-end="url(#aK)"/>
+
+  <text x="72" y="1060" class="t"><tspan font-weight="700">Same rules for everybody.</tspan> Times = race clock (sim time + 5 s per crash + 1 s per tick too fast in a zone); DNF ordered by progress.</text>
+  <text x="72" y="1092" class="ts">Drivers start one by one (one more every 2 s) and run in parallel (default: CPUs − 1 at a time); progress shows live in the terminal.</text>
+
+  <text x="72" y="1160" class="foot">Limits = GrandPrixConfig defaults (agentic_gp/race/grand_prix.py); commands: python race.py --help  ·  lesson/assets/grand_prix_pipeline.svg</text>
+</svg>

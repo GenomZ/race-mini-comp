@@ -1,0 +1,25 @@
+# Streamlit settings for the Race Control app (app/) and the Streamlit lessons (streamlit_lessons/).
+# Run from the repo root:  streamlit run app/race_control.py
+
+[server]
+runOnSave = true                       # save a file -> the page updates (great for the lessons)
+# Do not rerun the app when races, logs or the venv change on disk.
+folderWatchBlacklist = ["races", "results", "logs", "llm_logs", ".venv", "data", "unity", ".cache"]
+maxUploadSize = 50                     # MB (replay JSONs, driver files)
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"                # no "Deploy" button on the projector (the main menu stays)
+
+[runner]
+fastReruns = true
+
+[theme]
+base = "dark"                          # matches the canvases (dark "broadcast" look, readable on a projector)
+primaryColor = "#3987e5"
+backgroundColor = "#0e0f11"
+secondaryBackgroundColor = "#1a1a19"
+textColor = "#f0efec"
+font = "sans serif"

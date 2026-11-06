@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">The fly circuit that drives the car</title>
+  <desc id="d">The car's sensors drive real fly visual neurons (LC10a for the waypoint, LC16 for walls, LPLC2 and LC4 for looming). 4,494 FlyWire neurons pass the signal on; steering is read from DNa02 and from AOTU019, braking from MDN and an emergency stop from the DNp01 giant fiber. A scrambled copy of the wiring is the control.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .colh { font-size: 17px; letter-spacing: 2px; font-weight: 800; fill: #898781; }
+      .nn { font-size: 23px; font-weight: 800; }
+      .nr { font-size: 16.5px; fill: #52514e; }
+      .t { font-size: 19px; }
+      .ts { font-size: 17px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 16.5px; }
+      .monob { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 17px; font-weight: 700; }
+      .h { font-size: 23px; font-weight: 800; }
+      .foot { font-size: 18px; fill: #898781; }
+    </style>
+    <marker id="aM" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d55181"/></marker>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a9a7a0"/></marker>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTER 7</text>
+  <text x="72" y="152" class="title">A real fly brain drives the car</text>
+  <text x="72" y="200" class="sub">4,494 neurons and 407,139 connections from the FlyWire connectome (v783). We built only the eyes and the readout.</text>
+
+  <!-- column heads -->
+  <text x="72" y="262" class="colh">THE CAR'S SENSORS</text>
+  <text x="430" y="262" class="colh">EYES (INPUT NEURONS)</text>
+  <text x="790" y="262" class="colh">CENTRAL BRAIN</text>
+  <text x="1080" y="262" class="colh">DESCENDING NEURONS</text>
+  <text x="1380" y="262" class="colh">THE CAR'S CONTROLS</text>
+
+  <!-- the brain blob -->
+  <rect x="760" y="282" width="290" height="676" rx="40" fill="#fdf1f6" stroke="#e87ba4" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <text x="905" y="924" class="ts" text-anchor="middle">all 4,494 neurons spike here</text>
+  <text x="905" y="946" class="ts" text-anchor="middle">(Shiu et al. LIF model)</text>
+
+  <!-- ===== sensors ===== -->
+  <g transform="translate(72,290)">
+    <rect width="320" height="210" rx="16" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <text x="20" y="38" class="monob">angle_to_next_waypoint</text>
+    <text x="20" y="66" class="t">where is the gate? (+ = right)</text>
+    <text x="20" y="104" class="ts">a gate on the RIGHT drives</text>
+    <text x="20" y="128" class="ts">the RIGHT eye's LC10a</text>
+    <text x="20" y="166" class="ts">hidden behind a wall?</text>
+    <text x="20" y="190" class="ts">the drive is dimmed to 30 %</text>
+  </g>
+  <g transform="translate(72,620)">
+    <rect width="320" height="130" rx="16" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <text x="20" y="38" class="monob">distance_to_wall_*</text>
+    <text x="20" y="66" class="t">7 rays: how close is a wall?</text>
+    <text x="20" y="102" class="ts">left rays → left LC16, right → right</text>
+  </g>
+  <g transform="translate(72,790)">
+    <rect width="320" height="150" rx="16" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <text x="20" y="38" class="monob">speed / front ray</text>
+    <text x="20" y="66" class="t">= 1 / time to contact</text>
+    <text x="20" y="102" class="ts">something is coming at me</text>
+    <text x="20" y="126" class="ts">fast (looming)</text>
+  </g>
+
+  <!-- ===== input neurons ===== -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="430" y="300" width="290" height="80" rx="40" fill="#6250d6"/>
+    <text x="456" y="335" class="nn" style="fill:#fff">LC10a  left</text><text x="456" y="362" class="nr" style="fill:#e3dffb">small moving object</text>
+    <rect x="430" y="400" width="290" height="80" rx="40" fill="#eb6834"/>
+    <text x="456" y="435" class="nn" style="fill:#fff">LC10a  right</text><text x="456" y="462" class="nr" style="fill:#fde3d6">small moving object</text>
+    <rect x="430" y="620" width="290" height="130" rx="40" fill="#ffffff" stroke="#1baf7a" stroke-width="3.5"/>
+    <text x="456" y="666" class="nn">LC16  left / right</text><text x="456" y="694" class="nr">walls; 200 Hz × (1 − d / range)</text>
+    <text x="456" y="720" class="nr">per side</text>
+    <rect x="430" y="790" width="290" height="150" rx="40" fill="#ffffff" stroke="#e34948" stroke-width="3.5"/>
+    <text x="456" y="836" class="nn">LPLC2 + LC4</text><text x="456" y="864" class="nr">looming detectors: 0 Hz at</text>
+    <text x="456" y="888" class="nr">≥ 0.9 s to contact, 100 Hz at 0.7 s</text>
+  </g>
+  <!-- sensor -> input arrows -->
+  <g stroke="#52514e" stroke-width="3" marker-end="url(#aK)" fill="none">
+    <path d="M 392 360 C 410 350, 410 340, 426 340"/>
+    <path d="M 392 420 C 410 430, 410 440, 426 440"/>
+    <path d="M 392 685 H 426"/>
+    <path d="M 392 865 H 426"/>
+  </g>
+
+  <!-- ===== central hub ===== -->
+  <rect x="790" y="300" width="230" height="80" rx="40" fill="#6250d6"/>
+  <text x="812" y="335" class="nn" style="fill:#fff">AOTU019 left</text><text x="812" y="362" class="nr" style="fill:#e3dffb">pursuit hub</text>
+  <rect x="790" y="400" width="230" height="80" rx="40" fill="#eb6834"/>
+  <text x="812" y="435" class="nn" style="fill:#fff">AOTU019 right</text><text x="812" y="462" class="nr" style="fill:#fde3d6">pursuit hub</text>
+  <text x="905" y="520" class="ts" text-anchor="middle">ONE synapse after LC10a:</text>
+  <text x="905" y="542" class="ts" text-anchor="middle">carries 77-79 % of the</text>
+  <text x="905" y="564" class="ts" text-anchor="middle">steering in races</text>
+
+  <!-- input -> hub, hub -> DN -->
+  <g stroke="#d55181" stroke-width="4" fill="none" marker-end="url(#aM)">
+    <path d="M 720 340 H 786"/>
+    <path d="M 720 440 H 786"/>
+    <path d="M 1020 340 H 1076"/>
+    <path d="M 1020 440 H 1076"/>
+  </g>
+  <!-- deeper paths through the brain -->
+  <g stroke="#d55181" stroke-width="2.5" fill="none" stroke-dasharray="7 6" marker-end="url(#aM)">
+    <path d="M 722 668 C 860 640, 960 606, 1076 604"/>
+    <path d="M 720 865 C 900 865, 960 860, 1076 860"/>
+  </g>
+  <text x="905" y="712" class="ts" text-anchor="middle">walls → opposite DNa02 (weak)</text>
+  <text x="905" y="734" class="ts" text-anchor="middle">and → MDN, silent while chasing</text>
+  <text x="905" y="842" class="ts" text-anchor="middle">loom → giant fiber</text>
+
+  <!-- ===== descending neurons ===== -->
+  <rect x="1080" y="300" width="250" height="80" rx="40" fill="#6250d6"/>
+  <text x="1104" y="335" class="nn" style="fill:#fff">DNa02 left</text><text x="1104" y="362" class="nr" style="fill:#e3dffb">turn left</text>
+  <rect x="1080" y="400" width="250" height="80" rx="40" fill="#eb6834"/>
+  <text x="1104" y="435" class="nn" style="fill:#fff">DNa02 right</text><text x="1104" y="462" class="nr" style="fill:#fde3d6">turn right</text>
+  <rect x="1080" y="560" width="250" height="90" rx="40" fill="#ffffff" stroke="#eda100" stroke-width="3.5"/>
+  <text x="1104" y="598" class="nn">MDN</text><text x="1104" y="626" class="nr">"moonwalker": back up</text>
+  <rect x="1080" y="810" width="250" height="100" rx="40" fill="#ffffff" stroke="#e34948" stroke-width="3.5"/>
+  <text x="1104" y="852" class="nn">DNp01</text><text x="1104" y="880" class="nr">giant fiber: escape!</text>
+
+  <!-- DN -> controls -->
+  <g stroke="#52514e" stroke-width="3" marker-end="url(#aK)" fill="none">
+    <path d="M 1330 340 C 1350 340, 1350 380, 1372 380"/>
+    <path d="M 1330 440 C 1350 440, 1350 400, 1372 400"/>
+    <path d="M 1330 605 H 1372"/>
+    <path d="M 1330 860 H 1372"/>
+  </g>
+
+  <!-- ===== controls ===== -->
+  <g transform="translate(1376,290)">
+    <rect width="236" height="250" rx="16" fill="#1d1d1b"/>
+    <text x="18" y="38" class="h" style="fill:#ffffff">steering</text>
+    <text x="18" y="70" class="mono" style="fill:#eda100">0.4 × (</text>
+    <text x="18" y="94" class="mono" style="fill:#eda100"> DNa02_R/130</text>
+    <text x="18" y="118" class="mono" style="fill:#eda100">-DNa02_L/150</text>
+    <text x="18" y="142" class="mono" style="fill:#eda100">+0.5×(AOTU019_R</text>
+    <text x="18" y="166" class="mono" style="fill:#eda100"> -AOTU019_L)/175)</text>
+    <text x="18" y="204" class="ts" style="fill:#c3c2b7">rates in Hz; 0.4 calms</text>
+    <text x="18" y="226" class="ts" style="fill:#c3c2b7">the 0.5 s tick overshoot</text>
+  </g>
+  <g transform="translate(1376,560)">
+    <rect width="236" height="100" rx="16" fill="#ffffff" stroke="#eda100" stroke-width="2.5"/>
+    <text x="18" y="36" class="h">brake / reverse</text>
+    <text x="18" y="66" class="t">MDN mean / 30 Hz</text>
+  </g>
+  <g transform="translate(1376,680)">
+    <rect width="236" height="110" rx="16" fill="#ffffff" stroke="#c3c2b7" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="18" y="36" class="h">throttle</text>
+    <text x="18" y="64" class="ts">"spinal cord" - engineered,</text>
+    <text x="18" y="88" class="ts">no neuron drives speed</text>
+  </g>
+  <g transform="translate(1376,810)">
+    <rect width="236" height="100" rx="16" fill="#ffffff" stroke="#e34948" stroke-width="2.5"/>
+    <text x="18" y="36" class="h">emergency stop</text>
+    <text x="18" y="66" class="t">DNp01 ≥ 50 Hz</text>
+  </g>
+
+  <!-- ===== bottom: the control experiment ===== -->
+  <rect x="72" y="988" width="1540" height="128" rx="18" fill="#fdf1f6" stroke="#e87ba4" stroke-width="2.5"/>
+  <text x="100" y="1028" class="h">The control experiment: scramble the wiring, keep everything else</text>
+  <text x="100" y="1064" class="t">Steering-follows-target index: real wiring <tspan font-weight="800">+0.83</tspan>, 5 scrambled copies −0.10 … 0.00.</text>
+  <text x="100" y="1096" class="t">One lap of oval: real <tspan font-weight="800">49.2 s</tspan>, clean · scrambled 126-163 s with 9-17 crashes, and seed 4 never finishes.</text>
+
+  <text x="72" y="1160" class="foot">Data derived from FlyWire (CC BY-NC 4.0, see agentic_gp/fly/ATTRIBUTION.md). Numbers: lesson/make_figures.py (fly_tuning_curve, fly_real_vs_scrambled).  ·  lesson/assets/fly_circuit.svg</text>
+</svg>

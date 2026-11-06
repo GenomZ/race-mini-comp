@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">Max: a crew of four</title>
+  <desc id="d">Max, the house racer, is one driver file with four roles. plan(): a Strategist LLM sets the plan through tools and a code Steward checks it. drive(): a code Driver follows the plan every tick. reflect(): code guardrails, then a Race Engineer LLM with tools proposes changes, and the Steward checks them again. Memory, budgets and the fallback are listed at the bottom.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .col { font-size: 24px; font-weight: 800; fill: #ffffff; }
+      .cols { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 20px; font-weight: 700; fill: #ffffff; }
+      .role { font-size: 27px; font-weight: 800; }
+      .kind { font-size: 16px; font-weight: 700; letter-spacing: 1.5px; }
+      .t { font-size: 19.5px; }
+      .ts { font-size: 18px; fill: #52514e; }
+      .tool { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 16.5px; fill: #0b0b0b; }
+      .h { font-size: 22px; font-weight: 800; }
+      .foot { font-size: 18px; fill: #898781; }
+      .arrowlab { font-size: 16.5px; fill: #52514e; font-weight: 700; }
+    </style>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#008300"/></marker>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTER 6</text>
+  <text x="72" y="152" class="title">Max: one file, a crew of four</text>
+  <text x="72" y="200" class="sub">drivers/examples/l6_llm_crew_chief.py - "The LLM advises, code keeps the car safe."</text>
+
+  <!-- column headers -->
+  <rect x="72" y="236" width="488" height="58" rx="14" fill="#6250d6"/>
+  <text x="96" y="274" class="col">SESSION clock</text><text x="536" y="273" class="cols" text-anchor="end">plan(track)</text>
+  <rect x="598" y="236" width="488" height="58" rx="14" fill="#eb6834"/>
+  <text x="622" y="274" class="col">TICK clock</text><text x="1062" y="273" class="cols" text-anchor="end">drive(obs)</text>
+  <rect x="1124" y="236" width="488" height="58" rx="14" fill="#2a78d6"/>
+  <text x="1148" y="274" class="col">LAP clock</text><text x="1588" y="273" class="cols" text-anchor="end">reflect(report)</text>
+
+  <!-- ===== SESSION: Strategist (LLM) ===== -->
+  <rect x="72" y="318" width="488" height="262" rx="18" fill="#f1effc" stroke="#6250d6" stroke-width="3"/>
+  <text x="96" y="352" class="kind" style="fill:#6250d6">LLM  ·  MiniMax</text>
+  <text x="96" y="388" class="role">STRATEGIST</text>
+  <text x="96" y="420" class="t">reads the corner table + the BRIEFING,</text>
+  <text x="96" y="446" class="t">sets the plan by calling tools:</text>
+  <g transform="translate(96,466)">
+    <rect width="208" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="10" y="23" class="tool">set_aggression</text>
+    <rect x="218" width="222" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="228" y="23" class="tool">set_corner_factor</text>
+    <rect y="42" width="208" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="10" y="65" class="tool">set_safety_margin</text>
+    <rect x="218" y="42" width="222" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="228" y="65" class="tool">add_speed_limit</text>
+  </g>
+
+  <!-- ===== SESSION: Steward (code) ===== -->
+  <rect x="72" y="636" width="488" height="232" rx="18" fill="#eef7ee" stroke="#008300" stroke-width="3"/>
+  <text x="96" y="670" class="kind" style="fill:#008300">CODE  ·  VERIFIER</text>
+  <text x="96" y="706" class="role">STEWARD</text>
+  <text x="96" y="740" class="t">factors 0.6 - 1.6 · safety margin 0.8 - 4</text>
+  <text x="96" y="768" class="t">every briefing zone kept, no invented zones</text>
+  <text x="96" y="796" class="t">first plan ≤ 5 % slower than the code plan</text>
+  <text x="96" y="836" class="ts">a rejection goes back to the model as the tool result</text>
+
+  <path d="M 250 580 V 636" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+  <text x="262" y="614" class="arrowlab">tool calls</text>
+  <path d="M 420 636 V 580" stroke="#008300" stroke-width="3" marker-end="url(#aG)"/>
+  <text x="432" y="614" class="arrowlab" style="fill:#008300">verdict</text>
+
+  <!-- ===== TICK: Driver (code) ===== -->
+  <rect x="598" y="318" width="488" height="550" rx="18" fill="#fff4ee" stroke="#eb6834" stroke-width="3"/>
+  <text x="622" y="352" class="kind" style="fill:#c4501f">CODE  ·  NO LLM HERE</text>
+  <text x="622" y="388" class="role">DRIVER</text>
+  <text x="622" y="424" class="t">follows the plan on the racing line</text>
+  <text x="622" y="452" class="t">(driverkit.PathFollower), every 0.5 s</text>
+  <text x="622" y="500" class="h" style="font-size:20px">The plan = 4 kinds of knob</text>
+  <text x="640" y="532" class="t">• one speed factor per corner</text>
+  <text x="640" y="560" class="t">• aggression for everything else</text>
+  <text x="640" y="588" class="t">• safety margin (free space ahead)</text>
+  <text x="640" y="616" class="t">• speed-limit zones from the briefing</text>
+  <text x="622" y="664" class="h" style="font-size:20px">Writes its own telemetry</text>
+  <text x="622" y="694" class="t">per corner: which limit held it back -</text>
+  <text x="622" y="720" class="t">the plan (plan%) or the safety net (net%)</text>
+  <text x="622" y="746" class="ts">→ tells the engineer WHICH knob to turn</text>
+  <text x="622" y="800" class="t">radio: the plan, corner calls</text>
+  <text x="622" y="836" class="ts">Grand Prix: ≤ 2 s per tick, LLM refused</text>
+
+  <path d="M 560 752 H 598" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+
+  <!-- ===== LAP: guardrails (code) ===== -->
+  <rect x="1124" y="318" width="488" height="190" rx="18" fill="#eef7ee" stroke="#008300" stroke-width="3"/>
+  <text x="1148" y="352" class="kind" style="fill:#008300">CODE  ·  FIRST, ALWAYS</text>
+  <text x="1148" y="388" class="role">GUARDRAILS</text>
+  <text x="1148" y="422" class="t">crash → slow that corner down</text>
+  <text x="1148" y="450" class="t">clearly slower lap → revert to the best plan</text>
+  <text x="1148" y="478" class="t">next is qualifying / race → lock in the best</text>
+
+  <!-- ===== LAP: Race Engineer (LLM) ===== -->
+  <rect x="1124" y="540" width="488" height="328" rx="18" fill="#f1effc" stroke="#6250d6" stroke-width="3"/>
+  <text x="1148" y="574" class="kind" style="fill:#6250d6">LLM  ·  MiniMax</text>
+  <text x="1148" y="610" class="role">RACE ENGINEER</text>
+  <text x="1148" y="644" class="t">reads report["summary_text"], the</text>
+  <text x="1148" y="670" class="t">telemetry and the lessons notebook</text>
+  <g transform="translate(1148,690)">
+    <rect width="168" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="10" y="23" class="tool">corner_stats</text>
+    <rect x="178" width="168" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="188" y="23" class="tool">crash_detail</text>
+    <rect y="42" width="168" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="10" y="65" class="tool">set_* (knobs)</text>
+    <rect x="178" y="42" width="168" height="34" rx="8" fill="#ffffff" stroke="#c3c2b7"/><text x="188" y="65" class="tool">add_lesson</text>
+  </g>
+  <text x="1148" y="806" class="t">→ <tspan font-weight="700">STEWARD</tspan> again: ≤ 10 % change per</text>
+  <text x="1148" y="832" class="t">knob per debrief, bounds, zones</text>
+  <path d="M 1368 508 V 540" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+
+  <!-- telemetry arrow driver -> reflect, and the loop back -->
+  <path d="M 1086 420 H 1124" stroke="#52514e" stroke-width="3" marker-end="url(#aK)"/>
+  <path d="M 1368 868 V 900 H 842 V 868" fill="none" stroke="#2a78d6" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#aK)"/>
+  <text x="1105" y="924" class="arrowlab" text-anchor="middle" style="fill:#2a78d6">new plan for the next practice lap</text>
+
+  <!-- ===== bottom: memory, budget, fallback ===== -->
+  <g transform="translate(72,952)">
+    <rect width="488" height="172" rx="18" fill="#fff8e6" stroke="#eda100" stroke-width="2.5"/>
+    <text x="24" y="40" class="h">MEMORY</text>
+    <text x="24" y="74" class="t">a Reflexion-style lessons notebook</text>
+    <text x="24" y="102" class="t">+ the best plan so far</text>
+    <text x="24" y="136" class="ts">this session only - no files</text>
+  </g>
+  <g transform="translate(598,952)">
+    <rect width="488" height="172" rx="18" fill="#ffffff" stroke="#c3c2b7" stroke-width="2.5"/>
+    <text x="24" y="40" class="h">BUDGET (official rules)</text>
+    <text x="24" y="74" class="t">≤ 2 LLM calls in plan, ≤ 2 per reflect,</text>
+    <text x="24" y="102" class="t">≤ 8 on a track · none in qualifying / race</text>
+    <text x="24" y="136" class="ts">measured weekend: 6 calls, 12.6-21.6k prompt +</text>
+    <text x="24" y="158" class="ts">3.6-8.8k completion tokens</text>
+  </g>
+  <g transform="translate(1124,952)">
+    <rect width="488" height="172" rx="18" fill="#1d1d1b"/>
+    <text x="24" y="40" class="h" style="fill:#d4a017">FALLBACK + RESULT</text>
+    <text x="24" y="74" class="t" style="fill:#ffffff">no LLM (mock, no key, timeout)? the code</text>
+    <text x="24" y="102" class="t" style="fill:#ffffff">plan races: racing line, 49.95 s, clean</text>
+    <text x="24" y="136" class="ts" style="fill:#c3c2b7">with MiniMax on grand_prix: 46.05 → 46.05</text>
+    <text x="24" y="158" class="ts" style="fill:#c3c2b7">→ qualifying 44.65 s, clean</text>
+  </g>
+
+  <text x="72" y="1166" class="foot">Read self.crew_log after a session: every LLM call, tool call and Steward verdict. Numbers: drivers/README.md (real MiniMax-M3 runs).  ·  lesson/assets/max_architecture.svg</text>
+</svg>

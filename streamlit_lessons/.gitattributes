@@ -1,0 +1,3 @@
+# The lessons are diffed against their solutions in class (git diff --no-index): one line ending
+# for every file, on Windows and macOS alike.
+* text=auto eol=lf

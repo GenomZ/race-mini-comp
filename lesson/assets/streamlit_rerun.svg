@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">Streamlit: the rerun model</title>
+  <desc id="d">Every event (a click, a slider, a saved file) reruns the whole script from top to bottom, and every st call draws part of the page. Widgets are percepts, session_state is memory, cache is experience, and a fragment is a faster clock for one part of the page.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .h { font-size: 30px; font-weight: 800; }
+      .t { font-size: 21px; }
+      .ts { font-size: 18.5px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 19px; }
+      .monos { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 17px; }
+      .kw { fill: #6250d6; font-weight: 700; }
+      .cm { fill: #898781; }
+      .st { fill: #e34948; }
+      .big { font-size: 34px; font-weight: 800; }
+      .foot { font-size: 18px; fill: #898781; }
+      .white { fill: #ffffff; }
+    </style>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e34948"/></marker>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  STREAMLIT BLOCK (DAY 1, 13:30)</text>
+  <text x="72" y="152" class="title">Streamlit: the whole script reruns</text>
+  <text x="72" y="200" class="sub">Something happens → your script runs again from the top → every st.* line draws the page. That's the whole trick.</text>
+
+  <!-- 1 EVENT -->
+  <g transform="translate(72,250)">
+    <rect width="300" height="430" rx="22" fill="#fff4ee" stroke="#eb6834" stroke-width="3"/>
+    <text x="28" y="56" class="big" style="fill:#eb6834">1  EVENT</text>
+    <text x="28" y="100" class="t">you click a button</text>
+    <text x="28" y="136" class="t">you drag a slider</text>
+    <text x="28" y="172" class="t">you type in a box</text>
+    <text x="28" y="208" class="t">you save the .py file</text>
+    <text x="28" y="244" class="t">a fragment's timer fires</text>
+    <!-- slider + button icons -->
+    <line x1="34" y1="300" x2="266" y2="300" stroke="#e1e0d9" stroke-width="10" stroke-linecap="round"/>
+    <line x1="34" y1="300" x2="170" y2="300" stroke="#eb6834" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="170" cy="300" r="15" fill="#ffffff" stroke="#eb6834" stroke-width="5"/>
+    <rect x="34" y="340" width="150" height="50" rx="12" fill="#ffffff" stroke="#c3c2b7" stroke-width="2.5"/>
+    <text x="109" y="372" class="t" text-anchor="middle" font-weight="700">Race!</text>
+    <path d="M 196 364 l 18 22 l 6 -10 l 12 12 l 6 -6 l -12 -12 l 10 -6 z" fill="#0b0b0b"/>
+  </g>
+  <path d="M 372 465 H 418" stroke="#52514e" stroke-width="4" marker-end="url(#aK)"/>
+
+  <!-- 2 RERUN -->
+  <g transform="translate(422,250)">
+    <rect width="620" height="430" rx="22" fill="#ffffff" stroke="#e34948" stroke-width="3"/>
+    <text x="28" y="56" class="big" style="fill:#e34948">2  RERUN, top to bottom</text>
+    <rect x="20" y="78" width="580" height="330" rx="14" fill="#1d1d1b"/>
+    <g transform="translate(70,116)">
+      <text x="0" y="0" class="mono white"><tspan class="kw" style="fill:#b7aef5">import</tspan> streamlit <tspan class="kw" style="fill:#b7aef5">as</tspan> st</text>
+      <text x="0" y="36" class="mono white">st.title(<tspan style="fill:#eda100">"Corner calculator"</tspan>)</text>
+      <text x="0" y="72" class="mono white">R = st.slider(<tspan style="fill:#eda100">"radius R"</tspan>, 10, 80, 30)</text>
+      <text x="0" y="108" class="mono white">v = (20 * R) ** 0.5</text>
+      <text x="0" y="144" class="mono white">st.metric(<tspan style="fill:#eda100">"v_max"</tspan>, <tspan style="fill:#eda100">f"{v:.1f} u/s"</tspan>)</text>
+      <text x="0" y="188" class="mono" style="fill:#898781"># memory: survives every rerun</text>
+      <text x="0" y="220" class="mono white"><tspan class="kw" style="fill:#b7aef5">if</tspan> <tspan style="fill:#eda100">"laps"</tspan> <tspan class="kw" style="fill:#b7aef5">not in</tspan> st.session_state:</text>
+      <text x="40" y="252" class="mono white">st.session_state.laps = []</text>
+    </g>
+    <!-- playhead -->
+    <path d="M 44 108 V 372" stroke="#e34948" stroke-width="4" marker-end="url(#aR)"/>
+    <text x="586" y="396" class="ts" text-anchor="end" style="fill:#c3c2b7;font-size:16px">red arrow: Python runs every line, every time</text>
+  </g>
+  <path d="M 1042 465 H 1088" stroke="#52514e" stroke-width="4" marker-end="url(#aK)"/>
+
+  <!-- 3 RENDER -->
+  <g transform="translate(1092,250)">
+    <rect width="520" height="430" rx="22" fill="#eef5fd" stroke="#2a78d6" stroke-width="3"/>
+    <text x="28" y="56" class="big" style="fill:#2a78d6">3  THE PAGE</text>
+    <rect x="24" y="80" width="472" height="320" rx="14" fill="#ffffff" stroke="#c3c2b7" stroke-width="2"/>
+    <rect x="24" y="80" width="472" height="34" rx="14" fill="#f4f3ef"/><rect x="24" y="100" width="472" height="14" fill="#f4f3ef"/>
+    <circle cx="48" cy="97" r="6" fill="#e34948"/><circle cx="68" cy="97" r="6" fill="#eda100"/><circle cx="88" cy="97" r="6" fill="#1baf7a"/>
+    <text x="110" y="103" class="monos" style="fill:#898781">localhost:8501</text>
+    <text x="52" y="164" style="font-size:30px;font-weight:800">Corner calculator</text>
+    <text x="52" y="210" class="ts">radius R</text>
+    <line x1="52" y1="236" x2="460" y2="236" stroke="#e1e0d9" stroke-width="8" stroke-linecap="round"/>
+    <line x1="52" y1="236" x2="211" y2="236" stroke="#e34948" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="211" cy="236" r="11" fill="#e34948"/>
+    <text x="211" y="270" class="ts" text-anchor="middle">30</text>
+    <text x="52" y="318" class="ts">v_max</text>
+    <text x="52" y="368" style="font-size:44px;font-weight:600">24.5 u/s</text>
+  </g>
+
+  <!-- back arrow -->
+  <path d="M 1352 680 V 722 H 222 V 684" fill="none" stroke="#52514e" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#aK)"/>
+  <text x="787" y="752" class="t" text-anchor="middle" fill="#52514e">… and waits for the next event. Variables are gone - unless you put them in session_state.</text>
+
+  <!-- analogy row -->
+  <text x="72" y="818" class="h">It is the driver loop again</text>
+  <g transform="translate(72,840)">
+    <rect width="364" height="232" rx="18" fill="#ffffff" stroke="#eb6834" stroke-width="2.5"/>
+    <rect width="364" height="8" rx="4" fill="#eb6834"/>
+    <text x="24" y="52" class="t" font-weight="800">a widget value</text>
+    <text x="24" y="84" class="monos">x = st.slider(...)</text>
+    <text x="24" y="134" class="ts">is a PERCEPT, like</text>
+    <text x="24" y="164" class="monos">obs["speed"]</text>
+    <text x="24" y="208" class="ts">read it fresh every run</text>
+  </g>
+  <g transform="translate(464,840)">
+    <rect width="364" height="232" rx="18" fill="#ffffff" stroke="#eda100" stroke-width="2.5"/>
+    <rect width="364" height="8" rx="4" fill="#eda100"/>
+    <text x="24" y="52" class="t" font-weight="800">st.session_state</text>
+    <text x="24" y="84" class="monos">st.session_state.laps</text>
+    <text x="24" y="134" class="ts">is MEMORY, like</text>
+    <text x="24" y="164" class="monos">self.history</text>
+    <text x="24" y="208" class="ts">the only thing that survives</text>
+  </g>
+  <g transform="translate(856,840)">
+    <rect width="364" height="232" rx="18" fill="#ffffff" stroke="#2a78d6" stroke-width="2.5"/>
+    <rect width="364" height="8" rx="4" fill="#2a78d6"/>
+    <text x="24" y="52" class="t" font-weight="800">@st.cache_data</text>
+    <text x="24" y="84" class="monos">def load_track(key): ...</text>
+    <text x="24" y="134" class="ts">is EXPERIENCE, like the</text>
+    <text x="24" y="164" class="monos">plan()  you did once</text>
+    <text x="24" y="208" class="ts">slow work done once, reused</text>
+  </g>
+  <g transform="translate(1248,840)">
+    <rect width="364" height="232" rx="18" fill="#ffffff" stroke="#e34948" stroke-width="2.5"/>
+    <rect width="364" height="8" rx="4" fill="#e34948"/>
+    <text x="24" y="52" class="t" font-weight="800">a rerun = a TICK</text>
+    <text x="24" y="84" class="monos">@st.fragment(run_every=0.5)</text>
+    <text x="24" y="134" class="ts">reruns ONLY that function:</text>
+    <text x="24" y="164" class="ts">a faster clock for one part</text>
+    <text x="24" y="208" class="ts">S08 Live View, S10 Replay</text>
+  </g>
+
+  <text x="72" y="1124" class="t">Ten tiny apps, one idea each: <tspan class="monos">streamlit_lessons/s01_hello_pitwall.py</tspan> … <tspan class="monos">s10_race_replay.py</tspan></text>
+  <text x="72" y="1166" class="foot">Run one: python -m streamlit run streamlit_lessons/s02_corner_calculator.py  ·  lesson/assets/streamlit_rerun.svg</text>
+</svg>

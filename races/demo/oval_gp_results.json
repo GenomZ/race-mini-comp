@@ -1,0 +1,254 @@
+{
+ "format": "agentic-gp-grand-prix",
+ "version": 1,
+ "title": "Agentic Grand Prix",
+ "track": "oval",
+ "track_name": "Oval",
+ "created_utc": "2026-10-21T00:21:24Z",
+ "config": {
+  "practice_attempts": 1,
+  "race_laps": 2,
+  "jobs": 2,
+  "driver_timeout_s": 300.0,
+  "tick_timeout_s": 120.0,
+  "title": "Agentic Grand Prix",
+  "start_method": "spawn",
+  "qualifying": true,
+  "drive_timeout_s": 2.0,
+  "plan_timeout_s": 120.0,
+  "reflect_timeout_s": 120.0,
+  "load_timeout_s": 300.0,
+  "llm_policy": "official",
+  "llm_concurrency": 8,
+  "ramp_s": 2.0,
+  "log_dir": "logs\\drivers\\oval_gp",
+  "llm_log_dir": "races\\demo\\llm_logs\\oval_gp",
+  "track": "oval",
+  "crash_rule": "marshal"
+ },
+ "qualifying": [
+  {
+   "position": 1,
+   "name": "Planner",
+   "id": "planner",
+   "author": "Agentic GP",
+   "kind": "code",
+   "house": false,
+   "qualifying_time": 25.95,
+   "best_lap": 25.95,
+   "practice_times": [
+    25.95
+   ],
+   "crashes": 0,
+   "attempts": 2,
+   "status": ""
+  },
+  {
+   "position": 2,
+   "name": "Dummy",
+   "id": "dummy",
+   "author": "Agentic GP",
+   "kind": "code",
+   "house": false,
+   "qualifying_time": 151.6,
+   "best_lap": 151.6,
+   "practice_times": [
+    151.6
+   ],
+   "crashes": 15,
+   "attempts": 2,
+   "status": ""
+  }
+ ],
+ "standings": [
+  {
+   "position": 1,
+   "id": "planner",
+   "name": "Planner",
+   "author": "Agentic GP",
+   "kind": "code",
+   "model": null,
+   "color": "#2a9d8f",
+   "house": false,
+   "race_time": 49.7,
+   "gap": 0.0,
+   "gap_text": "",
+   "laps_completed": 2,
+   "race_progress": 2.0,
+   "waypoints_passed": 16,
+   "best_lap": 23.75,
+   "crashes": 0,
+   "penalty_time": 0.0,
+   "status": "",
+   "llm_calls": 0,
+   "llm_tokens": 0,
+   "qualifying_time": 25.95,
+   "grid": 1,
+   "pole": true
+  },
+  {
+   "position": 2,
+   "id": "dummy",
+   "name": "Dummy",
+   "author": "Agentic GP",
+   "kind": "code",
+   "model": null,
+   "color": "#8d99ae",
+   "house": false,
+   "race_time": 302.1,
+   "gap": 252.4,
+   "gap_text": "+252.40s",
+   "laps_completed": 2,
+   "race_progress": 2.0,
+   "waypoints_passed": 16,
+   "best_lap": 150.5,
+   "crashes": 30,
+   "penalty_time": 150.0,
+   "status": "",
+   "llm_calls": 0,
+   "llm_tokens": 0,
+   "qualifying_time": 151.6,
+   "grid": 2,
+   "pole": false
+  }
+ ],
+ "errors": [],
+ "drivers": [
+  {
+   "name": "Dummy",
+   "author": "Agentic GP",
+   "color": "#8d99ae",
+   "kind": "code",
+   "model": null,
+   "source": "D:\\workspace\\race-mini-comp\\drivers\\examples\\l0_dummy.py",
+   "motto": "Eyes closed, foot down.",
+   "anatomy": [
+    "act"
+   ],
+   "house": false,
+   "status": "",
+   "log": "logs\\drivers\\oval_gp\\00_l0-dummy.log",
+   "plan_error": null,
+   "plan_seconds": 0.003,
+   "llm": {
+    "calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "seconds": 0.0,
+    "errors": 0,
+    "cache_hits": 0,
+    "mode": "official",
+    "calls_left": 8
+   },
+   "think_seconds_mean": 0.00054,
+   "attempts": [
+    {
+     "attempt": 1,
+     "phase": "practice",
+     "completed": true,
+     "race_time": 151.6,
+     "best_lap": 151.6,
+     "crashes": 15,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    },
+    {
+     "attempt": 2,
+     "phase": "qualifying",
+     "completed": true,
+     "race_time": 151.6,
+     "best_lap": 151.6,
+     "crashes": 15,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    },
+    {
+     "attempt": 3,
+     "phase": "race",
+     "completed": true,
+     "race_time": 302.1,
+     "best_lap": 150.5,
+     "crashes": 30,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    }
+   ]
+  },
+  {
+   "name": "Planner",
+   "author": "Agentic GP",
+   "color": "#2a9d8f",
+   "kind": "code",
+   "model": null,
+   "source": "D:\\workspace\\race-mini-comp\\drivers\\examples\\l2_planner.py",
+   "motto": "Plan the lap, drive the plan.",
+   "anatomy": [
+    "perceive",
+    "act",
+    "map",
+    "plan"
+   ],
+   "house": false,
+   "status": "",
+   "log": "logs\\drivers\\oval_gp\\01_l2-planner.log",
+   "plan_error": null,
+   "plan_seconds": 0.006,
+   "llm": {
+    "calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "seconds": 0.0,
+    "errors": 0,
+    "cache_hits": 0,
+    "mode": "official",
+    "calls_left": 8
+   },
+   "think_seconds_mean": 0.00105,
+   "attempts": [
+    {
+     "attempt": 1,
+     "phase": "practice",
+     "completed": true,
+     "race_time": 25.95,
+     "best_lap": 25.95,
+     "crashes": 0,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    },
+    {
+     "attempt": 2,
+     "phase": "qualifying",
+     "completed": true,
+     "race_time": 25.95,
+     "best_lap": 25.95,
+     "crashes": 0,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    },
+    {
+     "attempt": 3,
+     "phase": "race",
+     "completed": true,
+     "race_time": 49.7,
+     "best_lap": 23.75,
+     "crashes": 0,
+     "stalls": 0,
+     "driver_errors": 0,
+     "status": "",
+     "reflect_error": null
+    }
+   ]
+  }
+ ],
+ "wall_seconds": 10.19
+}
