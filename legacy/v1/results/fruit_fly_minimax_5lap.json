@@ -1,0 +1,170 @@
+{
+  "name": "fruit_fly_minimax_5lap",
+  "agent": "agentic_gp.agents.fruit_fly_minimax",
+  "track": "oval",
+  "timestamp": "2026-09-15T13:12:37.272461+00:00",
+  "model": "-",
+  "attempts": [
+    {
+      "attempt": 1,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 0.0,
+      "crashes": 0,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 2,
+      "completed": true,
+      "lap_time": 104.55,
+      "sim_time": 74.55,
+      "penalty_time": 30.0,
+      "crashes": 6,
+      "waypoints_passed": 8,
+      "ticks": 150,
+      "ended_by": "lap_complete"
+    },
+    {
+      "attempt": 3,
+      "completed": true,
+      "lap_time": 69.8,
+      "sim_time": 49.8,
+      "penalty_time": 20.0,
+      "crashes": 4,
+      "waypoints_passed": 8,
+      "ticks": 100,
+      "ended_by": "lap_complete"
+    },
+    {
+      "attempt": 4,
+      "completed": true,
+      "lap_time": 75.55,
+      "sim_time": 50.55,
+      "penalty_time": 25.0,
+      "crashes": 5,
+      "waypoints_passed": 8,
+      "ticks": 102,
+      "ended_by": "lap_complete"
+    },
+    {
+      "attempt": 5,
+      "completed": true,
+      "lap_time": 189.15,
+      "sim_time": 89.15,
+      "penalty_time": 100.0,
+      "crashes": 20,
+      "waypoints_passed": 8,
+      "ticks": 179,
+      "ended_by": "lap_complete"
+    },
+    {
+      "attempt": 6,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 0.0,
+      "crashes": 0,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 7,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 5.0,
+      "crashes": 1,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 8,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 2465.0,
+      "crashes": 493,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 9,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 210.0,
+      "crashes": 42,
+      "waypoints_passed": 2,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 10,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 285.0,
+      "crashes": 57,
+      "waypoints_passed": 1,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 11,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 5.0,
+      "crashes": 1,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 12,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 95.0,
+      "crashes": 19,
+      "waypoints_passed": 0,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 13,
+      "completed": false,
+      "lap_time": null,
+      "sim_time": 250.0,
+      "penalty_time": 580.0,
+      "crashes": 116,
+      "waypoints_passed": 2,
+      "ticks": 500,
+      "ended_by": "max_ticks"
+    },
+    {
+      "attempt": 14,
+      "completed": true,
+      "lap_time": 52.85,
+      "sim_time": 37.85,
+      "penalty_time": 15.0,
+      "crashes": 3,
+      "waypoints_passed": 8,
+      "ticks": 76,
+      "ended_by": "lap_complete"
+    }
+  ],
+  "best_lap": 52.85,
+  "completed_attempts": 5,
+  "max_waypoints_passed": 8,
+  "total_crashes": 767,
+  "tool_calls": 5121,
+  "wall_clock_seconds": 8.0,
+  "log": "logs/fruit_fly_minimax_5lap_1789477949.jsonl"
+}

@@ -25,6 +25,9 @@ races/*
 llm_logs/
 !races/demo/llm_logs/
 drivers/examples/.memory/
+# trained readout weights of the legacy v1 fruit-fly agents (legacy/v1/train_fruit_fly_minimax.py)
+fruit_fly_weights.json
+fruit_fly_minimax_*lap_weights.json
 
 # course day: student files, the sealed mystery track, saved results (never commit them by accident)
 drivers/submissions/*

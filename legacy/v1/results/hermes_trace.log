@@ -1,0 +1,285 @@
+=== tick 1 (attempt 1) t=0.5s ===
+state:
+  tick 1, t=0.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 105.2m at -0.5 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": -0.5, "angle_to_waypoint_after_next": -5.1, "attempt_over": false, "crashes": 0, "distance_to_next_waypoint": 105.2, "distance_to_wall_front": 174.0, "distance_to_wall_left_20": 23.6, "distance_to_wall_left_45": 12.6, "distance_to_wall_left_90": 10.0, "distance_to_wall_right_20": 35.8, "distance_to_wall_right_45": 16.1, "distance_to_wall_right_90": 10.2, "distance_to_waypoint_after_next": 207.3, "events": [], "heading_deg": -4.9, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 0.0, "sim_time": 0.5, "speed": 4.06, "tick": 1, "ticks_remaining": 14, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 2 (attempt 1) t=1.0s ===
+state:
+  tick 2, t=1.0s, speed=7.8, gate 1 (passed 0/8), next waypoint 102.2m at +8.2 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 8.2, "angle_to_waypoint_after_next": 3.5, "attempt_over": false, "crashes": 0, "distance_to_next_waypoint": 102.2, "distance_to_wall_front": 51.4, "distance_to_wall_left_20": 16.8, "distance_to_wall_left_45": 10.7, "distance_to_wall_left_90": 9.7, "distance_to_wall_right_20": 60.9, "distance_to_wall_right_45": 20.3, "distance_to_wall_right_90": 11.1, "distance_to_waypoint_after_next": 204.3, "events": [], "heading_deg": 3.7, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 0.0, "sim_time": 1.0, "speed": 7.83, "tick": 2, "ticks_remaining": 13, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 3 (attempt 1) t=1.5s ===
+state:
+  tick 3, t=1.5s, speed=11.3, gate 1 (passed 0/8), next waypoint 97.5m at +17.4 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 17.4, "angle_to_waypoint_after_next": 12.3, "attempt_over": false, "crashes": 0, "distance_to_next_waypoint": 97.5, "distance_to_wall_front": 22.1, "distance_to_wall_left_20": 11.6, "distance_to_wall_left_45": 8.3, "distance_to_wall_left_90": 8.4, "distance_to_wall_right_20": 133.4, "distance_to_wall_right_45": 29.1, "distance_to_wall_right_90": 13.3, "distance_to_waypoint_after_next": 199.5, "events": [], "heading_deg": 12.3, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 0.0, "sim_time": 1.5, "speed": 11.32, "tick": 3, "ticks_remaining": 12, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 4 (attempt 1) t=2.0s ===
+state:
+  tick 4, t=2.0s, speed=14.6, gate 1 (passed 0/8), next waypoint 91.6m at +27.4 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 27.4, "angle_to_waypoint_after_next": 21.3, "attempt_over": false, "crashes": 0, "distance_to_next_waypoint": 91.6, "distance_to_wall_front": 10.0, "distance_to_wall_left_20": 6.4, "distance_to_wall_left_45": 5.0, "distance_to_wall_left_90": 5.5, "distance_to_wall_right_20": 43.7, "distance_to_wall_right_45": 47.3, "distance_to_wall_right_90": 17.3, "distance_to_waypoint_after_next": 193.4, "events": [], "heading_deg": 20.7, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 0.0, "sim_time": 2.0, "speed": 14.56, "tick": 4, "ticks_remaining": 11, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 5 (attempt 1) t=2.5s ===
+state:
+  tick 5, t=2.5s, speed=17.6, gate 1 (passed 0/8), next waypoint 84.8m at +37.3 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 37.3, "angle_to_waypoint_after_next": 29.5, "attempt_over": false, "crashes": 0, "distance_to_next_waypoint": 84.8, "distance_to_wall_front": 0.8, "distance_to_wall_left_20": 0.6, "distance_to_wall_left_45": 0.5, "distance_to_wall_left_90": 0.6, "distance_to_wall_right_20": 1.8, "distance_to_wall_right_45": 81.3, "distance_to_wall_right_90": 23.7, "distance_to_waypoint_after_next": 186.1, "events": [], "heading_deg": 27.8, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 0.0, "sim_time": 2.5, "speed": 17.57, "tick": 5, "ticks_remaining": 10, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 6 (attempt 1) t=3.0s ===
+state:
+  tick 6, t=3.0s, speed=0.0, gate 1 (passed 0/8), next waypoint 86.4m at +36.5 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 36.5, "angle_to_waypoint_after_next": 29.2, "attempt_over": false, "crashes": 1, "distance_to_next_waypoint": 86.4, "distance_to_wall_front": 2.8, "distance_to_wall_left_20": 2.0, "distance_to_wall_left_45": 1.6, "distance_to_wall_left_90": 2.0, "distance_to_wall_right_20": 6.2, "distance_to_wall_right_45": 78.1, "distance_to_wall_right_90": 22.3, "distance_to_waypoint_after_next": 187.9, "events": ["crash: hit a wall, +5s penalty, speed reset to 0"], "heading_deg": 27.8, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 5.0, "sim_time": 3.0, "speed": 0.0, "tick": 6, "ticks_remaining": 9, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['crash: hit a wall, +5s penalty, speed reset to 0']
+
+=== tick 7 (attempt 1) t=3.5s ===
+state:
+  tick 7, t=3.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 85.6m at +45.6 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 45.6, "angle_to_waypoint_after_next": 38.0, "attempt_over": false, "crashes": 1, "distance_to_next_waypoint": 85.6, "distance_to_wall_front": 1.4, "distance_to_wall_left_20": 1.0, "distance_to_wall_left_45": 0.9, "distance_to_wall_left_90": 1.3, "distance_to_wall_right_20": 2.3, "distance_to_wall_right_45": 143.9, "distance_to_wall_right_90": 26.0, "distance_to_waypoint_after_next": 187.0, "events": [], "heading_deg": 36.4, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 5.0, "sim_time": 3.5, "speed": 4.06, "tick": 7, "ticks_remaining": 8, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 8 (attempt 1) t=4.0s ===
+state:
+  tick 8, t=4.0s, speed=0.0, gate 1 (passed 0/8), next waypoint 86.1m at +49.5 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 49.5, "angle_to_waypoint_after_next": 42.1, "attempt_over": false, "crashes": 2, "distance_to_next_waypoint": 86.1, "distance_to_wall_front": 2.0, "distance_to_wall_left_20": 1.6, "distance_to_wall_left_45": 1.5, "distance_to_wall_left_90": 2.3, "distance_to_wall_right_20": 3.2, "distance_to_wall_right_45": 190.5, "distance_to_wall_right_90": 27.1, "distance_to_waypoint_after_next": 187.5, "events": ["crash: hit a wall, +5s penalty, speed reset to 0"], "heading_deg": 40.7, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 10.0, "sim_time": 4.0, "speed": 0.0, "tick": 8, "ticks_remaining": 7, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['crash: hit a wall, +5s penalty, speed reset to 0']
+
+=== tick 9 (attempt 1) t=4.5s ===
+state:
+  tick 9, t=4.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 85.5m at +58.7 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 58.7, "angle_to_waypoint_after_next": 50.9, "attempt_over": false, "crashes": 2, "distance_to_next_waypoint": 85.5, "distance_to_wall_front": 0.8, "distance_to_wall_left_20": 0.7, "distance_to_wall_left_45": 0.7, "distance_to_wall_left_90": 1.3, "distance_to_wall_right_20": 1.2, "distance_to_wall_right_45": 3.4, "distance_to_wall_right_90": 33.7, "distance_to_waypoint_after_next": 186.8, "events": [], "heading_deg": 49.3, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 10.0, "sim_time": 4.5, "speed": 4.06, "tick": 9, "ticks_remaining": 6, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 10 (attempt 1) t=5.0s ===
+state:
+  tick 10, t=5.0s, speed=0.0, gate 1 (passed 0/8), next waypoint 86.1m at +60.5 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 60.5, "angle_to_waypoint_after_next": 53.2, "attempt_over": false, "crashes": 3, "distance_to_next_waypoint": 86.1, "distance_to_wall_front": 2.1, "distance_to_wall_left_20": 1.9, "distance_to_wall_left_45": 1.9, "distance_to_wall_left_90": 3.7, "distance_to_wall_right_20": 2.9, "distance_to_wall_right_45": 7.5, "distance_to_wall_right_90": 34.0, "distance_to_waypoint_after_next": 187.6, "events": ["crash: hit a wall, +5s penalty, speed reset to 0"], "heading_deg": 51.9, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 15.0, "sim_time": 5.0, "speed": 0.0, "tick": 10, "ticks_remaining": 5, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['crash: hit a wall, +5s penalty, speed reset to 0']
+
+=== tick 11 (attempt 1) t=5.5s ===
+state:
+  tick 11, t=5.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 85.7m at +69.7 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 69.7, "angle_to_waypoint_after_next": 62.1, "attempt_over": false, "crashes": 3, "distance_to_next_waypoint": 85.7, "distance_to_wall_front": 1.0, "distance_to_wall_left_20": 0.9, "distance_to_wall_left_45": 1.0, "distance_to_wall_left_90": 2.5, "distance_to_wall_right_20": 1.2, "distance_to_wall_right_45": 2.3, "distance_to_wall_right_90": 46.0, "distance_to_waypoint_after_next": 187.1, "events": [], "heading_deg": 60.5, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 15.0, "sim_time": 5.5, "speed": 4.06, "tick": 11, "ticks_remaining": 4, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 12 (attempt 1) t=6.0s ===
+state:
+  tick 12, t=6.0s, speed=0.0, gate 1 (passed 0/8), next waypoint 86.1m at +71.4 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 71.4, "angle_to_waypoint_after_next": 64.3, "attempt_over": false, "crashes": 4, "distance_to_next_waypoint": 86.1, "distance_to_wall_front": 2.3, "distance_to_wall_left_20": 2.1, "distance_to_wall_left_45": 2.4, "distance_to_wall_left_90": 6.7, "distance_to_wall_right_20": 2.8, "distance_to_wall_right_45": 5.0, "distance_to_wall_right_90": 47.7, "distance_to_waypoint_after_next": 187.6, "events": ["crash: hit a wall, +5s penalty, speed reset to 0"], "heading_deg": 63.1, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 20.0, "sim_time": 6.0, "speed": 0.0, "tick": 12, "ticks_remaining": 3, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['crash: hit a wall, +5s penalty, speed reset to 0']
+
+=== tick 13 (attempt 1) t=6.5s ===
+state:
+  tick 13, t=6.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 85.9m at +80.7 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 80.7, "angle_to_waypoint_after_next": 73.2, "attempt_over": false, "crashes": 4, "distance_to_next_waypoint": 85.9, "distance_to_wall_front": 1.2, "distance_to_wall_left_20": 1.2, "distance_to_wall_left_45": 1.4, "distance_to_wall_left_90": 6.6, "distance_to_wall_right_20": 1.3, "distance_to_wall_right_45": 2.0, "distance_to_wall_right_90": 74.4, "distance_to_waypoint_after_next": 187.3, "events": [], "heading_deg": 71.7, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 20.0, "sim_time": 6.5, "speed": 4.06, "tick": 13, "ticks_remaining": 2, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: []
+
+=== tick 14 (attempt 1) t=7.0s ===
+state:
+  tick 14, t=7.0s, speed=0.0, gate 1 (passed 0/8), next waypoint 86.0m at +83.5 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 83.5, "angle_to_waypoint_after_next": 76.3, "attempt_over": false, "crashes": 5, "distance_to_next_waypoint": 86.0, "distance_to_wall_front": 2.2, "distance_to_wall_left_20": 2.2, "distance_to_wall_left_45": 2.8, "distance_to_wall_left_90": 96.6, "distance_to_wall_right_20": 2.4, "distance_to_wall_right_45": 3.5, "distance_to_wall_right_90": 87.5, "distance_to_waypoint_after_next": 187.5, "events": ["crash: hit a wall, +5s penalty, speed reset to 0"], "heading_deg": 75.1, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 25.0, "sim_time": 7.0, "speed": 0.0, "tick": 14, "ticks_remaining": 1, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['crash: hit a wall, +5s penalty, speed reset to 0']
+
+=== tick 15 (attempt 1) t=7.5s ===
+state:
+  tick 15, t=7.5s, speed=4.1, gate 1 (passed 0/8), next waypoint 86.0m at +92.7 deg
+prompt-to-llm:
+  [system]
+  You are driving a virtual car. Analyze the sensor data and output the optimal throttle and steering values to complete the track quickly without hitting walls. ... (603 chars)
+  [user]
+  Current sensor data:
+  {"angle_to_next_waypoint": 92.7, "angle_to_waypoint_after_next": 85.2, "attempt_over": true, "crashes": 5, "distance_to_next_waypoint": 86.0, "distance_to_wall_front": 1.1, "distance_to_wall_left_20": 1.2, "distance_to_wall_left_45": 1.7, "distance_to_wall_left_90": 76.4, "distance_to_wall_right_20": 1.2, "distance_to_wall_right_45": 1.6, "distance_to_wall_right_90": 169.3, "distance_to_waypoint_after_next": 187.4, "events": ["attempt_over: max ticks reached (DNF)"], "heading_deg": 83.7, "lap_complete": false, "next_waypoint_index": 1, "penalty_time": 25.0, "sim_time": 7.5, "speed": 4.06, "tick": 15, "ticks_remaining": 0, "waypoints_passed": 0, "waypoints_total": 8}
+llm-reply:
+  'throttle=0.7 steering=-0.2 (drive forward, slight left turn)'
+parsed-from:
+  tool_call
+decision:
+  throttle = +0.70
+  steering = -0.20
+latency_ms: 0.0
+events: ['attempt_over: max ticks reached (DNF)']
+
