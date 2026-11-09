@@ -1,7 +1,8 @@
 # Documentation index
 
 Every document in this repository, grouped by who it is for. New here? Start with the
-[front page](../README.md), then the [lesson overview](../lesson/README.md).
+[front page](../README.md), then the [lesson overview](../lesson/README.md). Picking up development
+work? Read [HANDOVER.md](HANDOVER.md): current state and the remaining tasks, staged.
 
 ## Students
 
