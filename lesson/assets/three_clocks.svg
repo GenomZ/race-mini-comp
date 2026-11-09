@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">The Three Clocks</title>
+  <desc id="d">Every part of a driver lives on one of three clocks: TICK (drive, every 0.5 s), LAP (reflect, after every attempt) and SESSION (plan, once per track). LLM calls belong on the slow clocks.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .big { font-size: 54px; font-weight: 800; letter-spacing: 2px; }
+      .dial { font-size: 40px; font-weight: 700; }
+      .dials { font-size: 20px; fill: #52514e; }
+      .k { font-size: 18px; letter-spacing: 1.5px; fill: #898781; font-weight: 700; }
+      .v { font-size: 24px; }
+      .vs { font-size: 21px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 28px; font-weight: 700; }
+      .foot { font-size: 18px; fill: #898781; }
+      .white { fill: #ffffff; }
+      .q { font-size: 30px; font-weight: 700; }
+    </style>
+    <g id="ticks" stroke="#c3c2b7" stroke-width="4" stroke-linecap="round">
+      <line x1="0" y1="-108" x2="0" y2="-94"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(30)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(60)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(90)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(120)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(150)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(180)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(210)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(240)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(270)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(300)"/>
+      <line x1="0" y1="-108" x2="0" y2="-94" transform="rotate(330)"/>
+    </g>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  EVERY CHAPTER</text>
+  <text x="72" y="152" class="title">The Three Clocks</text>
+  <text x="72" y="200" class="sub">Every line of your driver runs on one of three clocks. Fast clock: no time to think. Slow clocks: think as much as you like.</text>
+
+  <!-- ===================== TICK ===================== -->
+  <g transform="translate(72,248)">
+    <rect width="480" height="760" rx="24" fill="#fff4ee" stroke="#eb6834" stroke-width="3"/>
+    <text x="32" y="74" class="big" style="fill:#eb6834">TICK</text>
+    <text x="32" y="112" class="vs">the fast clock</text>
+    <g transform="translate(360,110)">
+      <circle r="92" fill="#ffffff" stroke="#eb6834" stroke-width="6"/>
+      <g transform="scale(0.8)"><use href="#ticks"/></g>
+      <path d="M0 0 L0 -76 A76 76 0 0 1 72.3 -23.5 Z" fill="#eb6834" opacity="0.18"/>
+      <line x1="0" y1="0" x2="72.3" y2="-23.5" stroke="#eb6834" stroke-width="6" stroke-linecap="round"/>
+      <circle r="8" fill="#eb6834"/>
+      <text x="0" y="56" class="dials" text-anchor="middle" font-weight="700" style="fill:#0b0b0b;font-size:24px">0.5 s</text>
+    </g>
+    <text x="32" y="250" class="mono">drive(obs)</text>
+    <text x="32" y="300" class="k">HOW OFTEN</text>
+    <text x="32" y="332" class="v">every tick = 0.5 s of race time</text>
+    <text x="32" y="362" class="vs">≈ 100 calls per lap on the home track</text>
+    <text x="32" y="414" class="k">TIME YOU GET</text>
+    <text x="32" y="446" class="v">Grand Prix: 2 s per call,</text>
+    <text x="32" y="476" class="vs">slower = a stall: the car coasts</text>
+    <text x="32" y="528" class="k">LLM AT THE GRAND PRIX</text>
+    <text x="32" y="560" class="v"><tspan font-weight="700">never</tspan> - calls in drive() are refused</text>
+    <text x="32" y="612" class="k">WHAT LIVES HERE</text>
+    <text x="32" y="644" class="v">reflexes, steering, the safety net,</text>
+    <text x="32" y="674" class="v">PathFollower, spiking fly brains</text>
+    <text x="32" y="726" class="vs">L0  L1  L2  …  every driver</text>
+  </g>
+
+  <!-- ===================== LAP ===================== -->
+  <g transform="translate(602,248)">
+    <rect width="480" height="760" rx="24" fill="#eef5fd" stroke="#2a78d6" stroke-width="3"/>
+    <text x="32" y="74" class="big" style="fill:#2a78d6">LAP</text>
+    <text x="32" y="112" class="vs">between attempts</text>
+    <g transform="translate(360,110)">
+      <circle r="92" fill="#ffffff" stroke="#2a78d6" stroke-width="6"/>
+      <g transform="scale(0.8)"><use href="#ticks"/></g>
+      <circle r="62" fill="none" stroke="#2a78d6" stroke-width="10" stroke-dasharray="330 60" transform="rotate(-90)" opacity="0.85"/>
+      <circle r="8" fill="#2a78d6"/>
+      <text x="0" y="-16" class="dials" text-anchor="middle" font-weight="700" style="fill:#0b0b0b;font-size:24px">1 lap</text>
+      <text x="0" y="30" class="dials" text-anchor="middle" style="font-size:15px">≈ 25-60 s</text>
+    </g>
+    <text x="32" y="250" class="mono">reflect(report)</text>
+    <text x="32" y="300" class="k">HOW OFTEN</text>
+    <text x="32" y="332" class="v">after every attempt (a practice lap)</text>
+    <text x="32" y="362" class="vs">Grand Prix default: 2 practice laps</text>
+    <text x="32" y="414" class="k">TIME YOU GET</text>
+    <text x="32" y="446" class="v">up to 120 s</text>
+    <text x="32" y="476" class="vs">(all your thinking on a track: 300 s)</text>
+    <text x="32" y="528" class="k">LLM AT THE GRAND PRIX</text>
+    <text x="32" y="560" class="v">yes: <tspan font-weight="700">≤ 2 calls</tspan> per reflect()</text>
+    <text x="32" y="612" class="k">WHAT LIVES HERE</text>
+    <text x="32" y="644" class="v">the critic, keep-best, revert,</text>
+    <text x="32" y="674" class="v">lock-in, Max's Race Engineer</text>
+    <text x="32" y="726" class="vs">L3 Learner, L6 Max</text>
+  </g>
+
+  <!-- ===================== SESSION ===================== -->
+  <g transform="translate(1132,248)">
+    <rect width="480" height="760" rx="24" fill="#f1effc" stroke="#6250d6" stroke-width="3"/>
+    <text x="32" y="74" class="big" style="fill:#6250d6">SESSION</text>
+    <text x="32" y="112" class="vs">once per track</text>
+    <g transform="translate(386,112) scale(0.88)">
+      <circle r="92" fill="#ffffff" stroke="#6250d6" stroke-width="6"/>
+      <g transform="scale(0.8)"><use href="#ticks"/></g>
+      <ellipse cx="0" cy="10" rx="46" ry="24" fill="none" stroke="#6250d6" stroke-width="8"/>
+      <rect x="-5" y="26" width="10" height="16" fill="#0b0b0b"/>
+      <text x="0" y="-30" class="dials" text-anchor="middle" font-weight="700" style="fill:#0b0b0b;font-size:24px">1 track</text>
+      <text x="0" y="66" class="dials" text-anchor="middle" style="font-size:18px">before lap 1</text>
+    </g>
+    <text x="32" y="250" class="mono">plan(track)</text>
+    <text x="32" y="300" class="k">HOW OFTEN</text>
+    <text x="32" y="332" class="v">once, before the first attempt</text>
+    <text x="32" y="362" class="vs">you get the whole map + the briefing</text>
+    <text x="32" y="414" class="k">TIME YOU GET</text>
+    <text x="32" y="446" class="v">up to 120 s</text>
+    <text x="32" y="476" class="vs">(all your thinking on a track: 300 s)</text>
+    <text x="32" y="528" class="k">LLM AT THE GRAND PRIX</text>
+    <text x="32" y="560" class="v">yes: <tspan font-weight="700">≤ 2 calls</tspan> in plan()</text>
+    <text x="32" y="612" class="k">WHAT LIVES HERE</text>
+    <text x="32" y="644" class="v">the map, the speed plan, the</text>
+    <text x="32" y="674" class="v">LLM strategist, briefing → zones</text>
+    <text x="32" y="726" class="vs">L2 Planner, L5 Strategist, L6 Max</text>
+  </g>
+
+  <!-- bottom banner -->
+  <rect x="72" y="1032" width="1540" height="92" rx="18" fill="#1d1d1b"/>
+  <text x="104" y="1072" class="v white" style="fill:#ffffff">An LLM answer takes about a second (L4 rookie on MiniMax: p50 1.16 s, p95 1.95 s) = 2-3 ticks driving blind.</text>
+  <text x="104" y="1106" class="v" style="fill:#eda100;font-weight:700">So the LLM goes on the slow clocks: SESSION and LAP. A whole track: ≤ 8 LLM calls. Qualifying and race: none.</text>
+
+  <text x="72" y="1160" class="foot">Limits = official Grand Prix rules (race.py grand-prix / final). In lessons, drive() may call the LLM - and you will see why it shouldn't.  ·  lesson/assets/three_clocks.svg</text>
+</svg>

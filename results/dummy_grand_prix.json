@@ -1,0 +1,134 @@
+{
+ "format": "agentic-gp-result",
+ "version": 1,
+ "name": "Dummy",
+ "author": "Agentic GP",
+ "color": "#8d99ae",
+ "kind": "code",
+ "model": null,
+ "source": "drivers\\examples\\l0_dummy.py",
+ "motto": "Eyes closed, foot down.",
+ "params": {
+  "throttle": 0.5
+ },
+ "track": "grand_prix",
+ "track_name": "Grand Prix Circuit",
+ "timestamp": "2026-10-21T21:59:29Z",
+ "config": {
+  "track": "grand_prix",
+  "attempts": 3,
+  "laps": 1,
+  "realtime": false,
+  "max_ticks_per_lap": null,
+  "llm_policy": "open",
+  "schedule": [
+   [
+    "session",
+    1
+   ],
+   [
+    "session",
+    1
+   ],
+   [
+    "session",
+    1
+   ]
+  ],
+  "drive_timeout_s": null,
+  "driver_budget_s": null,
+  "crash_rule": "marshal",
+  "tick_seconds": 0.5,
+  "max_speed": 40.0
+ },
+ "attempts": [
+  {
+   "attempt": 1,
+   "completed": true,
+   "race_time": 307.4,
+   "lap_times": [
+    307.4
+   ],
+   "best_lap": 307.4,
+   "sim_time": 152.4,
+   "penalty_time": 155.0,
+   "crashes": 31,
+   "waypoints_passed": 16,
+   "laps": 1,
+   "laps_completed": 1,
+   "ticks": 305,
+   "ended_by": "finished",
+   "zone_violations": 0,
+   "phase": "session",
+   "stalls": 0,
+   "driver_errors": 0,
+   "status": ""
+  },
+  {
+   "attempt": 2,
+   "completed": true,
+   "race_time": 307.4,
+   "lap_times": [
+    307.4
+   ],
+   "best_lap": 307.4,
+   "sim_time": 152.4,
+   "penalty_time": 155.0,
+   "crashes": 31,
+   "waypoints_passed": 16,
+   "laps": 1,
+   "laps_completed": 1,
+   "ticks": 305,
+   "ended_by": "finished",
+   "zone_violations": 0,
+   "phase": "session",
+   "stalls": 0,
+   "driver_errors": 0,
+   "status": ""
+  },
+  {
+   "attempt": 3,
+   "completed": true,
+   "race_time": 307.4,
+   "lap_times": [
+    307.4
+   ],
+   "best_lap": 307.4,
+   "sim_time": 152.4,
+   "penalty_time": 155.0,
+   "crashes": 31,
+   "waypoints_passed": 16,
+   "laps": 1,
+   "laps_completed": 1,
+   "ticks": 305,
+   "ended_by": "finished",
+   "zone_violations": 0,
+   "phase": "session",
+   "stalls": 0,
+   "driver_errors": 0,
+   "status": ""
+  }
+ ],
+ "best_lap": 307.4,
+ "best_attempt": 1,
+ "total_crashes": 93,
+ "completed_attempts": 3,
+ "max_waypoints_passed": 16,
+ "wall_seconds": 0.28,
+ "think_seconds_mean": 1e-05,
+ "think_seconds_max": 0.0001,
+ "llm": {
+  "calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "seconds": 0.0,
+  "errors": 0,
+  "cache_hits": 0,
+  "mode": "open",
+  "calls_left": null
+ },
+ "llm_calls": 0,
+ "plan_error": null,
+ "driver_errors": 0,
+ "status": ""
+}

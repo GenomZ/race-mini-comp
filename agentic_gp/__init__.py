@@ -1,17 +1,30 @@
-"""Agentic Grand Prix - a lightweight 2D racing gym for LLM agents.
+"""Agentic Grand Prix - a deterministic 2D racing gym for single-file AI drivers.
+
+    from agentic_gp import run_session, SessionConfig
+    result = run_session("drivers/examples/l2_planner.py", SessionConfig(track="sprint", attempts=2))
+    print(result.best_lap)
+    result.to_replay().to_json("races/sprint.json")       # for the Streamlit / HTML / Unity viewers
+
+    from agentic_gp import run_grand_prix, GrandPrixConfig
+    gp = run_grand_prix(["drivers/submissions"], GrandPrixConfig(track="grand_prix", race_laps=3))
+    gp.save("races", "final")
 
 Public API:
-    RaceEnv          - the simulation environment (reset / step / sensors)
-    PhysicsConfig    - tunable physics + competition constants
-    Track            - track geometry (walls, centerline, waypoint gates)
-    make_default_track()
-    make_tools(env)  - LangChain StructuredTool bindings for an env
+    RaceEnv, PhysicsConfig, Track, TRACKS, make_track     - the simulation (agentic_gp.sim)
+    load_driver, run_session, SessionConfig               - one driver, one track (agentic_gp.race)
+    run_grand_prix, GrandPrixConfig, Replay               - many drivers + the replay JSON contract
+Driver files only import agentic_gp.driverkit and agentic_gp.llm (never the sim or the runner).
+Command line: `python race.py --help` (agentic_gp/cli.py).
 """
 
-from .config import PhysicsConfig
-from .track import Track, make_default_track
-from .env import RaceEnv
-from .tools import make_tools
+from .sim.config import PhysicsConfig
+from .sim.track import TRACKS, Track, make_track
+from .sim.env import RaceEnv
+from .race.loader import load_driver
+from .race.session import SessionConfig, run_session
+from .race.grand_prix import GrandPrixConfig, run_grand_prix
+from .race.replay import Replay
 
-__all__ = ["RaceEnv", "PhysicsConfig", "Track", "make_default_track", "make_tools"]
-__version__ = "0.1.0"
+__all__ = ["RaceEnv", "PhysicsConfig", "Track", "TRACKS", "make_track", "load_driver", "run_session",
+           "SessionConfig", "run_grand_prix", "GrandPrixConfig", "Replay"]
+__version__ = "2.0.0"

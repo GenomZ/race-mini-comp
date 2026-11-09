@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">The driver frame: + = right</title>
+  <desc id="d">Top-down view of the car on a right-hand bend: the seven wall rays, the angles to the next two waypoints, the offset from the centerline and the steering range. Every angle, the steering and the offset use the same rule: positive means to the right.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .ray { font-size: 21px; font-weight: 700; }
+      .rayv { font-size: 19px; fill: #52514e; }
+      .ang { font-size: 18px; fill: #52514e; font-weight: 700; }
+      .lab { font-size: 23px; font-weight: 700; }
+      .labs { font-size: 20px; fill: #52514e; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 19.5px; }
+      .monob { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 22px; font-weight: 700; }
+      .r { font-size: 23px; }
+      .rs { font-size: 20px; fill: #52514e; }
+      .foot { font-size: 18px; fill: #898781; }
+      .pos { fill: #2a78d6; font-weight: 700; }
+      .neg { fill: #e34948; font-weight: 700; }
+    </style>
+    <marker id="aO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aV" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6250d6"/></marker>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b0b0b"/></marker>
+    <clipPath id="stage"><rect x="72" y="236" width="960" height="900" rx="22"/></clipPath>
+  </defs>
+
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  CHAPTER 1</text>
+  <text x="72" y="152" class="title">The driver frame: <tspan fill="#2a78d6">+ = right</tspan></text>
+  <text x="72" y="200" class="sub">Your car sees the world from the driver's seat. One rule for every angle, for steering and for the offset.</text>
+
+  <!-- ============ the stage: a right-hand bend, seen from above ============ -->
+  <rect x="72" y="236" width="960" height="900" rx="22" fill="#f4f3ef" stroke="#e1e0d9" stroke-width="2"/>
+  <g clip-path="url(#stage)">
+    <path d="M352,1140 V640 A448,448 0 0 1 800,192 H1040 V428 H800 A212,212 0 0 0 588,640 V1140 Z" fill="#ffffff"/>
+    <path d="M352,1140 V640 A448,448 0 0 1 800,192 H1040" fill="none" stroke="#1d1d1b" stroke-width="5"/>
+    <path d="M588,1140 V640 A212,212 0 0 1 800,428 H1040" fill="none" stroke="#1d1d1b" stroke-width="5"/>
+    <path d="M470,1140 V640 A330,330 0 0 1 800,310 H1040" fill="none" stroke="#a9a7a0" stroke-width="2.5" stroke-dasharray="14 10"/>
+    <!-- waypoint gates -->
+    <line x1="437.6" y1="376.7" x2="628.5" y2="515.4" stroke="#eda100" stroke-width="5"/>
+    <line x1="800" y1="192" x2="800" y2="428" stroke="#eda100" stroke-width="5"/>
+    <circle cx="533" cy="446" r="9" fill="#eda100" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="800" cy="310" r="9" fill="#eda100" stroke="#ffffff" stroke-width="3"/>
+  </g>
+  <line x1="626" y1="516" x2="704" y2="556" stroke="#a06d00" stroke-width="1.5"/>
+  <text x="708" y="564" class="labs" font-weight="700" style="fill:#a06d00">next waypoint (gate)</text>
+  <text x="812" y="452" class="labs" font-weight="700" style="fill:#a06d00">waypoint after next</text>
+  <text x="604" y="1110" class="labs">dashed line = the centerline</text>
+
+  <!-- heading (straight ahead) -->
+  <line x1="510" y1="820" x2="423.2" y2="327.6" stroke="#0b0b0b" stroke-width="2" stroke-dasharray="4 7"/>
+  <text x="300" y="300" class="labs" font-weight="700" style="fill:#0b0b0b">straight ahead = 0°</text>
+
+  <!-- the 7 rays (distance_to_wall_*) -->
+  <g stroke="#1baf7a" stroke-width="3.5" stroke-linecap="round">
+    <line x1="510" y1="820" x2="433.0" y2="383.1"/>
+    <line x1="510" y1="820" x2="359.4" y2="559.1"/>
+    <line x1="510" y1="820" x2="613.6" y2="232.6"/>
+    <line x1="510" y1="820" x2="352.0" y2="709.4"/>
+    <line x1="510" y1="820" x2="588.0" y2="708.6"/>
+    <line x1="510" y1="820" x2="352.0" y2="847.9"/>
+    <line x1="510" y1="820" x2="588.0" y2="806.2"/>
+  </g>
+  <g fill="#1baf7a" stroke="#ffffff" stroke-width="2.5">
+    <circle cx="433.0" cy="383.1" r="7"/><circle cx="359.4" cy="559.1" r="7"/><circle cx="613.6" cy="232.6" r="7"/>
+    <circle cx="352.0" cy="709.4" r="7"/><circle cx="588.0" cy="708.6" r="7"/><circle cx="352.0" cy="847.9" r="7"/>
+    <circle cx="588.0" cy="806.2" r="7"/>
+  </g>
+  <!-- ray labels -->
+  <text x="422" y="372" class="ray" text-anchor="end">front <tspan style="font-size:18px;fill:#52514e">0°</tspan></text><text x="422" y="396" class="rayv" text-anchor="end">33.9</text>
+  <text x="340" y="556" class="ray" text-anchor="end">left_20 <tspan class="neg" style="font-size:18px">−20°</tspan></text><text x="340" y="580" class="rayv" text-anchor="end">23.0</text>
+  <text x="628" y="246" class="ray">right_20 <tspan class="pos" style="font-size:18px">+20°</tspan></text><text x="628" y="270" class="rayv">45.5</text>
+  <text x="340" y="704" class="ray" text-anchor="end">left_45 <tspan class="neg" style="font-size:18px">−45°</tspan></text><text x="340" y="728" class="rayv" text-anchor="end">14.7</text>
+  <text x="604" y="702" class="ray">right_45 <tspan class="pos" style="font-size:18px">+45°</tspan></text><text x="604" y="726" class="rayv">10.4</text>
+  <text x="340" y="846" class="ray" text-anchor="end">left_90 <tspan class="neg" style="font-size:18px">−90°</tspan></text><text x="340" y="870" class="rayv" text-anchor="end">12.2</text>
+  <text x="604" y="802" class="ray">right_90 <tspan class="pos" style="font-size:18px">+90°</tspan></text><text x="604" y="826" class="rayv">6.0</text>
+  <!-- angle to the next waypoint (+13.5) and the one after (+39.6) -->
+  <line x1="510" y1="820" x2="530.3" y2="456.4" stroke="#eb6834" stroke-width="5" marker-end="url(#aO)"/>
+  <line x1="510" y1="820" x2="789.3" y2="315.3" stroke="#6250d6" stroke-width="5" marker-end="url(#aV)"/>
+  <path d="M 485.7 682.1 A 140 140 0 0 1 518.5 680.3" fill="none" stroke="#eb6834" stroke-width="4"/>
+  <path d="M 467.2 577.7 A 246 246 0 0 1 631.5 606.1" fill="none" stroke="#6250d6" stroke-width="4"/>
+
+  <!-- the car (heading 10° left of the page's up) -->
+  <g transform="translate(510,820) rotate(-10)">
+    <rect x="-23" y="-44" width="46" height="88" rx="14" fill="#2a78d6" stroke="#0b0b0b" stroke-width="2.5"/>
+    <rect x="-17" y="-28" width="34" height="20" rx="5" fill="#cde2fb"/>
+    <path d="M -12 -44 L 0 -58 L 12 -44 Z" fill="#0b0b0b"/>
+    <rect x="-29" y="-36" width="8" height="20" rx="3" fill="#1d1d1b"/><rect x="21" y="-36" width="8" height="20" rx="3" fill="#1d1d1b"/>
+    <rect x="-29" y="16" width="8" height="20" rx="3" fill="#1d1d1b"/><rect x="21" y="16" width="8" height="20" rx="3" fill="#1d1d1b"/>
+  </g>
+
+  <!-- offset from the centerline -->
+  <line x1="470" y1="930" x2="510" y2="930" stroke="#0b0b0b" stroke-width="2.5" marker-start="url(#aK)" marker-end="url(#aK)"/>
+  <line x1="510" y1="866" x2="510" y2="944" stroke="#0b0b0b" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="604" y="926" class="lab">offset_from_center = <tspan class="pos">+3.0</tspan></text>
+  <text x="604" y="954" class="labs">you are 3 units RIGHT of the centerline</text>
+  <line x1="520" y1="930" x2="596" y2="922" stroke="#52514e" stroke-width="1.5"/>
+
+  <!-- steering gauge -->
+  <g transform="translate(212,1040)">
+    <path d="M -88 0 A 88 88 0 0 1 88 0" fill="none" stroke="#e1e0d9" stroke-width="16" stroke-linecap="round"/>
+    <path d="M -88 0 A 88 88 0 0 1 0 -88" fill="none" stroke="#e34948" stroke-width="16" stroke-linecap="round" opacity="0.35"/>
+    <path d="M 0 -88 A 88 88 0 0 1 88 0" fill="none" stroke="#2a78d6" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
+    <line x1="0" y1="0" x2="42" y2="-73" stroke="#0b0b0b" stroke-width="5" stroke-linecap="round"/>
+    <circle r="9" fill="#0b0b0b"/>
+    <text x="0" y="-150" class="lab" text-anchor="middle">steering</text>
+    <text x="0" y="-108" class="labs" text-anchor="middle">0 = straight</text>
+    <text x="-96" y="34" class="labs" text-anchor="middle"><tspan class="neg">−1</tspan> left</text>
+    <text x="96" y="34" class="labs" text-anchor="middle"><tspan class="pos">+1</tspan> right</text>
+  </g>
+
+  <!-- angle callouts -->
+  <rect x="736" y="596" width="290" height="62" rx="12" fill="#ffffff" stroke="#eb6834" stroke-width="2.5"/>
+  <text x="752" y="622" class="monob" style="font-size:16.5px">angle_to_next_waypoint</text>
+  <text x="752" y="648" class="labs" style="font-size:18px">= <tspan class="pos">+13.5</tspan> → gate to the RIGHT</text>
+  <rect x="736" y="670" width="290" height="62" rx="12" fill="#ffffff" stroke="#6250d6" stroke-width="2.5"/>
+  <text x="748" y="696" class="monob" style="font-size:16px">angle_to_waypoint_after_next</text>
+  <text x="752" y="722" class="labs" style="font-size:18px">= <tspan class="pos">+39.6</tspan> → the bend tightens</text>
+
+  <!-- ============ right column: the rule ============ -->
+  <rect x="1072" y="236" width="540" height="150" rx="22" fill="#2a78d6"/>
+  <text x="1342" y="330" text-anchor="middle" style="font-size:84px;font-weight:800;fill:#ffffff">+ = RIGHT</text>
+  <text x="1342" y="366" text-anchor="middle" style="font-size:21px;fill:#cde2fb">−  =  left, for everything below</text>
+
+  <g transform="translate(1072,420)">
+    <text x="0" y="22" class="r"><tspan font-weight="700">angle_to_…</tspan> &gt; 0 → the target is to your right</text>
+    <text x="0" y="62" class="r"><tspan font-weight="700">steering</tspan> +1 = full right, −1 = full left</text>
+    <text x="0" y="102" class="r"><tspan font-weight="700">offset_from_center</tspan> &gt; 0 → right of the line</text>
+    <text x="0" y="142" class="r"><tspan font-weight="700">rays</tspan>: left_20/45/90 = −20/−45/−90°,</text>
+    <text x="0" y="172" class="r">       right_20/45/90 = +20/+45/+90°</text>
+    <text x="0" y="214" class="rs">So the simplest steering rule just works:</text>
+    <text x="0" y="248" class="monob">steering = angle / 30</text>
+    <text x="0" y="280" class="rs">+ angle → + steering → turn right, toward it.</text>
+  </g>
+
+  <rect x="1072" y="724" width="540" height="300" rx="18" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+  <text x="1096" y="760" class="labs" font-weight="700" style="fill:#0b0b0b">This tick's obs (units; track width 18)</text>
+  <g transform="translate(1096,794)">
+    <text x="0" y="0" class="mono">"angle_to_next_waypoint":       13.5,</text>
+    <text x="0" y="28" class="mono">"angle_to_waypoint_after_next": 39.6,</text>
+    <text x="0" y="56" class="mono">"distance_to_next_waypoint":    28.6,</text>
+    <text x="0" y="84" class="mono">"distance_to_wall_front":       33.9,</text>
+    <text x="0" y="112" class="mono">"distance_to_wall_left_20":     23.0,</text>
+    <text x="0" y="140" class="mono">"distance_to_wall_right_90":     6.0,</text>
+    <text x="0" y="168" class="mono">"offset_from_center":            3.0,</text>
+    <text x="0" y="196" class="mono" style="fill:#898781"># ... 7 rays in all, capped at 200</text>
+  </g>
+
+  <rect x="1072" y="1044" width="540" height="92" rx="18" fill="#fff8e6" stroke="#eda100" stroke-width="2"/>
+  <text x="1096" y="1080" class="r" font-weight="700">The one exception: heading_deg</text>
+  <text x="1096" y="1112" class="rs">a WORLD angle, counter-clockwise from +x, like the map.</text>
+
+  <text x="72" y="1170" class="foot">An illustration drawn to scale (13.1 px = 1 unit): the numbers are what the rays would read here. Field names: agentic_gp/driver.py OBS_FIELDS  ·  lesson/assets/driver_frame.svg</text>
+</svg>

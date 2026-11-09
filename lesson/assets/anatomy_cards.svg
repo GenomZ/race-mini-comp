@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1684 1191" width="1684" height="1191" role="img" aria-labelledby="t d">
+  <title id="t">Anatomy cards</title>
+  <desc id="d">Ten parts an agent can have: perceive, act, map, plan, memory, reflect, llm, tools, roles, spiking. Each card says what the part does, how it looks in code and where it first appears on the driver ladder.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #0b0b0b; }
+      .kicker { font-size: 20px; letter-spacing: 3px; fill: #898781; font-weight: 600; }
+      .title { font-size: 60px; font-weight: 700; }
+      .sub { font-size: 28px; fill: #52514e; }
+      .nm { font-size: 40px; font-weight: 800; }
+      .mn { font-size: 18.5px; fill: #52514e; }
+      .cd { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 15.5px; }
+      .k { font-size: 15px; letter-spacing: 1.5px; fill: #898781; font-weight: 700; }
+      .fs { font-size: 21px; font-weight: 700; }
+      .num { font-size: 22px; font-weight: 700; fill: #c3c2b7; }
+      .b { font-size: 24px; }
+      .mono { font-family: "Cascadia Code", Consolas, Menlo, "DejaVu Sans Mono", monospace; font-size: 24px; font-weight: 700; }
+      .foot { font-size: 18px; fill: #898781; }
+    </style>
+  </defs>
+  <rect width="1684" height="1191" fill="#fcfcfb"/>
+  <text x="72" y="84" class="kicker">AGENTIC GRAND PRIX  ·  POSTER  ·  ANATOMY CARDS</text>
+  <text x="72" y="152" class="title">Anatomy of an agent: ten parts</text>
+  <text x="72" y="200" class="sub">Collect them one chapter at a time. A good driver uses the parts it needs - not all of them.</text>
+  <g transform="translate(72,246)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#eb6834"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#eb6834"/><path d="M-26 0 Q0 -22 26 0 Q0 22 -26 0 Z" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle r="8" fill="#ffffff"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">01</text>
+    <text x="24" y="164" class="nm">perceive</text>
+    <text x="24" y="198" class="mn">read the sensors, this tick</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">obs[&quot;speed&quot;], obs[...]</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L1 Reflex</text>
+  </g>
+  <g transform="translate(382,246)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#eb6834"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#eb6834"/><circle r="24" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle r="6" fill="#ffffff"/><path d="M-24 0 H-6 M6 0 H24 M0 6 V24" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">02</text>
+    <text x="24" y="164" class="nm">act</text>
+    <text x="24" y="198" class="mn">decide the controls, now</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">return throttle, steering</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L0 Dummy</text>
+  </g>
+  <g transform="translate(692,246)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#2a78d6"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#2a78d6"/><path d="M-26 -18 L-9 -24 L9 -18 L26 -24 V18 L9 24 L-9 18 L-26 24 Z M-9 -24 V18 M9 -18 V24" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">03</text>
+    <text x="24" y="164" class="nm">map</text>
+    <text x="24" y="198" class="mn">a model of the whole track</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">track[&quot;corners&quot;]</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L2 Planner</text>
+  </g>
+  <g transform="translate(1002,246)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#2a78d6"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#2a78d6"/><path d="M-26 -14 H-8 Q0 -14 2 0 Q4 16 14 16 H26" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-26" cy="-14" r="5" fill="#ffffff"/><circle cx="26" cy="16" r="5" fill="#ffffff"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">04</text>
+    <text x="24" y="164" class="nm">plan</text>
+    <text x="24" y="198" class="mn">speeds decided in advance</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">dk.speed_profile(points)</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L2 Planner</text>
+  </g>
+  <g transform="translate(1312,246)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#eda100"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#eda100"/><rect x="-20" y="-24" width="40" height="48" rx="5" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M-10 -10 H10 M-10 2 H10 M-10 14 H4" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">05</text>
+    <text x="24" y="164" class="nm">memory</text>
+    <text x="24" y="198" class="mn">keep what happened</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">self.history, self.best</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L3 Learner</text>
+  </g>
+  <g transform="translate(72,618)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#eda100"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#eda100"/><path d="M20 -10 A22 22 0 1 0 22 8" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 -24 V-8 H6" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">06</text>
+    <text x="24" y="164" class="nm">reflect</text>
+    <text x="24" y="198" class="mn">learn between attempts</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">def reflect(self, report):</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L3 Learner</text>
+  </g>
+  <g transform="translate(382,618)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#6250d6"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#6250d6"/><path d="M-26 -18 H26 V12 H-4 L-16 24 V12 H-26 Z" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-11" cy="-3" r="3.5" fill="#ffffff"/><circle cx="0" cy="-3" r="3.5" fill="#ffffff"/><circle cx="11" cy="-3" r="3.5" fill="#ffffff"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">07</text>
+    <text x="24" y="164" class="nm">llm</text>
+    <text x="24" y="198" class="mn">a language model helps</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">llm.chat_json(prompt)</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L4 Rookie</text>
+  </g>
+  <g transform="translate(692,618)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#1baf7a"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#1baf7a"/><text x="0" y="10" text-anchor="middle" style="font-family:Consolas,Menlo,monospace;font-size:30px;font-weight:700;fill:#ffffff">f(x)</text></g>
+    <text x="270" y="60" class="num" text-anchor="end">08</text>
+    <text x="24" y="164" class="nm">tools</text>
+    <text x="24" y="198" class="mn">LLM calls your functions</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">llm.ask_with_tools(p, [fn])</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L5 Strategist</text>
+  </g>
+  <g transform="translate(1002,618)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#1d1d1b"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#1d1d1b"/><circle cx="-18" cy="-8" r="7" fill="#ffffff"/><path d="M-29 16 Q-18 -2 -7 16" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="0" cy="-8" r="7" fill="#d4a017"/><path d="M-11 16 Q0 -2 11 16" stroke="#d4a017" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="18" cy="-8" r="7" fill="#ffffff"/><path d="M7 16 Q18 -2 29 16" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">09</text>
+    <text x="24" y="164" class="nm">roles</text>
+    <text x="24" y="198" class="mn">a team, one job each</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">self.crew_log</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">L6 Max</text>
+  </g>
+  <g transform="translate(1312,618)">
+    <rect width="290" height="350" rx="20" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+    <rect width="290" height="8" rx="4" fill="#e87ba4"/>
+    <g transform="translate(58,76)"><circle r="40" fill="#e87ba4"/><path d="M-28 10 H-18 L-14 -20 L-10 10 H0 L4 -20 L8 10 H16 L20 -20 L24 10 H28" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="270" y="60" class="num" text-anchor="end">10</text>
+    <text x="24" y="164" class="nm">spiking</text>
+    <text x="24" y="198" class="mn">neurons are the controller</text>
+    <rect x="16" y="222" width="258" height="46" rx="10" fill="#f4f3ef"/>
+    <text x="28" y="252" class="cd">FlyBrain.step(obs)</text>
+    <text x="24" y="312" class="k">FIRST ON THE LADDER</text>
+    <text x="24" y="336" class="fs">Fly brains (Ch 7)</text>
+  </g>
+  <rect x="72" y="1002" width="1540" height="112" rx="18" fill="#1d1d1b"/>
+  <text x="104" y="1046" class="b" style="fill:#ffffff">Declare yours at the top of your file - the Race Control app and the replays show it on your driver card:</text>
+  <text x="104" y="1090" class="mono" style="fill:#eda100">ANATOMY = ["perceive", "act", "map", "plan"]</text>
+  <text x="72" y="1160" class="foot">Tags: agentic_gp/driver.py ANATOMY_TAGS  ·  examples: drivers/examples/*.py  ·  lesson/assets/anatomy_cards.svg</text>
+</svg>
